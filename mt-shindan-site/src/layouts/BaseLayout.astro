@@ -1,0 +1,66 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = "山口県の中小企業診断士 前貴棋。AI活用支援・事業承継/M&A・補助金申請支援。" } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} - 前貴棋中小企業診断士事務所</title>
+  <meta name="description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" />
+  <style is:global>
+    :root {
+      --bg: #F6F4EE;
+      --ink: #242B24;
+      --moss: #3D5C45;
+      --moss-light: #EDF1EA;
+      --gold: #A97A3F;
+      --gold-light: #F6EDDD;
+      --coral: #B0503A;
+      --line: #DAD5C6;
+      --muted: #6B6656;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Noto Sans JP', sans-serif;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      font-family: 'Shippori Mincho', serif;
+      line-height: 1.5;
+    }
+    a { color: var(--moss); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; height: auto; border-radius: 8px; }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+  </style>
+</head>
+<body>
+  <header style="border-bottom:1px solid var(--line); background:#fff;">
+    <div class="wrap" style="display:flex; align-items:center; justify-content:space-between; padding-top:16px; padding-bottom:16px;">
+      <a href="/" style="font-family:'Shippori Mincho',serif; font-weight:700; font-size:18px; color:var(--ink);">前貴棋中小企業診断士事務所</a>
+      <nav style="display:flex; gap:20px; font-size:14px;">
+        <a href="/">HOME</a>
+        <a href="/blog/">ブログ</a>
+        <a href="/yamaguchi-chushokigyo-shindan/">プロフィール</a>
+        <a href="/contact/" style="background:var(--moss); color:#fff; padding:8px 16px; border-radius:999px;">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <slot />
+  </main>
+  <footer style="border-top:1px solid var(--line); margin-top:60px; padding:32px 0; text-align:center; font-size:12px; color:var(--muted);">
+    <div class="wrap">Copyright &copy; 2023-2026 前貴棋中小企業診断士事務所 All Rights Reserved.</div>
+  </footer>
+</body>
+</html>

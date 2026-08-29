@@ -1,0 +1,27 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("pages");
+  return pages
+    .filter((p) => !["home-2", "blog"].includes(p.data.slug))
+    .map((p) => ({ params: { slug: p.data.slug }, props: { entry: p } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+<BaseLayout title={entry.data.title}>
+  <div class="wrap" style="padding:40px 0 60px; max-width:760px;">
+    <h1>{entry.data.title}</h1>
+    <article class="prose">
+      <Content />
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .prose :global(h2) { font-size: 22px; margin-top: 32px; border-left: 4px solid var(--gold); padding-left: 12px; }
+  .prose :global(a) { color: var(--moss); font-weight: 600; }
+</style>

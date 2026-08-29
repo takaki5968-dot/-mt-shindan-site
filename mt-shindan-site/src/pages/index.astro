@@ -1,0 +1,22 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pages = await getCollection("pages");
+const entry = pages.find((p) => p.data.slug === "home-2")!;
+const { Content } = await render(entry);
+---
+<BaseLayout title="山口県の中小企業診断士 | AI活用支援・事業承継・M&A">
+  <div class="wrap" style="padding:40px 0 60px;">
+    <article class="prose">
+      <Content />
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .prose :global(h1) { font-size: 32px; margin-top: 24px; }
+  .prose :global(h2) { font-size: 24px; margin-top: 40px; border-left: 4px solid var(--gold); padding-left: 12px; }
+  .prose :global(a) { color: var(--moss); font-weight: 600; }
+  .prose :global(ul) { padding-left: 20px; }
+</style>
