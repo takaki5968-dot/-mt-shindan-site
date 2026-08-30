@@ -42,25 +42,96 @@ const { title, description = "山口県の中小企業診断士 前貴棋。AI�
     a:hover { text-decoration: underline; }
     img { max-width: 100%; height: auto; border-radius: 8px; }
     .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+    .site-header { border-bottom: 1px solid var(--line); background: #fff; position: sticky; top: 0; z-index: 50; }
+    .header-inner { position: relative; display: flex; align-items: center; justify-content: space-between; padding-top: 16px; padding-bottom: 16px; }
+    .logo { font-family: 'Shippori Mincho', serif; font-weight: 700; font-size: 18px; color: var(--ink); white-space: nowrap; }
+    .site-nav { display: flex; align-items: center; gap: 20px; font-size: 14px; }
+    .site-nav a { white-space: nowrap; }
+    .nav-cta { background: var(--moss); color: #fff; padding: 8px 16px; border-radius: 999px; }
+    .nav-cta:hover { text-decoration: none; opacity: 0.9; }
+    .nav-toggle { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px; width: 40px; height: 40px; background: none; border: none; cursor: pointer; padding: 0; flex-shrink: 0; }
+    .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--ink); transition: transform 0.2s ease, opacity 0.2s ease; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 640px) {
+      .nav-toggle { display: flex; }
+      .site-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-top: none;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+      }
+      .site-nav.is-open { display: flex; }
+      .site-nav a { padding: 14px 24px; border-top: 1px solid var(--line); }
+      .nav-cta { border-radius: 0; text-align: center; }
+    }
+
+    .site-footer { border-top: 1px solid var(--line); margin-top: 60px; padding: 40px 0 32px; font-size: 13px; color: var(--muted); }
+    .footer-inner { display: flex; flex-wrap: wrap; gap: 24px 40px; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; }
+    .footer-nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+    .footer-nav a { color: var(--muted); }
+    .footer-social { display: flex; gap: 16px; }
+    .footer-social a { color: var(--muted); }
+    .footer-bottom { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 20px; font-size: 12px; }
   </style>
 </head>
 <body>
-  <header style="border-bottom:1px solid var(--line); background:#fff;">
-    <div class="wrap" style="display:flex; align-items:center; justify-content:space-between; padding-top:16px; padding-bottom:16px;">
-      <a href="/" style="font-family:'Shippori Mincho',serif; font-weight:700; font-size:18px; color:var(--ink);">前貴棋中小企業診断士事務所</a>
-      <nav style="display:flex; gap:20px; font-size:14px;">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="/" class="logo">前貴棋中小企業診断士事務所</a>
+      <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav">
         <a href="/">HOME</a>
         <a href="/blog/">ブログ</a>
         <a href="/yamaguchi-chushokigyo-shindan/">プロフィール</a>
-        <a href="/contact/" style="background:var(--moss); color:#fff; padding:8px 16px; border-radius:999px;">お問い合わせ</a>
+        <a href="/contact/" class="nav-cta">お問い合わせ</a>
       </nav>
     </div>
   </header>
   <main>
     <slot />
   </main>
-  <footer style="border-top:1px solid var(--line); margin-top:60px; padding:32px 0; text-align:center; font-size:12px; color:var(--muted);">
-    <div class="wrap">Copyright &copy; 2023-2026 前貴棋中小企業診断士事務所 All Rights Reserved.</div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-inner">
+        <nav class="footer-nav">
+          <a href="/">HOME</a>
+          <a href="/blog/">ブログ</a>
+          <a href="/yamaguchi-chushokigyo-shindan/">プロフィール</a>
+          <a href="/contact/">お問い合わせ</a>
+          <a href="/privacy-policy/">プライバシーポリシー</a>
+        </nav>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/takakimae672" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.instagram.com/takaki_mae/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>TEL: 080-6307-4502　｜　受付時間: 平日 9:00〜18:00</span>
+        <span>Copyright &copy; 2023-2026 前貴棋中小企業診断士事務所 All Rights Reserved.</span>
+      </div>
+    </div>
   </footer>
+  <script>
+    const navToggle = document.getElementById("nav-toggle");
+    const siteNav = document.getElementById("site-nav");
+    navToggle?.addEventListener("click", () => {
+      const isOpen = siteNav?.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", String(!!isOpen));
+    });
+  </script>
 </body>
 </html>

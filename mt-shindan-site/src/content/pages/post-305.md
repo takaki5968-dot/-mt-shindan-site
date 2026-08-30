@@ -11,7 +11,7 @@ YAMAGUCHI PREFECTURE · SME CONSULTANT
 補助金申請・経営計画・販路開拓を、  
 現場に寄り添いながら一緒に実行します。
 
-[▶ 初回相談（無料）はこちら](#mae-contact)
+[▶ 初回相談（無料）はこちら](#山口県で中小企業診断士への-ご相談をお考えの方へ)
 
 ABOUT
 
@@ -76,6 +76,12 @@ SERVICES
 * SNS活用支援
 * 商品・サービスの強み整理
 
+#### セミナー・研修講師
+
+* 経営改善・補助金活用セミナー
+* 創業サポート講座
+* 生成AI・デジタル活用セミナー
+
 TRACK RECORD
 
 ### セミナー登壇実績（山口県内）
@@ -112,6 +118,6 @@ CONTACT
 
 初回相談 無料
 
-[▶ お問い合わせはこちら](https://mt-shindan.com/お問い合わせフォーム/)
+[▶ お問い合わせはこちら](/contact/)
 [Facebookで活動情報を見る](https://www.facebook.com/takakimae672)
 [Instagramで活動情報を見る](https://www.instagram.com/takaki_mae/)
