@@ -1,0 +1,132 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="無料相談（現状整理）フォーム" description="山口県の中小企業診断士 前貴棋への無料相談お申し込みフォームです。">
+  <div class="wrap" style="padding:40px 0 60px; max-width:640px;">
+    <h1>無料相談（現状整理）フォーム</h1>
+
+    <div class="intro">
+      <p class="intro-main">初回30分の無料相談です。<br />営業目的のご連絡は行いません。</p>
+      <p class="intro-sub">「まだ依頼するか決めていない」という段階でも大丈夫です。<br />現状整理だけでも歓迎しています。</p>
+    </div>
+
+    <form id="contact-form">
+      <input type="hidden" name="access_key" value="af363103-062d-4b58-b2e7-652fc7edaf08" />
+      <input type="hidden" name="subject" value="【mt-shindan.com】無料相談のお申し込みがありました" />
+      <input type="checkbox" name="botcheck" style="display:none;" />
+
+      <div class="field">
+        <label for="your-name">お名前 <span class="req">必須</span></label>
+        <input type="text" id="your-name" name="お名前" required placeholder="例：山田 太郎" />
+      </div>
+
+      <div class="field">
+        <label for="your-email">メールアドレス <span class="req">必須</span></label>
+        <input type="email" id="your-email" name="email" required placeholder="例：yamada@example.com" />
+      </div>
+
+      <div class="field">
+        <label for="your-tel">電話番号 <span class="opt">任意</span></label>
+        <input type="tel" id="your-tel" name="電話番号" placeholder="例：080-1234-5678" />
+      </div>
+
+      <div class="field">
+        <label>ご相談内容（複数選択可） <span class="opt">任意</span></label>
+        <div class="checks">
+          <label><input type="checkbox" name="ご相談内容" value="持続化補助金について相談したい" /> 持続化補助金について相談したい</label>
+          <label><input type="checkbox" name="ご相談内容" value="経営計画を作りたい" /> 経営計画を作りたい</label>
+          <label><input type="checkbox" name="ご相談内容" value="資金繰りを整理したい" /> 資金繰りを整理したい</label>
+          <label><input type="checkbox" name="ご相談内容" value="売上・集客を改善したい" /> 売上・集客を改善したい</label>
+          <label><input type="checkbox" name="ご相談内容" value="まずは話を聞いてみたい" /> まずは話を聞いてみたい</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="your-message">ご相談の概要 <span class="req">必須</span></label>
+        <textarea id="your-message" name="ご相談の概要" required rows="6" placeholder="簡単で構いません。どんな状況か、何に困っているかを教えてください。"></textarea>
+      </div>
+
+      <div class="submit-wrap">
+        <button type="submit" id="submit-btn">無料相談を申し込む →</button>
+        <p class="reassure">通常1営業日以内にご返信いたします。<br />万が一返信が届かない場合は迷惑メールフォルダをご確認ください。</p>
+      </div>
+
+      <div id="form-result" role="status"></div>
+    </form>
+  </div>
+</BaseLayout>
+
+<style>
+  h1 { font-size: 26px; margin-bottom: 8px; }
+  .intro { background: var(--moss-light); border-radius: 10px; padding: 16px 20px; margin-bottom: 28px; font-size: 14px; }
+  .intro-main { font-weight: 700; margin: 0 0 8px; }
+  .intro-sub { margin: 0; color: var(--muted); }
+  .field { margin-bottom: 22px; }
+  label { display: block; font-weight: 700; font-size: 14px; margin-bottom: 6px; }
+  .req { color: var(--coral); font-size: 11px; font-weight: 700; background: #F5E6DF; padding: 2px 8px; border-radius: 999px; margin-left: 4px; }
+  .opt { color: var(--muted); font-size: 11px; font-weight: 700; background: #EFEDE6; padding: 2px 8px; border-radius: 999px; margin-left: 4px; }
+  input[type="text"], input[type="email"], input[type="tel"], textarea {
+    width: 100%; border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px;
+    font-family: inherit; font-size: 14px; background: #fff; box-sizing: border-box;
+  }
+  .checks { display: flex; flex-direction: column; gap: 8px; font-weight: 400; font-size: 14px; }
+  .checks label { display: flex; align-items: center; gap: 8px; font-weight: 400; }
+  .checks input { width: auto; }
+  .submit-wrap { text-align: center; margin-top: 32px; }
+  #submit-btn {
+    background: var(--moss); color: #fff; border: none; padding: 14px 32px;
+    border-radius: 999px; font-size: 16px; font-weight: 700; cursor: pointer; font-family: inherit;
+  }
+  #submit-btn:disabled { opacity: 0.6; cursor: default; }
+  .reassure { font-size: 12px; color: var(--muted); margin-top: 12px; }
+  #form-result { margin-top: 16px; text-align: center; font-size: 14px; font-weight: 600; }
+  #form-result.ok { color: var(--moss); }
+  #form-result.ng { color: var(--coral); }
+</style>
+
+<script>
+  const form = document.getElementById("contact-form") as HTMLFormElement;
+  const resultEl = document.getElementById("form-result") as HTMLDivElement;
+  const btn = document.getElementById("submit-btn") as HTMLButtonElement;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = "送信中...";
+    resultEl.textContent = "";
+    resultEl.className = "";
+
+    const formData = new FormData(form);
+    const object: Record<string, any> = {};
+    formData.forEach((value, key) => {
+      if (key === "ご相談内容") {
+        object[key] = object[key] ? object[key] + ", " + value : value;
+      } else {
+        object[key] = value;
+      }
+    });
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(object),
+      });
+      const json = await res.json();
+      if (json.success) {
+        resultEl.textContent = "ありがとうございます。メッセージは送信されました。";
+        resultEl.className = "ok";
+        form.reset();
+      } else {
+        resultEl.textContent = "メッセージの送信に失敗しました。後でまたお試しください。";
+        resultEl.className = "ng";
+      }
+    } catch {
+      resultEl.textContent = "メッセージの送信に失敗しました。後でまたお試しください。";
+      resultEl.className = "ng";
+    } finally {
+      btn.disabled = false;
+      btn.textContent = "無料相談を申し込む →";
+    }
+  });
+</script>

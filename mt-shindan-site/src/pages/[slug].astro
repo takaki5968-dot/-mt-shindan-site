@@ -5,7 +5,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
   return pages
-    .filter((p) => !["home-2", "blog"].includes(p.data.slug))
+    .filter((p) => !["home-2", "blog", "contact"].includes(p.data.slug))
     .map((p) => ({ params: { slug: p.data.slug }, props: { entry: p } }));
 }
 
