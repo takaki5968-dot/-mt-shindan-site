@@ -173,11 +173,13 @@ date: "2026-03-01 23:12:37"
 経営は一人で抱えるものではありません。地域で頑張る事業者の皆様に寄り添い、一緒に考え、実行していく支援を大切にしています。
 
 <ul class="stat-row">
+<li><span class="stat-num">60件超</span><span class="stat-label">補助金の採択を支援</span></li>
+<li><span class="stat-num">400件</span><span class="stat-label">年間の経営相談対応</span></li>
+<li><span class="stat-num">20回超</span><span class="stat-label">セミナー・研修に登壇</span></li>
 <li><span class="stat-num">9年</span><span class="stat-label">商工会での現場経験</span></li>
-<li><span class="stat-num">認定</span><span class="stat-label">経営革新等支援機関</span></li>
-<li><span class="stat-num">全域</span><span class="stat-label">山口県内どこでも対応</span></li>
-<li><span class="stat-num">無料</span><span class="stat-label">初回相談</span></li>
 </ul>
+
+<p class="stat-note">※相談対応件数は、商工会および山口県よろず支援拠点での対応を含みます。補助金の採択支援件数は、これまでの累計です。</p>
 
 [まずは30分、気軽に相談する →](/contact/)
 
@@ -239,7 +241,7 @@ date: "2026-03-01 23:12:37"
 <div class="faq-list">
 <details>
 <summary>本当に初回相談は無料ですか？あとから請求されませんか？</summary>
-<div class="faq-answer"><p>初回30分のご相談は無料です。この段階で費用が発生することはありません。ご相談のうえで正式な支援が必要と判断された場合のみ、内容と費用をお見積りとしてご提示します。ご検討いただいた結果、お断りいただいても構いません。</p></div>
+<div class="faq-answer"><p>初回30分のご相談は無料です。この段階で費用が発生することはありません。正式なご依頼をいただく前に、必ずお見積りをご提示します。持続化補助金の申請支援は5万円、経営顧問は月5万円からで、目安は<a href="/pricing/">料金のご案内</a>に掲載しています。金額にご納得いただけない場合は、お断りいただいて構いません。</p></div>
 </details>
 
 <details>
