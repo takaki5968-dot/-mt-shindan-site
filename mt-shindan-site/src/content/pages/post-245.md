@@ -19,7 +19,7 @@ date: "2026-03-01 23:12:37"
 </ul>
 </div>
 <figure class="hero-figure">
-<img src="/images/2024/05/IMG_11-scaled-e1716444134963.jpg" alt="中小企業診断士 前 貴棋" />
+<img src="/images/2024/05/IMG_11-scaled-e1716444134963.jpg" alt="中小企業診断士 前 貴棋" loading="eager" />
 <figcaption><strong>前　貴棋</strong><span>中小企業診断士｜MAE TAKAKI</span></figcaption>
 </figure>
 </div>
