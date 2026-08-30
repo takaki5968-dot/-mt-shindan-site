@@ -610,7 +610,10 @@ const orgSchema = {
         });
       }
 
-      const revealAll = () => targets.forEach((t) => t.classList.add("is-in"));
+      // Dropping .js-anim removes the hiding rule outright, so the content is
+      // shown without depending on a transition running. Environments that
+      // never report intersections often don't run transitions either.
+      const abandonReveal = () => document.documentElement.classList.remove("js-anim");
 
       if ("IntersectionObserver" in window) {
         let observerReported = false;
@@ -635,11 +638,11 @@ const orgSchema = {
         setTimeout(() => {
           if (!observerReported) {
             io.disconnect();
-            revealAll();
+            abandonReveal();
           }
         }, 1200);
       } else {
-        revealAll();
+        abandonReveal();
       }
 
       // Count the support figures up when they first come into view. The
