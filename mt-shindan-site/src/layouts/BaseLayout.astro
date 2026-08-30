@@ -106,7 +106,11 @@ const orgSchema = {
     main th, main td { border: 1px solid var(--line); padding: 10px 13px; text-align: left; vertical-align: top; }
     main thead th { background: var(--moss-light); font-weight: 700; color: var(--ink); }
     @media (max-width: 640px) {
-      main table { display: block; overflow-x: auto; }
+      /* Let wide tables scroll inside their own box instead of cramming
+         every column into the viewport width. */
+      main table { display: block; overflow-x: auto; white-space: normal; }
+      main table tbody, main table thead { display: table; width: 100%; min-width: 460px; }
+      main th, main td { padding: 8px 10px; font-size: 13px; }
     }
 
     /* Eyebrow section labels */
