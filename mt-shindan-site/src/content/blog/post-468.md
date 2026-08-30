@@ -2,7 +2,7 @@
 title: "結婚のご報告"
 slug: "marriage"
 date: "2026-06-15 18:15:19"
-categories: ["日常"]
+categories: ["事務所より"]
 description: "このたび、私事ではありますが、本日6月15日に婚姻届を提出し、夫婦となりました。"
 ---
 

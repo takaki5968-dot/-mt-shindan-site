@@ -5,6 +5,27 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 const posts = (await getCollection("blog")).sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
+
+// Display order for the filter chips: the categories a prospective client
+// is most likely to want first, personal posts last.
+const CATEGORY_ORDER = [
+  "補助金",
+  "セミナー・登壇",
+  "経営のヒント",
+  "お知らせ",
+  "事務所より",
+  "読書",
+];
+
+const counts = new Map<string, number>();
+for (const post of posts) {
+  for (const cat of post.data.categories ?? []) {
+    counts.set(cat, (counts.get(cat) ?? 0) + 1);
+  }
+}
+const categories = [...counts.keys()].sort(
+  (a, b) => CATEGORY_ORDER.indexOf(a) - CATEGORY_ORDER.indexOf(b)
+);
 ---
 <BaseLayout
   title="ブログ"
@@ -13,21 +34,90 @@ const posts = (await getCollection("blog")).sort(
 >
   <div class="wrap" style="padding:40px 0 60px;">
     <h1>ブログ</h1>
-    <div style="display:flex; flex-direction:column; gap:16px; margin-top:24px;">
+
+    <div class="filters" role="group" aria-label="カテゴリで絞り込む">
+      <button type="button" class="chip is-active" data-cat="all" aria-pressed="true">
+        すべて<span class="count">{posts.length}</span>
+      </button>
+      {categories.map((cat) => (
+        <button type="button" class="chip" data-cat={cat} aria-pressed="false">
+          {cat}<span class="count">{counts.get(cat)}</span>
+        </button>
+      ))}
+    </div>
+
+    <p class="result-count" aria-live="polite"></p>
+
+    <div class="post-list">
       {posts.map((post) => (
         <a
+          class="post-card"
           href={`/blog/${post.data.slug}/`}
-          style="display:block; background:#fff; border:1px solid var(--line); border-radius:10px; padding:18px 20px;"
+          data-cats={(post.data.categories ?? []).join("|")}
         >
-          <div style="font-size:12px; color:var(--muted); font-family:'JetBrains Mono',monospace;">
+          <div class="post-meta">
             {new Date(post.data.date).toLocaleDateString("ja-JP")}
             {post.data.categories?.length ? ` ・ ${post.data.categories.join(", ")}` : ""}
           </div>
-          <div style="font-weight:700; font-size:16px; margin-top:4px; color:var(--ink);">
-            {post.data.title}
-          </div>
+          <div class="post-title">{post.data.title}</div>
         </a>
       ))}
     </div>
   </div>
 </BaseLayout>
+
+<style>
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 8px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: inherit; font-size: 13px; font-weight: 700;
+    background: #fff; color: var(--muted);
+    border: 1px solid var(--line); border-radius: 999px;
+    padding: 7px 14px; cursor: pointer;
+  }
+  .chip:hover { border-color: var(--moss); color: var(--moss); }
+  .chip.is-active { background: var(--moss); border-color: var(--moss); color: #fff; }
+  .chip .count { font-family: 'JetBrains Mono', monospace; font-size: 11px; opacity: 0.75; }
+  .result-count { font-size: 12px; color: var(--muted); margin: 8px 0 0; min-height: 1.2em; }
+
+  .post-list { display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+  .post-card {
+    display: block; background: #fff; border: 1px solid var(--line);
+    border-radius: 10px; padding: 18px 20px;
+  }
+  .post-card:hover { border-color: var(--moss); text-decoration: none; }
+  .post-card[hidden] { display: none; }
+  .post-meta { font-size: 12px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+  .post-title { font-weight: 700; font-size: 16px; margin-top: 4px; color: var(--ink); }
+</style>
+
+<script>
+  const chips = document.querySelectorAll<HTMLButtonElement>(".chip");
+  const cards = document.querySelectorAll<HTMLAnchorElement>(".post-card");
+  const resultCount = document.querySelector<HTMLParagraphElement>(".result-count");
+
+  chips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      const selected = chip.dataset.cat;
+
+      chips.forEach((c) => {
+        const active = c === chip;
+        c.classList.toggle("is-active", active);
+        c.setAttribute("aria-pressed", String(active));
+      });
+
+      let shown = 0;
+      cards.forEach((card) => {
+        const cats = (card.dataset.cats ?? "").split("|");
+        const match = selected === "all" || cats.includes(selected!);
+        card.hidden = !match;
+        if (match) shown++;
+      });
+
+      if (resultCount) {
+        resultCount.textContent =
+          selected === "all" ? "" : `「${selected}」の記事 ${shown}件を表示中`;
+      }
+    });
+  });
+</script>

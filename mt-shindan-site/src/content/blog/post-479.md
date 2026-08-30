@@ -2,7 +2,7 @@
 title: "自社サイトを3ヶ月間、Claudeと一緒に改善してみた話"
 slug: "claude-website-review"
 date: "2026-07-07 18:00:00"
-categories: ["お仕事"]
+categories: ["事務所より"]
 description: "このサイト(mt-shindan.com)は、独立した際にワードプレスで自分なりに作ったものでした。ただ、日々の業務に追われる中で更新の手が回らず、気づけば長い間放置してしまっている状態が続いていました。"
 ---
 

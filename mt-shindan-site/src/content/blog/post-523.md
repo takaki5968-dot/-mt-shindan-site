@@ -2,7 +2,7 @@
 title: "「めっちゃカメレオン」に学ぶ、小さくても勝てる理由"
 slug: "mecha-chameleon-business-lesson"
 date: "2026-08-11 18:00:00"
-categories: ["Uncategorized"]
+categories: ["経営のヒント"]
 description: "発売2週間で1000万本を突破した「めっちゃカメレオン」。爆発的なヒットの背景を、中小企業診断士の視点から「なぜここまで広がったのか」という仕組みの面で読み解きます。"
 ---
 

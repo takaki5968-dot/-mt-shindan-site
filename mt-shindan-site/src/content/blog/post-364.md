@@ -2,7 +2,7 @@
 title: "ライバルは何社？データで導き出す開業戦略セミナー開催レポート【RESAS × jSTATMAP × Googleマップ × ChatGPT】"
 slug: "resas-jstatmap-seminar"
 date: "2026-04-25 18:00:00"
-categories: ["お仕事"]
+categories: ["セミナー・登壇"]
 description: "山口県よろず支援拠点のコーディネーターとして、「ライバルは何社？データで導き出す開業戦略」 と題したオンラインセミナーを開催しました。"
 ---
 

@@ -2,7 +2,7 @@
 title: "お客様は「商品」でなく「物語」を買っている——『イン・ザ・メガチャーチ』に学ぶチャーチマーケティング"
 slug: "oshikatsu-market-megachurch"
 date: "2026-08-03 18:00:00"
-categories: ["Uncategorized"]
+categories: ["経営のヒント"]
 description: "推しのライブチケットを気づけば複数公演分申し込んでいたり、限定グッズを見つけると理由をつけて手が伸びてしまったり——そんな経験、ありませんか？"
 ---
 
