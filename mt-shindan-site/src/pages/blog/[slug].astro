@@ -9,6 +9,48 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+
+// Which service to point a reader at, based on the post's category.
+// Posts in personal categories (事務所より / 読書) get the generic invitation.
+const SERVICE_BY_CATEGORY: Record<
+  string,
+  { href: string; name: string; pitch: string }
+> = {
+  補助金: {
+    href: "/subsidy-support/",
+    name: "補助金申請支援",
+    pitch:
+      "持続化補助金・ものづくり補助金など、事業に合った制度の選定から事業計画書の作成、申請手続きまでサポートします。",
+  },
+  "セミナー・登壇": {
+    href: "/seminar/",
+    name: "セミナー・研修講師",
+    pitch:
+      "商工会・商工会議所や事業者団体からのご依頼を承っています。テーマ・対象者・時間に合わせてご提案します。",
+  },
+  経営のヒント: {
+    href: "/marketing-support/",
+    name: "マーケティング支援",
+    pitch:
+      "「誰に・何を・どう伝えるか」を整理し、売上と集客につながる仕組みを一緒に作ります。SNS・生成AIの活用にも対応します。",
+  },
+  お知らせ: {
+    href: "/yamaguchi-chushokigyo-shindan/",
+    name: "プロフィール",
+    pitch:
+      "商工会経営指導員として9年間、地域の事業者と向き合ってきました。これまでの経歴と支援方針をご覧いただけます。",
+  },
+};
+
+const DEFAULT_SERVICE = {
+  href: "/business-plan/",
+  name: "経営計画策定支援",
+  pitch:
+    "現状の整理から数値計画づくりまで、「経営の羅針盤」となる事業計画を対話しながら一緒に作ります。",
+};
+
+const category = entry.data.categories?.[0] ?? "";
+const service = SERVICE_BY_CATEGORY[category] ?? DEFAULT_SERVICE;
 ---
 <BaseLayout
   title={entry.data.title}
@@ -17,7 +59,7 @@ const { Content } = await render(entry);
   ogType="article"
 >
   <div class="wrap" style="padding:40px 0 60px; max-width:760px;">
-    <div style="font-size:12px; color:var(--muted); font-family:'JetBrains Mono',monospace;">
+    <div class="post-meta">
       {new Date(entry.data.date).toLocaleDateString("ja-JP")}
       {entry.data.categories?.length ? ` ・ ${entry.data.categories.join(", ")}` : ""}
     </div>
@@ -25,13 +67,60 @@ const { Content } = await render(entry);
     <article class="prose">
       <Content />
     </article>
-    <div style="margin-top:40px;">
+
+    <aside class="post-cta">
+      <p class="post-cta-eyebrow">関連するサービス</p>
+      <h2>{service.name}</h2>
+      <p class="post-cta-pitch">{service.pitch}</p>
+      <div class="post-cta-actions">
+        <a class="btn-primary" href="/contact/">無料相談を申し込む →</a>
+        <a class="btn-ghost" href={service.href}>{service.name}を見る</a>
+      </div>
+      <p class="post-cta-note">初回30分のご相談は無料です。営業目的のご連絡は行いません。</p>
+    </aside>
+
+    <div style="margin-top:32px;">
       <a href="/blog/">← ブログ一覧に戻る</a>
     </div>
   </div>
 </BaseLayout>
 
 <style>
+  .post-meta { font-size: 12px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
   .prose :global(h2) { font-size: 22px; margin-top: 32px; border-left: 4px solid var(--gold); padding-left: 12px; }
   .prose :global(a) { color: var(--moss); font-weight: 600; }
+
+  .post-cta {
+    margin-top: 48px;
+    background: var(--moss-light);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 26px 28px;
+  }
+  .post-cta-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 8px;
+  }
+  .post-cta h2 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    border: none;
+    padding: 0;
+  }
+  .post-cta-pitch { font-size: 14px; color: var(--muted); margin: 0 0 18px; }
+  .post-cta-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn-primary,
+  .btn-ghost {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 11px 22px; border-radius: 999px;
+    font-size: 14px; font-weight: 700; white-space: nowrap;
+  }
+  .btn-primary { background: var(--moss); color: #fff; }
+  .btn-ghost { background: #fff; color: var(--moss); border: 1px solid var(--moss); }
+  .btn-primary:hover, .btn-ghost:hover { text-decoration: none; opacity: 0.9; }
+  .post-cta-note { font-size: 12px; color: var(--muted); margin: 14px 0 0; }
 </style>

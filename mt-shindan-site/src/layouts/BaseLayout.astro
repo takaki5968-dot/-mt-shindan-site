@@ -174,8 +174,11 @@ const orgSchema = {
     .card-num { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: var(--gold-light); color: var(--gold); font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 13px; }
     .card-tag { display: inline-block; align-self: flex-start; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: var(--moss); background: var(--moss-light); padding: 3px 10px; border-radius: 999px; }
     .card-body h3 { font-size: 17px; margin: 0; font-family: 'Shippori Mincho', serif; }
-    .card-body p { font-size: 14px; color: var(--muted); margin: 0; flex: 1; }
-    .card-link { font-size: 13px; font-weight: 700; }
+    .card-body p { font-size: 14px; color: var(--muted); margin: 0; }
+    .card-body ul { margin: 0; padding-left: 18px; font-size: 13px; color: var(--muted); }
+    .card-body ul li { margin-bottom: 3px; }
+    .card-body > p:last-of-type:not(:last-child) { flex: 0; }
+    .card-link { font-size: 13px; font-weight: 700; margin-top: auto; }
 
     /* How it works timeline */
     .timeline { list-style: none; padding: 0; margin: 32px 0; }
