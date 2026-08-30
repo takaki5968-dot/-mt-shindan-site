@@ -1,0 +1,6 @@
+name = "mt-shindan-site"
+compatibility_date = "2026-01-01"
+main = "src/index.ts"
+
+[assets]
+directory = "./mt-shindan-site/dist"
