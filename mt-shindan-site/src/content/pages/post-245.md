@@ -49,7 +49,7 @@ date: "2026-03-01 23:12:37"
 
 <ul class="card-grid" style="--cols:3;">
 <li class="card">
-<div class="card-media"><img src="/images/2026/07/PKU4161360PAR58401_TP_V.jpg" alt="経営相談の様子" /></div>
+<div class="card-media"><img src="/images/2026/07/PKU4161360PAR58401_TP_V.jpg" alt="経営相談の様子" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <span class="card-num">01</span>
 <h3>商工会で9年間の経営支援経験</h3>
@@ -57,7 +57,7 @@ date: "2026-03-01 23:12:37"
 </div>
 </li>
 <li class="card">
-<div class="card-media"><img src="/images/2026/07/kaigiPAKE9187_TP_V.jpg" alt="補助金書類の作成" /></div>
+<div class="card-media"><img src="/images/2026/07/kaigiPAKE9187_TP_V.jpg" alt="補助金書類の作成" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <span class="card-num">02</span>
 <h3>補助金だけで終わらない支援</h3>
@@ -65,7 +65,7 @@ date: "2026-03-01 23:12:37"
 </div>
 </li>
 <li class="card">
-<div class="card-media"><img src="/images/2026/07/PKU4151345PAR58348_TP_V.jpg" alt="わかりやすい説明" /></div>
+<div class="card-media"><img src="/images/2026/07/PKU4151345PAR58348_TP_V.jpg" alt="わかりやすい説明" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <span class="card-num">03</span>
 <h3>専門用語を使わない分かりやすい説明</h3>
@@ -82,7 +82,7 @@ date: "2026-03-01 23:12:37"
 
 <ul class="card-grid" style="--cols:4;">
 <li class="card">
-<div class="card-media"><img src="/images/2026/07/kaigiPAKE9187_TP_V.jpg" alt="補助金申請支援" /></div>
+<div class="card-media"><img src="/images/2026/07/kaigiPAKE9187_TP_V.jpg" alt="補助金申請支援" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <span class="card-tag">SUBSIDY</span>
 <h3>補助金申請支援</h3>
@@ -91,7 +91,7 @@ date: "2026-03-01 23:12:37"
 </div>
 </li>
 <li class="card">
-<div class="card-media"><img src="/images/2026/07/gori_5106134_TP_V.jpg" alt="経営計画策定支援" style="object-position: center 35%;" /></div>
+<div class="card-media"><img src="/images/2026/07/gori_5106134_TP_V.jpg" alt="経営計画策定支援" style="object-position: center 35%;" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <span class="card-tag">CONSULTING</span>
 <h3>経営計画策定支援</h3>
@@ -100,7 +100,7 @@ date: "2026-03-01 23:12:37"
 </div>
 </li>
 <li class="card">
-<div class="card-media"><img src="/images/2026/07/21830aIMGL00331942_TP_V.jpg" alt="マーケティング支援" /></div>
+<div class="card-media"><img src="/images/2026/07/21830aIMGL00331942_TP_V.jpg" alt="マーケティング支援" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <span class="card-tag">MARKETING</span>
 <h3>マーケティング支援</h3>
@@ -109,7 +109,7 @@ date: "2026-03-01 23:12:37"
 </div>
 </li>
 <li class="card">
-<div class="card-media"><img src="/images/2026/07/fk-010A0838_TP_V.jpg" alt="セミナー・研修講師" /></div>
+<div class="card-media"><img src="/images/2026/07/fk-010A0838_TP_V.jpg" alt="セミナー・研修講師" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <span class="card-tag">SEMINAR</span>
 <h3>セミナー・研修講師</h3>
@@ -125,21 +125,21 @@ date: "2026-03-01 23:12:37"
 
 <ul class="card-grid" style="--cols:3;">
 <li class="card">
-<div class="card-media is-3-2"><img src="/images/2026/07/ogasuta458A7822_TP_V.jpg" alt="飲食業" /></div>
+<div class="card-media is-3-2"><img src="/images/2026/07/ogasuta458A7822_TP_V.jpg" alt="飲食業" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <h3>飲食業</h3>
 <p>補助金活用による店舗改善で集客力向上</p>
 </div>
 </li>
 <li class="card">
-<div class="card-media is-3-2"><img src="/images/2026/07/pakuphoto39908PAR57370_TP_V.jpg" alt="建設業" /></div>
+<div class="card-media is-3-2"><img src="/images/2026/07/pakuphoto39908PAR57370_TP_V.jpg" alt="建設業" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <h3>建設業</h3>
 <p>資金繰り整理により経営不安を解消</p>
 </div>
 </li>
 <li class="card">
-<div class="card-media is-3-2"><img src="/images/2026/07/PK-PAUI8335_TP_V.jpg" alt="小売業" /></div>
+<div class="card-media is-3-2"><img src="/images/2026/07/PK-PAUI8335_TP_V.jpg" alt="小売業" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <h3>小売業</h3>
 <p>販路開拓支援により売上増加</p>
@@ -185,7 +185,7 @@ date: "2026-03-01 23:12:37"
 
 <ol class="timeline">
 <li>
-<div class="step-icon"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=160&q=75" alt="お問い合わせ" /></div>
+<div class="step-icon"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=160&q=75" alt="お問い合わせ" loading="lazy" decoding="async" /></div>
 <div class="step-body">
 <span class="step-num">01</span>
 <h4>お問い合わせフォームからご連絡（約1分）</h4>
@@ -193,7 +193,7 @@ date: "2026-03-01 23:12:37"
 </div>
 </li>
 <li>
-<div class="step-icon"><img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=160&q=75" alt="日程調整" /></div>
+<div class="step-icon"><img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=160&q=75" alt="日程調整" loading="lazy" decoding="async" /></div>
 <div class="step-body">
 <span class="step-num">02</span>
 <h4>日程調整</h4>
@@ -201,7 +201,7 @@ date: "2026-03-01 23:12:37"
 </div>
 </li>
 <li>
-<div class="step-icon"><img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=160&q=75" alt="オンライン相談" /></div>
+<div class="step-icon"><img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=160&q=75" alt="オンライン相談" loading="lazy" decoding="async" /></div>
 <div class="step-body">
 <span class="step-num">03</span>
 <h4>初回30分 無料相談（オンライン・対面可）</h4>
@@ -209,7 +209,7 @@ date: "2026-03-01 23:12:37"
 </div>
 </li>
 <li>
-<div class="step-icon"><img src="/images/2026/07/PK4131315PAR58142_TP_V.jpg" alt="支援提案" /></div>
+<div class="step-icon"><img src="/images/2026/07/PK4131315PAR58142_TP_V.jpg" alt="支援提案" loading="lazy" decoding="async" /></div>
 <div class="step-body">
 <span class="step-num">04</span>
 <h4>必要な場合のみ正式な支援をご提案</h4>
