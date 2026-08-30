@@ -173,8 +173,9 @@ const orgSchema = {
     .band--dark { background: var(--moss); color: #E9EDE6; }
     .band--dark h2,
     .band--dark h3 { color: #fff; }
-    .band--dark .eyebrow { color: #C6A87B; }
-    .band--dark h2 { border-left-color: #C6A87B; }
+    /* #C6A87B only reached 3.3:1 on the moss ground; this clears 4.5:1. */
+    .band--dark .eyebrow { color: #DCC49B; }
+    .band--dark h2 { border-left-color: #DCC49B; }
     .band--dark a { color: #fff; }
     .band--dark strong { color: #fff; }
     @media (max-width: 640px) { .band { padding: 52px 0; } }
