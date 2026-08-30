@@ -4,6 +4,9 @@ slug: "home-2"
 date: "2026-03-01 23:12:37"
 ---
 
+<section class="band">
+<div class="wrap">
+
 <div class="hero">
 <div class="hero-body">
 <p class="hero-eyebrow">山口県の小規模事業者のための伴走型支援</p>
@@ -24,6 +27,12 @@ date: "2026-03-01 23:12:37"
 </figure>
 </div>
 
+</div>
+</section>
+
+<section class="band band--paper">
+<div class="wrap">
+
 <p class="eyebrow">Your Concerns</p>
 
 ## このようなお悩みはありませんか？
@@ -42,6 +51,12 @@ date: "2026-03-01 23:12:37"
 [補助金について相談してみる →](/contact/)
 
 初回相談は無料です。営業目的のご連絡は行いません。
+
+</div>
+</section>
+
+<section class="band">
+<div class="wrap">
 
 <p class="eyebrow">Why choose us</p>
 
@@ -149,6 +164,12 @@ date: "2026-03-01 23:12:37"
 
 ※守秘義務のため内容は一部調整しています。
 
+</div>
+</section>
+
+<section class="band band--tint">
+<div class="wrap">
+
 <p class="eyebrow">About</p>
 
 ## 前　貴棋について
@@ -178,6 +199,12 @@ date: "2026-03-01 23:12:37"
 [まずは30分、気軽に相談する →](/contact/)
 
 無理な営業は行いません。小さなことでも構いません。
+
+</div>
+</section>
+
+<section class="band">
+<div class="wrap">
 
 <p class="eyebrow">How It Works</p>
 
@@ -217,6 +244,12 @@ date: "2026-03-01 23:12:37"
 </div>
 </li>
 </ol>
+
+</div>
+</section>
+
+<section class="band band--paper">
+<div class="wrap">
 
 <p class="eyebrow">Credentials</p>
 
@@ -264,15 +297,21 @@ date: "2026-03-01 23:12:37"
 </details>
 </div>
 
+</div>
+</section>
+
+<section class="band band--dark">
+<div class="wrap">
+
 <p class="eyebrow">Contact</p>
 
 ## 経営の悩みは、一人で抱えずご相談ください。
 
-「ちょっと聞いてみたい」という段階でも大丈夫です。  
-初回相談は無料です。現状整理だけでも歓迎しています。
+「ちょっと聞いてみたい」という段階でも大丈夫です。初回相談は無料です。現状整理だけでも歓迎しています。
 
-[まずは30分、気軽に相談する →](/contact/)
-[補助金の相談をする →](/contact/)
+<p class="contact-actions"><a href="/contact/">まずは30分、気軽に相談する →</a><a href="/contact/">補助金の相談をする</a></p>
 
-TEL: 080-6307-4502　｜　受付時間: 平日 9:00〜18:00  
-営業目的のご連絡は行いません。
+<p class="contact-note">TEL: 080-6307-4502　｜　受付時間: 平日 9:00〜18:00<br />営業目的のご連絡は行いません。</p>
+
+</div>
+</section>

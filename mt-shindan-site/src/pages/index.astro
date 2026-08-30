@@ -51,16 +51,16 @@ const faqSchema = {
   description="山口県の小規模事業者を支援する中小企業診断士。商工会経営指導員として9年間の現場経験をもとに、持続化補助金などの申請支援から経営計画づくり・販路開拓まで伴走します。初回相談無料。"
 >
   <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} slot="head" />
-  <div class="wrap" style="padding:40px 0 60px;">
-    <article class="prose">
-      <Content />
-    </article>
-  </div>
+  {/* No wrapper here: each band in the content is full-bleed and supplies
+      its own .wrap, so the backgrounds can run edge to edge. */}
+  <article class="prose">
+    <Content />
+  </article>
 </BaseLayout>
 
 <style>
-  .prose :global(h1) { font-size: 32px; margin-top: 24px; }
-  .prose :global(h2) { font-size: 24px; margin-top: 40px; border-left: 4px solid var(--gold); padding-left: 12px; }
-  .prose :global(a) { color: var(--moss); font-weight: 600; }
+  .prose :global(h1) { font-size: 32px; margin-top: 0; }
+  .prose :global(h2) { font-size: 24px; margin-top: 0; border-left: 4px solid var(--gold); padding-left: 12px; }
+  .prose :global(.band > .wrap > *:first-child) { margin-top: 0; }
   .prose :global(ul) { padding-left: 20px; }
 </style>

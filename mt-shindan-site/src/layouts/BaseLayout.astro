@@ -162,6 +162,37 @@ const orgSchema = {
       main th, main td { padding: 8px 10px; font-size: 13px; }
     }
 
+    /* ---- Full-bleed section bands --------------------------------------
+       Bands mark shifts in what the page is doing — "here is your problem",
+       "here is the person", "here is how to start" — rather than alternating
+       on every heading, which reads as stripes. */
+    .band { padding: 72px 0; }
+    .band:first-child { padding-top: 40px; }
+    .band--paper { background: #fff; }
+    .band--tint { background: var(--moss-light); }
+    .band--dark { background: var(--moss); color: #E9EDE6; }
+    .band--dark h2,
+    .band--dark h3 { color: #fff; }
+    .band--dark .eyebrow { color: #C6A87B; }
+    .band--dark h2 { border-left-color: #C6A87B; }
+    .band--dark a { color: #fff; }
+    .band--dark strong { color: #fff; }
+    @media (max-width: 640px) { .band { padding: 52px 0; } }
+
+    /* The closing band turns its two links into buttons. */
+    .band--dark .contact-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 26px 0 22px; }
+    .band--dark .contact-actions a {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 14px 28px; border-radius: 999px;
+      font-size: 14.5px; font-weight: 700; white-space: nowrap;
+      transition: transform 0.3s var(--ease), background 0.3s var(--ease);
+    }
+    .band--dark .contact-actions a:hover { text-decoration: none; transform: translateY(-2px); }
+    .band--dark .contact-actions a:first-child { background: #fff; color: var(--moss); }
+    .band--dark .contact-actions a:last-child { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.55); }
+    .band--dark .contact-actions a:last-child:hover { background: rgba(255,255,255,0.12); }
+    .band--dark .contact-note { font-size: 13.5px; color: #C3CFC4; margin: 0; }
+
     /* Eyebrow section labels */
     .eyebrow { display: block; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin: 0 0 8px; }
 
