@@ -4,31 +4,25 @@ slug: "home-2"
 date: "2026-03-01 23:12:37"
 ---
 
-山口県の小規模事業者のための伴走型支援
-
+<div class="hero">
+<div class="hero-body">
+<p class="hero-eyebrow">山口県の小規模事業者のための伴走型支援</p>
 <p class="hero-catch">補助金も、経営計画も。まずは「元・商工会」の中小企業診断士に、話してみませんか。</p>
-
-# あなたの事業の 一歩先を、 ともに歩む。
-
-商工会経営指導員として9年間、地域事業者の経営相談に携わってきた  
-中小企業診断士が、経営計画づくりから実行まで現場目線でサポートします。
-
-[無料相談で現状を整理する →](/contact/)
-[サービスを見る](#サービス内容)
-
-初回相談は無料です。現状整理だけでも歓迎しています。
-
+<h1>あなたの事業の 一歩先を、 ともに歩む。</h1>
+<p class="hero-sub">商工会経営指導員として9年間、地域事業者の経営相談に携わってきた中小企業診断士が、経営計画づくりから実行まで現場目線でサポートします。</p>
+<p class="hero-actions"><a href="/contact/">無料相談で現状を整理する →</a><a href="#サービス内容">サービスを見る</a></p>
+<p class="hero-note">初回相談は無料です。現状整理だけでも歓迎しています。</p>
 <ul class="trust-badges">
 <li>初回相談無料</li>
 <li>認定経営革新等支援機関</li>
 <li>山口県よろず支援拠点</li>
 </ul>
-
-![前 貴棋 中小企業診断士](/images/2024/05/IMG_11-scaled-e1716444134963.jpg)
-
-前　貴棋
-
-中小企業診断士｜MAE TAKAKI
+</div>
+<figure class="hero-figure">
+<img src="/images/2024/05/IMG_11-scaled-e1716444134963.jpg" alt="中小企業診断士 前 貴棋" />
+<figcaption><strong>前　貴棋</strong><span>中小企業診断士｜MAE TAKAKI</span></figcaption>
+</figure>
+</div>
 
 <p class="eyebrow">Your Concerns</p>
 
