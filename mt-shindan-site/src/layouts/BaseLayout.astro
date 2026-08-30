@@ -104,6 +104,44 @@ const orgSchema = {
     /* Eyebrow section labels */
     .eyebrow { display: block; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin: 0 0 8px; }
 
+    /* Hero catch copy, sits above the H1 */
+    .hero-catch {
+      font-family: 'Shippori Mincho', serif;
+      font-size: clamp(17px, 2.4vw, 21px);
+      font-weight: 700;
+      line-height: 1.6;
+      color: var(--moss);
+      margin: 4px 0 12px;
+      text-wrap: balance;
+    }
+
+    /* 経営理念 */
+    .credo {
+      background: var(--moss-light);
+      border-left: 4px solid var(--moss);
+      border-radius: 0 12px 12px 0;
+      padding: 22px 26px;
+      margin: 28px 0;
+    }
+    .credo .credo-label {
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .credo p {
+      font-family: 'Shippori Mincho', serif;
+      font-size: clamp(18px, 2.6vw, 22px);
+      font-weight: 700;
+      line-height: 1.6;
+      color: var(--ink);
+      margin: 0;
+      text-wrap: balance;
+    }
+
     /* Hero trust badges */
     .trust-badges { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 0; padding: 0; list-style: none; }
     .trust-badges li { display: inline-flex; align-items: center; background: var(--moss-light); color: var(--moss); border: 1px solid var(--line); padding: 6px 16px; border-radius: 999px; font-size: 12px; font-weight: 700; }
