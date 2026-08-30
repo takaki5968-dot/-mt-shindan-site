@@ -6,8 +6,8 @@ const posts = (await getCollection("blog")).sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
 
-// Display order for the filter chips: the categories a prospective client
-// is most likely to want first, personal posts last.
+// Display order for the filter chips: what a prospective client is most
+// likely to want first, personal posts last.
 const CATEGORY_ORDER = [
   "補助金",
   "セミナー・登壇",
@@ -26,6 +26,13 @@ for (const post of posts) {
 const categories = [...counts.keys()].sort(
   (a, b) => CATEGORY_ORDER.indexOf(a) - CATEGORY_ORDER.indexOf(b)
 );
+
+const [featured, ...rest] = posts;
+// Everything past this point starts hidden behind 「もっと見る」 so the page
+// doesn't open as 18 screens of scrolling.
+const INITIAL_VISIBLE = 11;
+
+const fmt = (d: string) => new Date(d).toLocaleDateString("ja-JP");
 ---
 <BaseLayout
   title="ブログ"
@@ -33,7 +40,13 @@ const categories = [...counts.keys()].sort(
   description="補助金の最新情報、経営計画の作り方、セミナー登壇レポートなど。山口県の中小企業診断士が現場で得た知見を発信しています。"
 >
   <div class="wrap" style="padding:40px 0 60px;">
-    <h1>ブログ</h1>
+    <p class="eyebrow">Blog</p>
+    <h1>経営お役立ちブログ</h1>
+    <p class="blog-intro">
+      補助金の締切や変更点、経営計画の作り方、セミナーの開催レポートなど、
+      山口県の現場で見聞きしたことを書いています。制度の情報は、公募要領を確認したうえで、
+      できるだけ「いつまでに何をすればよいか」が分かる形でまとめるようにしています。
+    </p>
 
     <div class="filters" role="group" aria-label="カテゴリで絞り込む">
       <button type="button" class="chip is-active" data-cat="all" aria-pressed="true">
@@ -48,26 +61,67 @@ const categories = [...counts.keys()].sort(
 
     <p class="result-count" aria-live="polite"></p>
 
-    <div class="post-list">
-      {posts.map((post) => (
+    <a
+      class="featured"
+      href={`/blog/${featured.data.slug}/`}
+      data-cats={(featured.data.categories ?? []).join("|")}
+    >
+      <span class="featured-flag">最新の記事</span>
+      <span class="post-meta">
+        {fmt(featured.data.date)}
+        {featured.data.categories?.length ? ` ・ ${featured.data.categories.join(", ")}` : ""}
+      </span>
+      <span class="featured-title">{featured.data.title}</span>
+      {featured.data.description && (
+        <span class="featured-excerpt">{featured.data.description}</span>
+      )}
+      <span class="featured-more">続きを読む →</span>
+    </a>
+
+    <div class="post-grid">
+      {rest.map((post, i) => (
         <a
           class="post-card"
           href={`/blog/${post.data.slug}/`}
           data-cats={(post.data.categories ?? []).join("|")}
+          data-index={i}
+          hidden={i >= INITIAL_VISIBLE}
         >
-          <div class="post-meta">
-            {new Date(post.data.date).toLocaleDateString("ja-JP")}
+          <span class="post-meta">
+            {fmt(post.data.date)}
             {post.data.categories?.length ? ` ・ ${post.data.categories.join(", ")}` : ""}
-          </div>
-          <div class="post-title">{post.data.title}</div>
+          </span>
+          <span class="post-title">{post.data.title}</span>
+          {post.data.description && (
+            <span class="post-excerpt">{post.data.description}</span>
+          )}
         </a>
       ))}
     </div>
+
+    <div class="more-wrap">
+      <button type="button" id="load-more">
+        過去の記事をもっと見る（残り{Math.max(rest.length - INITIAL_VISIBLE, 0)}件）
+      </button>
+    </div>
+
+    <aside class="blog-cta">
+      <p class="blog-cta-eyebrow">記事では書ききれないこと</p>
+      <h2>個別のご相談は無料でお受けしています</h2>
+      <p>補助金が自社に使えるか、計画をどう書き始めるか。記事の内容について「うちの場合はどうなのか」と思われたら、そのままお持ちください。初回30分は無料です。</p>
+      <div class="blog-cta-actions">
+        <a class="btn-primary" href="/contact/">無料相談を申し込む →</a>
+        <a class="btn-ghost" href="/pricing/">料金を見る</a>
+      </div>
+    </aside>
   </div>
 </BaseLayout>
 
 <style>
-  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 8px; }
+  h1 { font-size: 30px; margin: 0 0 14px; }
+  .blog-intro { color: var(--muted); font-size: 14.5px; max-width: 62ch; margin: 0 0 24px; }
+
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 8px; }
   .chip {
     display: inline-flex; align-items: center; gap: 6px;
     font-family: inherit; font-size: 13px; font-weight: 700;
@@ -80,44 +134,148 @@ const categories = [...counts.keys()].sort(
   .chip .count { font-family: 'JetBrains Mono', monospace; font-size: 11px; opacity: 0.75; }
   .result-count { font-size: 12px; color: var(--muted); margin: 8px 0 0; min-height: 1.2em; }
 
-  .post-list { display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+  .post-meta { font-size: 12px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+
+  .featured {
+    display: block; background: var(--moss-light);
+    border: 1px solid var(--line); border-radius: 14px;
+    padding: 26px 28px; margin: 16px 0 20px;
+  }
+  .featured:hover { border-color: var(--moss); text-decoration: none; }
+  .featured[hidden] { display: none; }
+  .featured-flag {
+    display: inline-block; font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px; letter-spacing: 0.08em; font-weight: 600;
+    background: var(--moss); color: #fff;
+    padding: 3px 10px; border-radius: 999px; margin-bottom: 12px;
+  }
+  .featured .post-meta { display: block; margin-bottom: 4px; }
+  .featured-title {
+    display: block; font-family: 'Shippori Mincho', serif;
+    font-size: 22px; font-weight: 700; color: var(--ink); line-height: 1.5;
+  }
+  .featured-excerpt {
+    display: block; font-size: 14px; color: var(--muted);
+    margin-top: 10px; line-height: 1.8;
+  }
+  .featured-more {
+    display: inline-block; margin-top: 14px;
+    font-size: 13px; font-weight: 700; color: var(--moss);
+  }
+
+  .post-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 700px) { .post-grid { grid-template-columns: 1fr; } }
   .post-card {
-    display: block; background: #fff; border: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 4px;
+    background: #fff; border: 1px solid var(--line);
     border-radius: 10px; padding: 18px 20px;
   }
   .post-card:hover { border-color: var(--moss); text-decoration: none; }
   .post-card[hidden] { display: none; }
-  .post-meta { font-size: 12px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
-  .post-title { font-weight: 700; font-size: 16px; margin-top: 4px; color: var(--ink); }
+  .post-title { font-weight: 700; font-size: 15.5px; color: var(--ink); line-height: 1.6; }
+  .post-excerpt {
+    font-size: 13px; color: var(--muted); line-height: 1.75; margin-top: 2px;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+  }
+
+  .more-wrap { text-align: center; margin: 26px 0 0; }
+  #load-more {
+    font-family: inherit; font-size: 14px; font-weight: 700;
+    background: #fff; color: var(--moss); border: 1px solid var(--moss);
+    border-radius: 999px; padding: 12px 28px; cursor: pointer;
+  }
+  #load-more:hover { background: var(--moss-light); }
+  #load-more[hidden] { display: none; }
+
+  .blog-cta {
+    margin-top: 48px; background: #fff;
+    border: 1px solid var(--line); border-radius: 14px; padding: 26px 28px;
+  }
+  .blog-cta-eyebrow {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin: 0 0 8px;
+  }
+  .blog-cta h2 { font-size: 20px; margin: 0 0 10px; }
+  .blog-cta p { font-size: 14px; color: var(--muted); margin: 0 0 18px; }
+  .blog-cta-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn-primary, .btn-ghost {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 11px 22px; border-radius: 999px;
+    font-size: 14px; font-weight: 700; white-space: nowrap;
+  }
+  .btn-primary { background: var(--moss); color: #fff; }
+  .btn-ghost { background: #fff; color: var(--moss); border: 1px solid var(--moss); }
+  .btn-primary:hover, .btn-ghost:hover { text-decoration: none; opacity: 0.9; }
 </style>
 
 <script>
   const chips = document.querySelectorAll<HTMLButtonElement>(".chip");
+  const featured = document.querySelector<HTMLAnchorElement>(".featured");
   const cards = document.querySelectorAll<HTMLAnchorElement>(".post-card");
   const resultCount = document.querySelector<HTMLParagraphElement>(".result-count");
+  const loadMore = document.getElementById("load-more") as HTMLButtonElement | null;
+
+  const INITIAL_VISIBLE = 11;
+  let expanded = false;
+  let selected = "all";
+
+  function matches(el: HTMLElement) {
+    const cats = (el.dataset.cats ?? "").split("|");
+    return selected === "all" || cats.includes(selected);
+  }
+
+  function render() {
+    // While a category is active every match is shown; the "more" button only
+    // governs the unfiltered list, which is the long one.
+    let shown = 0;
+    let hiddenByFold = 0;
+
+    if (featured) {
+      const ok = matches(featured);
+      featured.hidden = !ok;
+      if (ok) shown++;
+    }
+
+    cards.forEach((card) => {
+      const ok = matches(card);
+      if (!ok) {
+        card.hidden = true;
+        return;
+      }
+      const index = Number(card.dataset.index ?? 0);
+      const foldedAway = selected === "all" && !expanded && index >= INITIAL_VISIBLE;
+      card.hidden = foldedAway;
+      if (foldedAway) hiddenByFold++;
+      else shown++;
+    });
+
+    if (resultCount) {
+      resultCount.textContent =
+        selected === "all" ? "" : `「${selected}」の記事 ${shown}件を表示中`;
+    }
+
+    if (loadMore) {
+      loadMore.hidden = hiddenByFold === 0;
+      loadMore.textContent = `過去の記事をもっと見る（残り${hiddenByFold}件）`;
+    }
+  }
 
   chips.forEach((chip) => {
     chip.addEventListener("click", () => {
-      const selected = chip.dataset.cat;
-
+      selected = chip.dataset.cat ?? "all";
       chips.forEach((c) => {
         const active = c === chip;
         c.classList.toggle("is-active", active);
         c.setAttribute("aria-pressed", String(active));
       });
-
-      let shown = 0;
-      cards.forEach((card) => {
-        const cats = (card.dataset.cats ?? "").split("|");
-        const match = selected === "all" || cats.includes(selected!);
-        card.hidden = !match;
-        if (match) shown++;
-      });
-
-      if (resultCount) {
-        resultCount.textContent =
-          selected === "all" ? "" : `「${selected}」の記事 ${shown}件を表示中`;
-      }
+      render();
     });
   });
+
+  loadMore?.addEventListener("click", () => {
+    expanded = true;
+    render();
+  });
+
+  render();
 </script>
