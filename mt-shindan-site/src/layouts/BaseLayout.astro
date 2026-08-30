@@ -184,14 +184,16 @@ const orgSchema = {
       transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), background 0.3s var(--ease);
     }
     .hero-actions a:hover { text-decoration: none; transform: translateY(-2px); }
-    .hero-actions a:first-child {
+    /* Specificity has to clear the page-level `.prose a` rule, which would
+       otherwise paint the label the same moss green as the button. */
+    .hero-body .hero-actions a:first-child {
       background: var(--moss); color: #fff; box-shadow: var(--shadow-sm);
     }
-    .hero-actions a:first-child:hover { box-shadow: var(--shadow-md); }
-    .hero-actions a:last-child {
+    .hero-body .hero-actions a:first-child:hover { box-shadow: var(--shadow-md); }
+    .hero-body .hero-actions a:last-child {
       background: transparent; color: var(--moss); border: 1px solid var(--moss);
     }
-    .hero-actions a:last-child:hover { background: var(--moss-light); }
+    .hero-body .hero-actions a:last-child:hover { background: var(--moss-light); }
     .hero-note { font-size: 13px; color: var(--muted); margin: 0; }
 
     .hero-figure { margin: 0; }
