@@ -178,9 +178,10 @@ const orgSchema = {
     .band--dark { background: var(--moss); color: #E9EDE6; }
     .band--dark h2,
     .band--dark h3 { color: #fff; }
-    /* #C6A87B only reached 3.3:1 on the moss ground; this clears 4.5:1. */
-    .band--dark .eyebrow { color: #DCC49B; }
-    .band--dark h2 { border-left-color: #DCC49B; }
+    /* Measured on the moss ground: #C6A87B was 3.30:1, #DCC49B 4.41:1.
+       #E4CFAA clears 4.5:1. */
+    .band--dark .eyebrow { color: #E4CFAA; }
+    .band--dark h2 { border-left-color: #E4CFAA; }
     .band--dark a { color: #fff; }
     .band--dark strong { color: #fff; }
     @media (max-width: 640px) { .band { padding: 52px 0; } }
