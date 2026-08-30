@@ -93,7 +93,12 @@ const orgSchema = {
       --ink: #242B24;
       --moss: #3D5C45;
       --moss-light: #EDF1EA;
-      --gold: #A97A3F;
+      /* #A97A3F only reached 3.26-3.44:1 against the cream, white and
+         gold-light grounds it is used on. This clears 4.5:1 on all of them
+         while keeping the same warm gold. Borders use --gold-rule, which can
+         stay lighter since rules carry no text. */
+      --gold: #8E6129;
+      --gold-rule: #A97A3F;
       --gold-light: #F6EDDD;
       --coral: #B0503A;
       --line: #DAD5C6;
@@ -404,7 +409,7 @@ const orgSchema = {
     }
     .stat-row li::before {
       content: ""; position: absolute; inset: 0 auto auto 0;
-      width: 100%; height: 3px; background: var(--gold);
+      width: 100%; height: 3px; background: var(--gold-rule);
       transform: scaleX(0); transform-origin: left;
       transition: transform 0.7s var(--ease) var(--reveal-delay, 0ms);
     }
