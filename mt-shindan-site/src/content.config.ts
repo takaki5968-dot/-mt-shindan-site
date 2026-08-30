@@ -9,6 +9,7 @@ const blog = defineCollection({
     date: z.string(),
     categories: z.array(z.string()).optional(),
     description: z.string().optional(),
+    seoTitle: z.string().optional(),
   }),
 });
 
@@ -18,6 +19,9 @@ const pages = defineCollection({
     title: z.string(),
     slug: z.string(),
     date: z.string().optional(),
+    description: z.string().optional(),
+    seoTitle: z.string().optional(),
+    eyebrow: z.string().optional(),
   }),
 });
 

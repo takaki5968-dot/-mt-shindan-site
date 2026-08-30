@@ -5,8 +5,52 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const pages = await getCollection("pages");
 const entry = pages.find((p) => p.data.slug === "home-2")!;
 const { Content } = await render(entry);
+
+// Mirrors the FAQ section rendered on this page (src/content/pages/post-245.md).
+// Keep both in sync — Google requires the markup to match the visible answers.
+const faqs = [
+  {
+    q: "本当に初回相談は無料ですか？あとから請求されませんか？",
+    a: "初回30分のご相談は無料です。この段階で費用が発生することはありません。ご相談のうえで正式な支援が必要と判断された場合のみ、内容と費用をお見積りとしてご提示します。ご検討いただいた結果、お断りいただいても構いません。",
+  },
+  {
+    q: "まだ依頼するか決めていませんが、相談してもいいですか？",
+    a: "もちろんです。「何から相談すればいいか分からない」「現状を整理したいだけ」という段階でのご相談を歓迎しています。無理な営業や、その後の売り込みのご連絡は行いません。",
+  },
+  {
+    q: "商工会や、よろず支援拠点との違いは何ですか？",
+    a: "公的機関のご支援と競合するものではなく、併用していただけます。商工会には9年間、経営指導員として在籍していました。現在は山口県よろず支援拠点のコーディネーターも務めています。その両方の経験をふまえ、公的窓口では時間の制約から踏み込みにくい「計画づくりから実行まで」を継続的に伴走できる点が、当事務所の役割です。",
+  },
+  {
+    q: "オンラインだけでも対応してもらえますか？",
+    a: "対応可能です。オンライン・訪問のどちらにも柔軟に対応しています。山口県内全域を対象としており、遠方の事業者様にはオンラインでのご相談をご案内しています。",
+  },
+  {
+    q: "補助金は必ず採択されますか？",
+    a: "採択を保証することはできません。補助金は審査を経て採否が決まる制度で、近年の持続化補助金の採択率は50%前後で推移しています。だからこそ、事業計画の内容と書き方が結果を左右します。採択されやすい計画書の構成・表現を、審査の観点をふまえてご一緒に整えていきます。",
+  },
+  {
+    q: "問い合わせてから、返信までどのくらいかかりますか？",
+    a: "通常1営業日以内にご返信し、ご都合のよい日時を数案ご提案します。万が一返信が届かない場合は、迷惑メールフォルダをご確認のうえ、お電話（080-6307-4502／平日9:00〜18:00）でもご連絡いただけます。",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
 ---
-<BaseLayout title="山口県の中小企業診断士 | AI活用支援・事業承継・M&A">
+<BaseLayout
+  title="山口県の中小企業診断士"
+  seoTitle="山口県の中小企業診断士｜補助金・経営計画なら前貴棋事務所"
+  description="山口県の小規模事業者を支援する中小企業診断士。商工会経営指導員として9年間の現場経験をもとに、持続化補助金などの申請支援から経営計画づくり・販路開拓まで伴走します。初回相談無料。"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} slot="head" />
   <div class="wrap" style="padding:40px 0 60px;">
     <article class="prose">
       <Content />

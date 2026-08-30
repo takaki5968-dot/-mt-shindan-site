@@ -6,7 +6,11 @@ const posts = (await getCollection("blog")).sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
 ---
-<BaseLayout title="ブログ">
+<BaseLayout
+  title="ブログ"
+  seoTitle="経営お役立ちブログ｜山口県の中小企業診断士 前貴棋事務所"
+  description="補助金の最新情報、経営計画の作り方、セミナー登壇レポートなど。山口県の中小企業診断士が現場で得た知見を発信しています。"
+>
   <div class="wrap" style="padding:40px 0 60px;">
     <h1>ブログ</h1>
     <div style="display:flex; flex-direction:column; gap:16px; margin-top:24px;">

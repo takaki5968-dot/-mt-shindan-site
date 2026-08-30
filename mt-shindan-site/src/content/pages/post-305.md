@@ -1,12 +1,11 @@
 ---
-title: "プロフィール"
+title: "山口県で中小企業診断士をお探しの方へ"
 slug: "yamaguchi-chushokigyo-shindan"
 date: "2026-03-03 21:06:24"
+eyebrow: "Yamaguchi Prefecture · SME Consultant"
+seoTitle: "前貴棋のプロフィール｜山口県の中小企業診断士"
+description: "山口県の中小企業診断士・前貴棋のプロフィール。商工会経営指導員として9年間、地域事業者の経営相談に従事。認定経営革新等支援機関、山口県よろず支援拠点コーディネーター。県内全域・オンライン対応。"
 ---
-
-YAMAGUCHI PREFECTURE · SME CONSULTANT
-
-## 山口県で中小企業診断士をお探しの方へ *前 貴棋*
 
 補助金申請・経営計画・販路開拓を、  
 現場に寄り添いながら一緒に実行します。

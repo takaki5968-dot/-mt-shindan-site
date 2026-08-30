@@ -10,7 +10,12 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 ---
-<BaseLayout title={entry.data.title} description={entry.data.description}>
+<BaseLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  seoTitle={entry.data.seoTitle}
+  ogType="article"
+>
   <div class="wrap" style="padding:40px 0 60px; max-width:760px;">
     <div style="font-size:12px; color:var(--muted); font-family:'JetBrains Mono',monospace;">
       {new Date(entry.data.date).toLocaleDateString("ja-JP")}

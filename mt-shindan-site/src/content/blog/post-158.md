@@ -3,6 +3,7 @@ title: "読んだ本【6、7冊目】"
 slug: "book6-7"
 date: "2024-04-19 22:24:03"
 categories: ["読書"]
+description: "「行動経済学が最強の学問である」ほかの読書メモ。人はなぜ不合理な選択をするのか。コピー機の実験など、実際のビジネスや交渉に活かせる事例を紹介します。"
 ---
 
 https://www.amazon.co.jp/%E8%A1%8C%E5%8B%95%E7%B5%8C%E6%B8%88%E5%AD%A6%E3%81%8C%E6%9C%80%E5%BC%B7%E3%81%AE%E5%AD%A6%E5%95%8F%E3%81%A7%E3%81%82%E3%82%8B-%E7%9B%B8%E8%89%AF-%E5%A5%88%E7%BE%8E%E9%A6%99-ebook/dp/B0C14JJWSH/ref=sr\_1\_1?adgrpid=149999234391&dib=eyJ2IjoiMSJ9.UEKIKLHd5o8hurir4bQmmKg7TukHlalY4Wjhs0uRPRynPBlVBzEB1CAsaT4Isy6Oxz6Q-SumGHiuYrKx0buwNZSAaGYkOXSoWUX-51PAPs1pY5Ax0hZ8mEX1WkgKYUCGCGJMFHSZE0qakyITxjdqq4oNnQQKivO4irBCAwW4RB-0K-G3elsf3\_Zh0RS9jOK8w\_aebASCXC2nMT2aoZ1rJUPtDdgic0RYo1QZ7flKfHyytpB-gnbjC072DXdl5DzjUtKrxqT9uCv2StUorW\_kMBuNWIuAJfn44TeJlbCkasc.LAJ9CNdxapB5lXSn4thGUkyAlH1tfLBWCUvOihulD8Q&dib\_tag=se&hvadid=678980875851&hvdev=c&hvlocphy=20658&hvnetw=g&hvqmt=e&hvrand=5353749360382350522&hvtargid=kwd-2006060101907&hydadcr=3196\_13722157&jp-ad-ap=0&keywords=%E8%A1%8C%E5%8B%95%E7%B5%8C%E6%B8%88%E5%AD%A6%E3%81%8C%E6%9C%80%E5%BC%B7%E3%81%AE%E5%AD%A6%E5%95%8F%E3%81%A7%E3%81%82%E3%82%8B&qid=1713527901&sr=8-1

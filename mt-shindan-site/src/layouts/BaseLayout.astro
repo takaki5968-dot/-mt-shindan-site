@@ -2,16 +2,74 @@
 interface Props {
   title: string;
   description?: string;
+  seoTitle?: string;
+  ogImage?: string;
+  ogType?: string;
 }
-const { title, description = "山口県の中小企業診断士 前貴棋。AI活用支援・事業承継/M&A・補助金申請支援。" } = Astro.props;
+const SITE_NAME = "前貴棋中小企業診断士事務所";
+const SITE_URL = "https://mt-shindan.com";
+const DEFAULT_OG_IMAGE = "/images/2026/07/PKU4161360PAR58401_TP_V.jpg";
+
+const {
+  title,
+  description = "山口県の小規模事業者を支援する中小企業診断士。持続化補助金などの補助金申請支援、経営計画づくり、販路開拓を現場目線でサポートします。初回相談無料。",
+  seoTitle,
+  ogImage = DEFAULT_OG_IMAGE,
+  ogType = "website",
+} = Astro.props;
+
+const pageTitle = seoTitle ?? `${title} - ${SITE_NAME}`;
+const canonicalURL = new URL(Astro.url.pathname, SITE_URL).href;
+const ogImageURL = new URL(ogImage, SITE_URL).href;
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: SITE_NAME,
+  alternateName: "前貴棋 中小企業診断士",
+  url: SITE_URL,
+  image: ogImageURL,
+  telephone: "+81-80-6307-4502",
+  priceRange: "初回相談無料",
+  description:
+    "山口県の小規模事業者・中小企業を対象に、補助金申請支援・経営計画策定・販路開拓支援を行う中小企業診断士事務所。",
+  areaServed: { "@type": "AdministrativeArea", name: "山口県" },
+  founder: {
+    "@type": "Person",
+    name: "前 貴棋",
+    jobTitle: "中小企業診断士",
+    knowsAbout: ["補助金申請支援", "経営計画策定", "販路開拓", "小規模事業者持続化補助金"],
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "09:00",
+    closes: "18:00",
+  },
+  sameAs: [
+    "https://www.facebook.com/takakimae672",
+    "https://www.instagram.com/takaki_mae/",
+  ],
+};
 ---
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{title} - 前貴棋中小企業診断士事務所</title>
+  <title>{pageTitle}</title>
   <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:image" content={ogImageURL} />
+  <meta property="og:site_name" content={SITE_NAME} />
+  <meta property="og:locale" content="ja_JP" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(orgSchema)} />
+  <slot name="head" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" />
   <style is:global>
@@ -91,6 +149,43 @@ const { title, description = "山口県の中小企業診断士 前貴棋。AI�
     .credentials-list li { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; }
     .credentials-list strong { display: block; font-size: 15px; }
     .credentials-list span { display: block; font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+    /* FAQ */
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
+    .faq-list details { background: #fff; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+    .faq-list summary { padding: 16px 18px; font-weight: 700; font-size: 15px; cursor: pointer; list-style: none; display: flex; gap: 10px; align-items: flex-start; }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::before { content: "Q"; font-family: 'JetBrains Mono', monospace; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+    .faq-list details[open] summary { border-bottom: 1px solid var(--line); }
+    .faq-answer { padding: 16px 18px; font-size: 14px; color: var(--muted); display: flex; gap: 10px; align-items: flex-start; }
+    .faq-answer::before { content: "A"; font-family: 'JetBrains Mono', monospace; color: var(--moss); font-weight: 700; flex-shrink: 0; }
+    .faq-answer p { margin: 0; }
+
+    /* Sticky mobile contact bar */
+    .mobile-cta { display: none; }
+    @media (max-width: 640px) {
+      body { padding-bottom: 68px; }
+      .mobile-cta {
+        display: grid;
+        grid-template-columns: 1fr 1.4fr;
+        gap: 8px;
+        position: fixed;
+        left: 0; right: 0; bottom: 0;
+        z-index: 60;
+        padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+        background: rgba(255, 255, 255, 0.97);
+        border-top: 1px solid var(--line);
+        box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.06);
+      }
+      .mobile-cta a {
+        display: flex; align-items: center; justify-content: center; gap: 6px;
+        padding: 13px 10px; border-radius: 999px;
+        font-size: 14px; font-weight: 700; text-align: center;
+      }
+      .mobile-cta a:hover { text-decoration: none; }
+      .mobile-cta .call { background: #fff; color: var(--moss); border: 1.5px solid var(--moss); }
+      .mobile-cta .consult { background: var(--moss); color: #fff; }
+    }
 
     .site-header { border-bottom: 1px solid var(--line); background: #fff; position: sticky; top: 0; z-index: 50; }
     .header-inner { position: relative; display: flex; align-items: center; justify-content: space-between; padding-top: 16px; padding-bottom: 16px; }
@@ -174,6 +269,10 @@ const { title, description = "山口県の中小企業診断士 前貴棋。AI�
       </div>
     </div>
   </footer>
+  <div class="mobile-cta">
+    <a class="call" href="tel:08063074502">電話で相談</a>
+    <a class="consult" href="/contact/">無料相談を申し込む</a>
+  </div>
   <script>
     const navToggle = document.getElementById("nav-toggle");
     const siteNav = document.getElementById("site-nav");
