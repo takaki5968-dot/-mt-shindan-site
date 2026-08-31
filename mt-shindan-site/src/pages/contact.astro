@@ -17,6 +17,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <form id="contact-form">
       <input type="hidden" name="access_key" value="af363103-062d-4b58-b2e7-652fc7edaf08" />
       <input type="hidden" name="subject" value="【mt-shindan.com】無料相談のお申し込みがありました" />
+      <input type="hidden" name="きっかけのページ" id="source-page" value="" />
       <input type="checkbox" name="botcheck" style="display:none;" />
 
       <div class="field">
@@ -37,10 +38,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <div class="field">
         <label>ご相談内容（複数選択可） <span class="opt">任意</span></label>
         <div class="checks">
-          <label><input type="checkbox" name="ご相談内容" value="持続化補助金について相談したい" /> 持続化補助金について相談したい</label>
-          <label><input type="checkbox" name="ご相談内容" value="経営計画を作りたい" /> 経営計画を作りたい</label>
+          <label><input type="checkbox" name="ご相談内容" value="補助金について相談したい" data-topic="subsidy" /> 補助金について相談したい</label>
+          <label><input type="checkbox" name="ご相談内容" value="AI・デジタル活用について相談したい" data-topic="ai" /> AI・デジタル活用について相談したい</label>
+          <label><input type="checkbox" name="ご相談内容" value="経営計画を作りたい" data-topic="plan" /> 経営計画を作りたい</label>
           <label><input type="checkbox" name="ご相談内容" value="資金繰りを整理したい" /> 資金繰りを整理したい</label>
-          <label><input type="checkbox" name="ご相談内容" value="売上・集客を改善したい" /> 売上・集客を改善したい</label>
+          <label><input type="checkbox" name="ご相談内容" value="売上・集客を改善したい" data-topic="marketing" /> 売上・集客を改善したい</label>
+          <label><input type="checkbox" name="ご相談内容" value="セミナー・研修を依頼したい" data-topic="seminar" /> セミナー・研修を依頼したい</label>
           <label><input type="checkbox" name="ご相談内容" value="まずは話を聞いてみたい" /> まずは話を聞いてみたい</label>
         </div>
       </div>
@@ -90,6 +93,29 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 </style>
 
 <script>
+  // Pages link here as /contact/?topic=ai so the matching box arrives ticked
+  // and the notification says which page the enquiry came from.
+  {
+    const params = new URLSearchParams(location.search);
+    const topic = params.get("topic");
+    if (topic) {
+      const box = document.querySelector<HTMLInputElement>(
+        `input[data-topic="${CSS.escape(topic)}"]`
+      );
+      if (box) box.checked = true;
+    }
+
+    const source = document.getElementById("source-page") as HTMLInputElement | null;
+    if (source) {
+      const from = params.get("from");
+      const referrer =
+        document.referrer && document.referrer.startsWith(location.origin)
+          ? new URL(document.referrer).pathname
+          : "";
+      source.value = from || referrer || "直接アクセス";
+    }
+  }
+
   const form = document.getElementById("contact-form") as HTMLFormElement;
   const resultEl = document.getElementById("form-result") as HTMLDivElement;
   const btn = document.getElementById("submit-btn") as HTMLButtonElement;

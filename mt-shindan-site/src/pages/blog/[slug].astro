@@ -87,8 +87,23 @@ const DEFAULT_SERVICE = {
     "現状の整理から数値計画づくりまで、「経営の羅針盤」となる事業計画を対話しながら一緒に作ります。",
 };
 
+const AI_SERVICE = {
+  href: "/ai-support/",
+  name: "AI導入支援",
+  pitch:
+    "「うちの何に使えるか」の見極めから、業務に定着するまで伴走します。ツールを売る立場ではないので、無料の範囲で足りるならそうお伝えします。",
+};
+
 const category = entry.data.categories?.[0] ?? "";
-const service = SERVICE_BY_CATEGORY[category] ?? DEFAULT_SERVICE;
+
+// A post about AI should offer the AI page, whatever category it sits in.
+const isAboutAI = /生成AI|ChatGPT|AI活用|AIで|AIパスポート/.test(
+  `${entry.data.title} ${entry.data.description ?? ""}`
+);
+
+const service = isAboutAI
+  ? AI_SERVICE
+  : SERVICE_BY_CATEGORY[category] ?? DEFAULT_SERVICE;
 ---
 <BaseLayout
   title={entry.data.title}
