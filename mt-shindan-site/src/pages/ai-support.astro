@@ -1,0 +1,66 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Rendered by its own route rather than [slug].astro so the content can use
+// full-bleed bands instead of a single .wrap column.
+const pages = await getCollection("pages");
+const entry = pages.find((p) => p.data.slug === "ai-support")!;
+const { Content } = await render(entry);
+
+// Mirrors the FAQ rendered on this page (src/content/pages/ai-support.md).
+// Keep both in sync — the markup has to match the visible answers.
+const faqs = [
+  {
+    q: "パソコンが苦手でも大丈夫ですか？",
+    a: "大丈夫です。セミナーでも「スマホだけでできるAI活用」を扱っており、操作の手順から一緒に確認します。分からないことを分からないまま先に進めない、というのを支援の前提にしています。",
+  },
+  {
+    q: "まず何から相談すればいいですか？",
+    a: "AIの話をご用意いただく必要はありません。「毎月の請求書づくりに半日かかっている」「チラシの文章を考えるのが苦痛だ」といった、時間を取られている作業を教えてください。そこからAIが効くかどうかを判断します。",
+  },
+  {
+    q: "結局、有料のツールを買わされませんか？",
+    a: "当事務所はツールの販売代理店ではないため、特定の製品を勧める動機がありません。無料で使える範囲で足りる場合は、そのようにお伝えします。有料版が必要な場面もありますが、その判断は費用対効果を一緒に確認したうえで、事業者ご自身に決めていただきます。",
+  },
+  {
+    q: "AIに任せてはいけない業務もありますか？",
+    a: "あります。顧客の個人情報や、取引先との機密に関わる情報の取り扱いは慎重に判断すべきですし、最終的な経営判断そのものを委ねるべきではありません。使わない方がよい領域も含めて切り分けるのが、業務の棚卸しの目的です。",
+  },
+  {
+    q: "導入にあたって補助金は使えますか？",
+    a: "ITツールの導入であれば、デジタル化・AI導入補助金（旧：IT導入補助金）の対象になる場合があります。2026年度からは生成AIを含むAI機能搭載ツールも補助対象として位置づけられました。ただし対象になるのは事務局に登録されたツールに限られるため、事前の確認が必要です。",
+  },
+  {
+    q: "どのくらいの期間で効果が出ますか？",
+    a: "作業の内容によりますが、文章づくりのような身近なものであれば、最初の1〜2回で手応えを感じていただけることが多いです。一方で、業務として定着するには調整の期間が必要です。「一度教われば終わり」ではなく、続けられる状態になるまでを支援の範囲と考えています。",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+---
+<BaseLayout
+  title={entry.data.title}
+  seoTitle={entry.data.seoTitle}
+  description={entry.data.description}
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} slot="head" />
+  <article class="prose">
+    <Content />
+  </article>
+</BaseLayout>
+
+<style>
+  .prose :global(h1) { font-size: 32px; margin-top: 0; }
+  .prose :global(h2) { font-size: 24px; margin-top: 0; border-left: 4px solid var(--gold-rule); padding-left: 12px; }
+  .prose :global(.band > .wrap > *:first-child) { margin-top: 0; }
+  .prose :global(ul) { padding-left: 20px; }
+</style>
