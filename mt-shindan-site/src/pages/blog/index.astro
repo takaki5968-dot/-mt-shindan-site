@@ -33,6 +33,21 @@ const [featured, ...rest] = posts;
 const INITIAL_VISIBLE = 11;
 
 const fmt = (d: string) => new Date(d).toLocaleDateString("ja-JP");
+
+// Rough reading time from the raw markdown, so a reader can tell a two-minute
+// note from a ten-minute explainer before committing.
+function readingMinutes(body: string | undefined): number {
+  if (!body) return 1;
+  const text = body
+    .replace(/```[\s\S]*?```/g, "")
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, "")
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
+    .replace(/<[^>]+>/g, "")
+    .replace(/[#*>|_`-]/g, "")
+    .replace(/\s+/g, "");
+  return Math.max(1, Math.round(text.length / 500));
+}
+const mins = (p: (typeof posts)[number]) => readingMinutes(p.body);
 ---
 <BaseLayout
   title="ブログ"
@@ -70,6 +85,7 @@ const fmt = (d: string) => new Date(d).toLocaleDateString("ja-JP");
       <span class="post-meta">
         {fmt(featured.data.date)}
         {featured.data.categories?.length ? ` ・ ${featured.data.categories.join(", ")}` : ""}
+        {` ・ 約${mins(featured)}分`}
       </span>
       <span class="featured-title">{featured.data.title}</span>
       {featured.data.description && (
@@ -90,6 +106,7 @@ const fmt = (d: string) => new Date(d).toLocaleDateString("ja-JP");
           <span class="post-meta">
             {fmt(post.data.date)}
             {post.data.categories?.length ? ` ・ ${post.data.categories.join(", ")}` : ""}
+            {` ・ 約${mins(post)}分`}
           </span>
           <span class="post-title">{post.data.title}</span>
           {post.data.description && (
@@ -260,16 +277,25 @@ const fmt = (d: string) => new Date(d).toLocaleDateString("ja-JP");
     }
   }
 
-  chips.forEach((chip) => {
-    chip.addEventListener("click", () => {
-      selected = chip.dataset.cat ?? "all";
-      chips.forEach((c) => {
-        const active = c === chip;
-        c.classList.toggle("is-active", active);
-        c.setAttribute("aria-pressed", String(active));
-      });
-      render();
+  function activate(cat: string, updateHash: boolean) {
+    const chip =
+      [...chips].find((c) => c.dataset.cat === cat) ??
+      [...chips].find((c) => c.dataset.cat === "all")!;
+    selected = chip.dataset.cat ?? "all";
+    chips.forEach((c) => {
+      const active = c === chip;
+      c.classList.toggle("is-active", active);
+      c.setAttribute("aria-pressed", String(active));
     });
+    if (updateHash) {
+      const hash = selected === "all" ? " " : `#${encodeURIComponent(selected)}`;
+      history.replaceState(null, "", selected === "all" ? location.pathname : hash);
+    }
+    render();
+  }
+
+  chips.forEach((chip) => {
+    chip.addEventListener("click", () => activate(chip.dataset.cat ?? "all", true));
   });
 
   loadMore?.addEventListener("click", () => {
@@ -277,5 +303,22 @@ const fmt = (d: string) => new Date(d).toLocaleDateString("ja-JP");
     render();
   });
 
-  render();
+  // Articles link here as /blog/#補助金 to carry the reader's topic across.
+  function applyHash() {
+    const raw = location.hash.slice(1);
+    if (!raw) {
+      activate("all", false);
+      return;
+    }
+    let cat = raw;
+    try {
+      cat = decodeURIComponent(raw);
+    } catch {
+      /* leave the raw value if it isn't valid encoding */
+    }
+    activate(cat, false);
+  }
+
+  window.addEventListener("hashchange", applyHash);
+  applyHash();
 </script>
