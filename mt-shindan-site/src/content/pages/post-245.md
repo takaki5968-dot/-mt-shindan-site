@@ -10,7 +10,7 @@ date: "2026-03-01 23:12:37"
 <div class="hero">
 <div class="hero-body">
 <p class="hero-eyebrow">山口県の小規模事業者のための伴走型支援</p>
-<p class="hero-catch">補助金も、経営計画も。12年、現場で相談を受けてきた中小企業診断士に、話してみませんか。</p>
+<p class="hero-catch">補助金も、経営計画も。まずは「元・商工会」の中小企業診断士に、話してみませんか。</p>
 <h1>あなたの事業の 一歩先を、 ともに歩む。</h1>
 <p class="hero-sub">商工会の経営指導員として9年、2023年の独立後も継続して、地域事業者の経営相談に携わってきました。通算12年以上の現場経験をもとに、経営計画づくりから実行まで現場目線でサポートします。</p>
 <p class="hero-actions"><a href="/contact/">無料相談で現状を整理する →</a><a href="#サービス内容">サービスを見る</a></p>
@@ -67,8 +67,8 @@ date: "2026-03-01 23:12:37"
 <div class="card-media"><img src="/images/2026/07/PKU4161360PAR58401_TP_V.jpg" alt="経営相談の様子" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <span class="card-num">01</span>
-<h3>通算12年以上の経営支援経験</h3>
-<p>商工会の経営指導員として9年、独立後も3年以上、小規模事業者・個人事業主の相談に応じ続けています。現場に合った、実行できる提案を重視しています。「理論だけ」ではない実践的な支援が強みです。</p>
+<h3>元・商工会の経営指導員。現場歴12年超</h3>
+<p>商工会で9年、独立後も3年以上、小規模事業者・個人事業主の相談に応じ続けています。支援する側の内側を知っているからこそ、公的窓口で何ができて何ができないかも含めてご案内できます。</p>
 </div>
 </li>
 <li class="card">
@@ -186,7 +186,7 @@ date: "2026-03-01 23:12:37"
 商工会勤務時代、多くの事業者の方が「相談できる相手がいない」「数字が苦手で不安」という悩みを抱えていることを実感しました。経営は一人で抱えるものではありません。地域で頑張る事業者の皆様に寄り添い、一緒に考え、実行していく支援を大切にしています。
 
 <ul class="stat-row">
-<li><span class="stat-num">12年超</span><span class="stat-label">経営相談に携わった年数</span></li>
+<li><span class="stat-num">12年超</span><span class="stat-label">経営相談歴（うち商工会9年）</span></li>
 <li><span class="stat-num">60件超</span><span class="stat-label">補助金の採択を支援</span></li>
 <li><span class="stat-num">400件</span><span class="stat-label">年間の経営相談対応</span></li>
 <li><span class="stat-num">20回超</span><span class="stat-label">セミナー・研修に登壇</span></li>
