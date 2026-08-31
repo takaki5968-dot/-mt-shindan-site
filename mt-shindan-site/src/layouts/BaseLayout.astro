@@ -122,7 +122,37 @@ const orgSchema = {
     h1, h2, h3 {
       font-family: 'Shippori Mincho', serif;
       line-height: 1.5;
-      text-wrap: balance;
+      /* Not `balance`: Japanese has no spaces, so balancing line lengths
+         splits mid-phrase — 「商工会で9年間 / の経営支援経験」. `pretty` only
+         avoids a stranded last line, and auto-phrase below confines breaks
+         to phrase boundaries. */
+      text-wrap: pretty;
+    }
+
+    /* ---- Japanese line breaking ----------------------------------------
+       word-break: auto-phrase breaks at 文節 boundaries instead of anywhere
+       a character happens to fall. Applied to headings and short display
+       text, where a bad break is most visible. Browsers without support
+       simply fall back to the default behaviour. */
+    h1, h2, h3, h4,
+    figcaption,
+    .hero-catch, .hero-sub, .hero-note, .hero-eyebrow, .hero-actions a,
+    .card-body p, .card-link,
+    .concerns-list li, .credentials-list li, .credentials-list span,
+    .stat-label, .stat-note,
+    .step-body p,
+    .faq-list summary, .faq-answer p,
+    .trust-badges li,
+    .subsidy > p, .subsidy-note, .subsidy-cap,
+    .notice p,
+    .credo p,
+    .price-card p, .price-tag,
+    .contact-actions a, .contact-note,
+    .blog-intro, .featured-title, .featured-excerpt, .post-title, .post-excerpt,
+    .post-cta-pitch, .post-cta-note,
+    .btn-primary, .btn-ghost,
+    .profile-lead-body p {
+      word-break: auto-phrase;
     }
     a { color: var(--moss); text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -274,7 +304,7 @@ const orgSchema = {
       line-height: 1.6;
       color: var(--moss);
       margin: 4px 0 12px;
-      text-wrap: balance;
+      text-wrap: pretty;
     }
 
     /* Profile page lead: portrait beside the story */
@@ -329,7 +359,7 @@ const orgSchema = {
       line-height: 1.6;
       color: var(--ink);
       margin: 0;
-      text-wrap: balance;
+      text-wrap: pretty;
     }
 
     /* Hero trust badges */
