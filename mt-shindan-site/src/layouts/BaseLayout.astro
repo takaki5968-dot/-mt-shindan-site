@@ -130,28 +130,19 @@ const orgSchema = {
     }
 
     /* ---- Japanese line breaking ----------------------------------------
-       word-break: auto-phrase breaks at 文節 boundaries instead of anywhere
-       a character happens to fall. Applied to headings and short display
-       text, where a bad break is most visible. Browsers without support
-       simply fall back to the default behaviour. */
+       word-break: auto-phrase confines breaks to 文節 boundaries, which fixes
+       headings splitting mid-word (「商工会で9年間 / の経営支援経験」).
+
+       Headings and one-or-two-line display type only. Running body text is
+       deliberately left alone: Japanese prose is set to fill each line, and
+       in a narrow column phrase-unit breaking strands whole phrases on the
+       next line while still splitting any phrase too long to fit — ragged
+       on the right and broken mid-word at the same time. */
     h1, h2, h3, h4,
-    figcaption,
-    .hero-catch, .hero-sub, .hero-note, .hero-eyebrow, .hero-actions a,
-    .card-body p, .card-link,
-    .concerns-list li, .credentials-list li, .credentials-list span,
-    .stat-label, .stat-note,
-    .step-body p,
-    .faq-list summary, .faq-answer p,
-    .trust-badges li,
-    .subsidy > p, .subsidy-note, .subsidy-cap,
-    .notice p,
+    .hero-catch,
     .credo p,
-    .price-card p, .price-tag,
-    .contact-actions a, .contact-note,
-    .blog-intro, .featured-title, .featured-excerpt, .post-title, .post-excerpt,
-    .post-cta-pitch, .post-cta-note,
-    .btn-primary, .btn-ghost,
-    .profile-lead-body p {
+    .faq-list summary,
+    .featured-title, .post-title {
       word-break: auto-phrase;
     }
     a { color: var(--moss); text-decoration: none; }
@@ -407,7 +398,9 @@ const orgSchema = {
     .card-body { padding: 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
     .card-num { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: var(--gold-light); color: var(--gold); font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 13px; }
     .card-tag { display: inline-block; align-self: flex-start; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: var(--moss); background: var(--moss-light); padding: 3px 10px; border-radius: 999px; }
-    .card-body h3 { font-size: 17px; margin: 0; font-family: 'Shippori Mincho', serif; }
+    /* The card column is narrow enough that a long service name cannot fit a
+       phrase per line; let it fill instead of stranding one. */
+    .card-body h3 { font-size: 17px; margin: 0; font-family: 'Shippori Mincho', serif; word-break: normal; }
     .card-body p { font-size: 14px; color: var(--muted); margin: 0; }
     .card-body ul { margin: 0; padding-left: 18px; font-size: 13px; color: var(--muted); }
     .card-body ul li { margin-bottom: 3px; }
