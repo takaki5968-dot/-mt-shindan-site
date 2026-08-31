@@ -358,7 +358,7 @@ const orgSchema = {
     @media (max-width: 560px) { .card-grid { grid-template-columns: 1fr; } }
     .card {
       background: #fff; border: 1px solid var(--line); border-radius: 14px;
-      overflow: hidden; display: flex; flex-direction: column;
+      overflow: hidden; display: flex; flex-direction: column; min-width: 0;
       box-shadow: var(--shadow-sm);
       transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s var(--ease);
     }
@@ -442,6 +442,10 @@ const orgSchema = {
     .subsidy {
       background: #fff; border: 1px solid var(--line); border-radius: 14px;
       padding: 24px 26px; box-shadow: var(--shadow-sm); position: relative;
+      /* Grid items default to min-content, which would let the schedule
+         table's min-width stretch the whole card past the viewport instead
+         of scrolling inside it. */
+      min-width: 0;
       transition: border-color 0.35s var(--ease), box-shadow 0.35s var(--ease);
     }
     .subsidy:hover { border-color: #C7C0AC; box-shadow: var(--shadow-md); }
