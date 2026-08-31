@@ -24,7 +24,7 @@ description: "「AIを入れたいが何から手をつければいいか分か�
 </ul>
 </div>
 <figure class="hero-figure">
-<img src="/images/2026/07/21830aIMGL00331942_TP_V.jpg" alt="業務のAI活用を検討する様子" loading="eager" />
+<img src="/images/2024/05/IMG_11-scaled-e1716444134963.jpg" alt="中小企業診断士 前 貴棋" loading="eager" />
 <figcaption><strong>前　貴棋</strong><span>中小企業診断士｜MAE TAKAKI</span></figcaption>
 </figure>
 </div>
