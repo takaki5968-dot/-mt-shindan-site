@@ -147,6 +147,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       if (json.success) {
         resultEl.textContent = "ありがとうございます。メッセージは送信されました。";
         resultEl.className = "ok";
+        // Only a form that actually reached Web3Forms counts as an enquiry.
+        // Analytics is optional, so never let a missing tag break the reply.
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "generate_lead", {
+            form_name: "contact",
+            // GA4 drops event parameters over 100 characters.
+            topic: String(object["ご相談内容"] || "").slice(0, 100),
+          });
+        }
         form.reset();
       } else {
         resultEl.textContent = "メッセージの送信に失敗しました。後でまたお試しください。";
