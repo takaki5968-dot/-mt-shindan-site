@@ -1,5 +1,5 @@
 ---
-title: "生成AIパスポートに挑戦中です ― 中小企業診断士が「AI活用の土台」を学び直す理由"
+title: "生成AIパスポートに挑戦中｜AI活用の土台を学び直す理由"
 slug: "studying-genai-passport"
 date: "2026-07-21 18:00:00"
 categories: ["事務所より"]

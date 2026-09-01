@@ -1,5 +1,5 @@
 ---
-title: "ライバルは何社？データで導き出す開業戦略セミナー開催レポート【RESAS × jSTATMAP × Googleマップ × ChatGPT】"
+title: "ライバルは何社？データで導き出す開業戦略セミナー開催レポート"
 slug: "resas-jstatmap-seminar"
 date: "2026-04-25 18:00:00"
 categories: ["セミナー・登壇"]

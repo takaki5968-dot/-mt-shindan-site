@@ -1,5 +1,5 @@
 ---
-title: "新しい補助金がスタートしました｜新事業進出・ものづくり商業サービス補助金"
+title: "新事業進出・ものづくり商業サービス補助金がスタート"
 slug: "shinjigyou-shinshutsu-monodukuri-subsidy"
 date: "2026-06-30 12:00:00"
 categories: ["補助金"]
