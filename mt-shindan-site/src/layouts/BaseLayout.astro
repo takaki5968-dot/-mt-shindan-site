@@ -78,6 +78,15 @@ const orgSchema = {
   <meta name="theme-color" content="#3D5C45" />
   <script type="application/ld+json" is:inline set:html={JSON.stringify(orgSchema)} />
   <slot name="head" />
+  <!-- Google tag (gtag.js) — carried over from the WordPress site so the
+       existing property keeps its history. -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-0EGXL250BN"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0EGXL250BN');
+  </script>
   <script is:inline>
     // Opt in to motion only when the visitor hasn't asked for less of it.
     // Without this class the reveal styles never apply, so content can never
