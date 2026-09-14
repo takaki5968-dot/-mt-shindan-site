@@ -101,9 +101,24 @@ const isAboutAI = /生成AI|ChatGPT|AI活用|AIで|AIパスポート/.test(
   `${entry.data.title} ${entry.data.description ?? ""}`
 );
 
-const service = isAboutAI
-  ? AI_SERVICE
-  : SERVICE_BY_CATEGORY[category] ?? DEFAULT_SERVICE;
+// A post can name its own service in frontmatter when neither its category
+// nor its title picks the right one. The 支援機関 guide is the case that
+// forced this: its category is 経営のヒント, which offers the marketing
+// page, but a reader who has just worked out where to go for advice wants
+// help getting their situation straight, not a campaign.
+const SERVICE_BY_SLUG: Record<string, { href: string; name: string; pitch: string }> = {
+  "subsidy-support": SERVICE_BY_CATEGORY["補助金"],
+  "business-plan": DEFAULT_SERVICE,
+  "marketing-support": SERVICE_BY_CATEGORY["経営のヒント"],
+  seminar: SERVICE_BY_CATEGORY["セミナー・登壇"],
+  "ai-support": AI_SERVICE,
+};
+
+const named = entry.data.service ? SERVICE_BY_SLUG[entry.data.service] : undefined;
+
+const service =
+  named ??
+  (isAboutAI ? AI_SERVICE : SERVICE_BY_CATEGORY[category] ?? DEFAULT_SERVICE);
 
 // Search results show roughly 32 full-width characters. Article titles are
 // long enough that the default " - 前貴棋中小企業診断士事務所" suffix would be
