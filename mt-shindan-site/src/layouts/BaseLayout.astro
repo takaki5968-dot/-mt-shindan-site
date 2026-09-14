@@ -29,7 +29,7 @@ const orgSchema = {
   alternateName: "前貴棋 中小企業診断士",
   url: SITE_URL,
   // schema.org expects a photo of the business here, not the share card.
-  image: new URL("/images/2024/05/IMG_11-scaled-e1716444134963.jpg", SITE_URL).href,
+  image: new URL("/images/2024/05/IMG_11-scaled-e1716444134963.webp", SITE_URL).href,
   telephone: "+81-80-6307-4502",
   priceRange: "初回相談無料",
   description:
@@ -156,6 +156,10 @@ const orgSchema = {
       word-break: auto-phrase;
     }
     a { color: var(--moss); text-decoration: none; }
+    /* Older posts carry bare URLs pasted from press releases. A URL has
+       no break opportunity, so on a phone one long link pushes the whole
+       page sideways. */
+    main a { overflow-wrap: anywhere; }
     a:hover { text-decoration: underline; }
     img { max-width: 100%; height: auto; border-radius: 8px; }
     .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
@@ -668,6 +672,34 @@ const orgSchema = {
     .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
     .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+    /* Services sit in a disclosure rather than five flat nav items: the bar
+       has to stay on one line, and until now the service pages were only
+       reachable from the homepage — a reader who arrived on an article had
+       no way to the thing the article was about. */
+    .nav-group { position: relative; display: flex; align-items: center; }
+    .nav-group-btn {
+      font: inherit; color: var(--ink); background: none; border: none; cursor: pointer;
+      padding: 0; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+    }
+    .nav-group-btn::after {
+      content: ""; width: 6px; height: 6px;
+      border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+      transform: translateY(-2px) rotate(45deg);
+      transition: transform 0.25s var(--ease);
+    }
+    .nav-group-btn[aria-expanded="true"]::after { transform: translateY(1px) rotate(-135deg); }
+    .nav-group-btn:hover { color: var(--moss); }
+    .nav-menu {
+      display: none; position: absolute; top: calc(100% + 15px); left: 50%;
+      transform: translateX(-50%); min-width: 212px; flex-direction: column;
+      background: #fff; border: 1px solid var(--line); border-radius: 12px;
+      box-shadow: var(--shadow-md); padding: 8px; z-index: 60;
+    }
+    .nav-menu.is-open { display: flex; }
+    .nav-menu a { padding: 9px 14px; border-radius: 8px; color: var(--ink); }
+    .nav-menu a:hover { background: var(--moss-light); color: var(--moss); text-decoration: none; }
+    .nav-menu-label { display: none; }
+
     @media (max-width: 640px) {
       .nav-toggle { display: flex; }
       .site-nav {
@@ -687,12 +719,29 @@ const orgSchema = {
       .site-nav.is-open { display: flex; }
       .site-nav a { padding: 14px 24px; border-top: 1px solid var(--line); }
       .nav-cta { border-radius: 0; text-align: center; }
+      /* The phone drawer is already a vertical list, so the services sit in
+         it directly instead of behind a second tap. */
+      .nav-group { display: block; }
+      .nav-group-btn { display: none; }
+      .nav-menu {
+        display: flex; position: static; transform: none; min-width: 0;
+        background: none; border: none; border-radius: 0; box-shadow: none; padding: 0;
+      }
+      .nav-menu-label {
+        display: block; padding: 13px 24px 3px; border-top: 1px solid var(--line);
+        font-size: 11px; font-weight: 700; letter-spacing: 0.06em; color: var(--muted);
+      }
+      .nav-menu a {
+        padding: 9px 24px 9px 36px; border-top: none; border-radius: 0; font-size: 13px;
+      }
+      .nav-menu a:last-child { padding-bottom: 14px; }
     }
 
     .site-footer { border-top: 1px solid var(--line); margin-top: 60px; padding: 40px 0 32px; font-size: 13px; color: var(--muted); }
-    .footer-inner { display: flex; flex-wrap: wrap; gap: 24px 40px; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; }
-    .footer-nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
-    .footer-nav a { color: var(--muted); }
+    .footer-inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 28px 40px; align-items: start; margin-bottom: 28px; }
+    .footer-col { display: flex; flex-direction: column; gap: 9px; min-width: 0; }
+    .footer-col-label { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; color: var(--ink); }
+    .footer-col a { color: var(--muted); }
     .footer-social { display: flex; gap: 16px; }
     .footer-social a { color: var(--muted); }
     .footer-bottom { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 20px; font-size: 12px; }
@@ -707,6 +756,17 @@ const orgSchema = {
       </button>
       <nav id="site-nav" class="site-nav">
         <a href="/">HOME</a>
+        <div class="nav-group">
+          <button id="nav-services-btn" class="nav-group-btn" type="button" aria-expanded="false" aria-controls="nav-services">サービス</button>
+          <div id="nav-services" class="nav-menu">
+            <span class="nav-menu-label">サービス</span>
+            <a href="/subsidy-support/">補助金申請支援</a>
+            <a href="/business-plan/">経営計画策定支援</a>
+            <a href="/marketing-support/">マーケティング支援</a>
+            <a href="/ai-support/">AI導入支援</a>
+            <a href="/seminar/">セミナー・研修講師</a>
+          </div>
+        </div>
         <a href="/pricing/">料金</a>
         <a href="/blog/">ブログ</a>
         <a href="/yamaguchi-chushokigyo-shindan/">プロフィール</a>
@@ -720,17 +780,30 @@ const orgSchema = {
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-inner">
-        <nav class="footer-nav">
-          <a href="/">HOME</a>
-          <a href="/pricing/">料金</a>
-          <a href="/blog/">ブログ</a>
+        <nav class="footer-col">
+          <span class="footer-col-label">サービス</span>
+          <a href="/subsidy-support/">補助金申請支援</a>
+          <a href="/business-plan/">経営計画策定支援</a>
+          <a href="/marketing-support/">マーケティング支援</a>
+          <a href="/ai-support/">AI導入支援</a>
+          <a href="/seminar/">セミナー・研修講師</a>
+        </nav>
+        <nav class="footer-col">
+          <span class="footer-col-label">事務所について</span>
           <a href="/yamaguchi-chushokigyo-shindan/">プロフィール</a>
+          <a href="/pricing/">料金のご案内</a>
+          <a href="/blog/">経営お役立ちブログ</a>
           <a href="/contact/">お問い合わせ</a>
           <a href="/privacy-policy/">プライバシーポリシー</a>
         </nav>
-        <div class="footer-social">
-          <a href="https://www.facebook.com/takakimae672" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="https://www.instagram.com/takaki_mae/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <div class="footer-col">
+          <span class="footer-col-label">ご連絡先</span>
+          <a href="tel:08063074502">080-6307-4502</a>
+          <span>受付：平日 9:00〜18:00</span>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/takakimae672" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/takaki_mae/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
         </div>
       </div>
       <div class="footer-bottom">
@@ -749,6 +822,27 @@ const orgSchema = {
     navToggle?.addEventListener("click", () => {
       const isOpen = siteNav?.classList.toggle("is-open");
       navToggle.setAttribute("aria-expanded", String(!!isOpen));
+    });
+
+
+    // Services disclosure. Only wired up for the desktop bar — on the phone
+    // the button is hidden and the list is always open, so nothing here runs.
+    const servicesBtn = document.getElementById("nav-services-btn");
+    const servicesMenu = document.getElementById("nav-services");
+    const closeServices = () => {
+      servicesMenu?.classList.remove("is-open");
+      servicesBtn?.setAttribute("aria-expanded", "false");
+    };
+    servicesBtn?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = servicesMenu?.classList.toggle("is-open");
+      servicesBtn.setAttribute("aria-expanded", String(!!isOpen));
+    });
+    document.addEventListener("click", (e) => {
+      if (!servicesMenu?.contains(e.target)) closeServices();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeServices();
     });
 
     // Shadow under the header once the page has moved.

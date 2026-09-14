@@ -116,6 +116,47 @@ const seoTitle =
   (entry.data.title.length + BRAND.length <= TITLE_LIMIT
     ? `${entry.data.title}${BRAND}`
     : entry.data.title);
+
+// Article markup: the visible byline and date exist, but nothing told a
+// machine who wrote this or when. Both matter for a consultant whose
+// credibility is the product.
+const SITE_URL = "https://mt-shindan.com";
+const postURL = `${SITE_URL}/blog/${entry.data.slug}/`;
+const published = new Date(entry.data.date).toISOString();
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: entry.data.title,
+  description: entry.data.description,
+  url: postURL,
+  mainEntityOfPage: { "@type": "WebPage", "@id": postURL },
+  datePublished: published,
+  dateModified: published,
+  inLanguage: "ja",
+  author: {
+    "@type": "Person",
+    name: "前 貴棋",
+    jobTitle: "中小企業診断士",
+    url: `${SITE_URL}/yamaguchi-chushokigyo-shindan/`,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "前貴棋中小企業診断士事務所",
+    url: SITE_URL,
+  },
+  ...(entry.data.categories?.length ? { articleSection: entry.data.categories[0] } : {}),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "ホーム", item: `${SITE_URL}/` },
+    { "@type": "ListItem", position: 2, name: "ブログ", item: `${SITE_URL}/blog/` },
+    { "@type": "ListItem", position: 3, name: entry.data.title, item: postURL },
+  ],
+};
 ---
 <BaseLayout
   title={entry.data.title}
@@ -123,6 +164,8 @@ const seoTitle =
   seoTitle={seoTitle}
   ogType="article"
 >
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleSchema)} slot="head" />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
   <div class="wrap" style="padding:40px 0 60px; max-width:760px;">
     <div class="post-meta">
       {new Date(entry.data.date).toLocaleDateString("ja-JP")}

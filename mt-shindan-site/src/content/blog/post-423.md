@@ -32,7 +32,7 @@ description: "おしゃれな内装のカフェに入ったとき、メニュー
 柴田陽子事務所の著書「美しいブランドのつくりかた」です。
 
 
-[![](/images/2026/05/81TzkD1I20L._SL1500_-722x1024.jpg)](https://www.amazon.co.jp/dp/4883356310)
+[![](/images/2026/05/81TzkD1I20L._SL1500_-722x1024.webp)](https://www.amazon.co.jp/dp/4883356310)
 
 
 

@@ -22,7 +22,7 @@ date: "2026-03-01 23:12:37"
 </ul>
 </div>
 <figure class="hero-figure">
-<img src="/images/2024/05/IMG_11-scaled-e1716444134963.jpg" alt="中小企業診断士 前 貴棋" loading="eager" />
+<img src="/images/2024/05/IMG_11-scaled-e1716444134963.webp" alt="中小企業診断士 前 貴棋" loading="eager" />
 <figcaption><strong>前　貴棋</strong><span>中小企業診断士｜MAE TAKAKI</span></figcaption>
 </figure>
 </div>
@@ -64,7 +64,7 @@ date: "2026-03-01 23:12:37"
 
 <ul class="card-grid" style="--cols:3;">
 <li class="card">
-<div class="card-media"><img src="/images/2026/07/PKU4161360PAR58401_TP_V.jpg" alt="経営相談の様子" loading="lazy" decoding="async" /></div>
+<div class="card-media"><img src="/images/2026/07/PKU4161360PAR58401_TP_V.webp" alt="経営相談の様子" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <span class="card-num">01</span>
 <h3>元・商工会の経営指導員。現場歴12年超</h3>
@@ -72,7 +72,7 @@ date: "2026-03-01 23:12:37"
 </div>
 </li>
 <li class="card">
-<div class="card-media"><img src="/images/2026/07/kaigiPAKE9187_TP_V.jpg" alt="補助金書類の作成" loading="lazy" decoding="async" /></div>
+<div class="card-media"><img src="/images/2026/07/kaigiPAKE9187_TP_V.webp" alt="補助金書類の作成" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <span class="card-num">02</span>
 <h3>補助金だけで終わらない支援</h3>
@@ -80,7 +80,7 @@ date: "2026-03-01 23:12:37"
 </div>
 </li>
 <li class="card">
-<div class="card-media"><img src="/images/2026/07/PKU4151345PAR58348_TP_V.jpg" alt="わかりやすい説明" loading="lazy" decoding="async" /></div>
+<div class="card-media"><img src="/images/2026/07/PKU4151345PAR58348_TP_V.webp" alt="わかりやすい説明" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <span class="card-num">03</span>
 <h3>専門用語を使わない分かりやすい説明</h3>
@@ -97,7 +97,7 @@ date: "2026-03-01 23:12:37"
 
 <ul class="card-grid" style="--cols:4;">
 <li class="card">
-<div class="card-media"><img src="/images/2026/07/kaigiPAKE9187_TP_V.jpg" alt="補助金申請支援" loading="lazy" decoding="async" /></div>
+<div class="card-media"><img src="/images/2026/07/kaigiPAKE9187_TP_V.webp" alt="補助金申請支援" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <span class="card-tag">SUBSIDY</span>
 <h3>補助金申請支援</h3>
@@ -106,7 +106,7 @@ date: "2026-03-01 23:12:37"
 </div>
 </li>
 <li class="card">
-<div class="card-media"><img src="/images/2026/07/gori_5106134_TP_V.jpg" alt="経営計画策定支援" style="object-position: center 35%;" loading="lazy" decoding="async" /></div>
+<div class="card-media"><img src="/images/2026/07/gori_5106134_TP_V.webp" alt="経営計画策定支援" style="object-position: center 35%;" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <span class="card-tag">CONSULTING</span>
 <h3>経営計画策定支援</h3>
@@ -115,7 +115,7 @@ date: "2026-03-01 23:12:37"
 </div>
 </li>
 <li class="card">
-<div class="card-media"><img src="/images/2026/07/21830aIMGL00331942_TP_V.jpg" alt="マーケティング支援" loading="lazy" decoding="async" /></div>
+<div class="card-media"><img src="/images/2026/07/21830aIMGL00331942_TP_V.webp" alt="マーケティング支援" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <span class="card-tag">MARKETING</span>
 <h3>マーケティング支援</h3>
@@ -124,7 +124,7 @@ date: "2026-03-01 23:12:37"
 </div>
 </li>
 <li class="card">
-<div class="card-media"><img src="/images/2026/07/fk-010A0838_TP_V.jpg" alt="セミナー・研修講師" loading="lazy" decoding="async" /></div>
+<div class="card-media"><img src="/images/2026/07/fk-010A0838_TP_V.webp" alt="セミナー・研修講師" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <span class="card-tag">SEMINAR</span>
 <h3>セミナー・研修講師</h3>
@@ -140,21 +140,21 @@ date: "2026-03-01 23:12:37"
 
 <ul class="card-grid" style="--cols:3;">
 <li class="card">
-<div class="card-media is-3-2"><img src="/images/2026/07/ogasuta458A7822_TP_V.jpg" alt="飲食業" loading="lazy" decoding="async" /></div>
+<div class="card-media is-3-2"><img src="/images/2026/07/ogasuta458A7822_TP_V.webp" alt="飲食業" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <h3>飲食業</h3>
 <p>補助金活用による店舗改善で集客力向上</p>
 </div>
 </li>
 <li class="card">
-<div class="card-media is-3-2"><img src="/images/2026/07/pakuphoto39908PAR57370_TP_V.jpg" alt="建設業" loading="lazy" decoding="async" /></div>
+<div class="card-media is-3-2"><img src="/images/2026/07/pakuphoto39908PAR57370_TP_V.webp" alt="建設業" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <h3>建設業</h3>
 <p>資金繰り整理により経営不安を解消</p>
 </div>
 </li>
 <li class="card">
-<div class="card-media is-3-2"><img src="/images/2026/07/PK-PAUI8335_TP_V.jpg" alt="小売業" loading="lazy" decoding="async" /></div>
+<div class="card-media is-3-2"><img src="/images/2026/07/PK-PAUI8335_TP_V.webp" alt="小売業" loading="lazy" decoding="async" /></div>
 <div class="card-body">
 <h3>小売業</h3>
 <p>販路開拓支援により売上増加</p>
@@ -268,7 +268,7 @@ date: "2026-03-01 23:12:37"
 </div>
 </li>
 <li>
-<div class="step-icon"><img src="/images/2026/07/PK4131315PAR58142_TP_V.jpg" alt="支援提案" loading="lazy" decoding="async" /></div>
+<div class="step-icon"><img src="/images/2026/07/PK4131315PAR58142_TP_V.webp" alt="支援提案" loading="lazy" decoding="async" /></div>
 <div class="step-body">
 <span class="step-num">04</span>
 <h4>必要な場合のみ正式な支援をご提案</h4>

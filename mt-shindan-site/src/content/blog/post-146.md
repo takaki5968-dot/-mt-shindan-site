@@ -16,4 +16,4 @@ description: "採択結果が発表されました。中小企業庁のHPより�
 
 
 　持続化補助金の詳細は、下記HPでご確認頂くか、または最寄りの商工会・商工会議所へお問い合わせください。もちろん、私の方にお問い合わせ頂いてもかまいません。  
-https://www.shokokai.or.jp/jizokuka\_r1h/index.html
+[小規模事業者持続化補助金 特設ページ（全国商工会連合会）](https://www.shokokai.or.jp/jizokuka_r1h/index.html)

@@ -2,6 +2,8 @@
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
+const SITE_URL = "https://mt-shindan.com";
+
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
   // ai-support has its own route so its content can use full-bleed bands.
@@ -12,12 +14,55 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+
+// Read the FAQ straight out of the page body rather than keeping a second
+// copy in the frontmatter. Google requires the marked-up answer to be the
+// one the visitor sees, and a duplicated list drifts the moment either side
+// is edited.
+const stripTags = (s: string) =>
+  s.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+
+const faqs = [
+  ...entry.body!.matchAll(
+    /<summary>([\s\S]*?)<\/summary>\s*<div class="faq-answer">([\s\S]*?)<\/div>/g
+  ),
+].map((m) => ({ q: stripTags(m[1]), a: stripTags(m[2]) }));
+
+const faqSchema = faqs.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    }
+  : null;
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "ホーム", item: SITE_URL + "/" },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: entry.data.title,
+      item: `${SITE_URL}/${entry.data.slug}/`,
+    },
+  ],
+};
 ---
 <BaseLayout
   title={entry.data.title}
   description={entry.data.description}
   seoTitle={entry.data.seoTitle}
 >
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+  {faqSchema && (
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} slot="head" />
+  )}
   <div class="wrap" style="padding:40px 0 60px; max-width:760px;">
     {entry.data.eyebrow && <p class="eyebrow">{entry.data.eyebrow}</p>}
     <h1>{entry.data.title}</h1>

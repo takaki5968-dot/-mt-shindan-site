@@ -24,7 +24,7 @@ description: "山口県の中小企業・小規模事業者のAI導入を支援�
 </ul>
 </div>
 <figure class="hero-figure">
-<img src="/images/2024/05/IMG_11-scaled-e1716444134963.jpg" alt="中小企業診断士 前 貴棋" loading="eager" />
+<img src="/images/2024/05/IMG_11-scaled-e1716444134963.webp" alt="中小企業診断士 前 貴棋" loading="eager" />
 <figcaption><strong>前　貴棋</strong><span>中小企業診断士｜MAE TAKAKI</span></figcaption>
 </figure>
 </div>
