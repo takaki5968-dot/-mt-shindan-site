@@ -363,6 +363,66 @@ const orgSchema = {
       text-wrap: pretty;
     }
 
+    /* Client voice. A single named testimonial carries more weight than the
+       anonymised case cards above it, so it gets a block of its own rather
+       than a slot in the card grid. White on the cream band, like .card. */
+    .voice {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--moss);
+      border-radius: 0 16px 16px 0;
+      box-shadow: var(--shadow-sm);
+      padding: clamp(24px, 4vw, 36px);
+      max-width: 780px;
+      margin: 26px auto 0;
+      min-width: 0;
+    }
+    .voice-meta {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      list-style: none; padding: 0; margin: 0 0 22px;
+    }
+    .voice-meta li {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; letter-spacing: 0.06em;
+      color: var(--gold); background: var(--gold-light);
+      border: 1px solid var(--gold-rule); border-radius: 999px;
+      padding: 4px 13px; margin: 0;
+    }
+    .voice-before {
+      background: var(--moss-light);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 0 0 26px;
+    }
+    .voice-before-label {
+      display: block; font-size: 12px; font-weight: 700;
+      color: var(--moss); margin-bottom: 8px;
+    }
+    .voice-before ul { margin: 0; padding-left: 1.15em; }
+    .voice-before li { font-size: 14px; margin: 4px 0; }
+    .voice-qa { margin: 0 0 22px; }
+    .voice-q {
+      font-size: 13px; font-weight: 700; color: var(--muted);
+      margin: 0 0 7px;
+    }
+    .voice-a {
+      font-family: 'Shippori Mincho', serif;
+      font-size: clamp(16px, 2.2vw, 19px);
+      line-height: 1.85; color: var(--ink);
+      margin: 0; text-wrap: pretty;
+    }
+    .voice-name {
+      display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px;
+      border-top: 1px solid var(--line);
+      margin: 26px 0 0; padding-top: 18px;
+    }
+    .voice-name strong { font-size: 15px; color: var(--ink); }
+    .voice-name span { font-size: 14px; color: var(--muted); }
+    .voice-consent {
+      font-size: 12px; color: var(--muted);
+      text-align: center; margin: 16px 0 0;
+    }
+
     /* Hero trust badges */
     .trust-badges { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 0; padding: 0; list-style: none; }
     .trust-badges li {

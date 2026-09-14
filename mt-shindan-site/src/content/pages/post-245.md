@@ -164,6 +164,40 @@ date: "2026-03-01 23:12:37"
 
 ※守秘義務のため内容は一部調整しています。
 
+<p class="eyebrow">Client Voice</p>
+
+## お客様の声
+
+<div class="voice">
+<ul class="voice-meta">
+<li>新聞販売業</li>
+<li>周防大島町</li>
+<li>補助金申請支援</li>
+</ul>
+<div class="voice-before">
+<span class="voice-before-label">ご相談前のお困りごと</span>
+<ul>
+<li>補助金を使いたいが、手続きが難しかった</li>
+<li>相談できる相手がいなかった</li>
+</ul>
+</div>
+<div class="voice-qa">
+<p class="voice-q">Q. 相談してみて、いかがでしたか？</p>
+<p class="voice-a">案件の申請、採択まで親身になって伴走支援してくださいました。</p>
+</div>
+<div class="voice-qa">
+<p class="voice-q">Q. 支援を受けて、変わったこと・助かったことはありますか？</p>
+<p class="voice-a">採択に向けて取り組んで頂き、以降の取り組みについてもご助言下さいました。</p>
+</div>
+<div class="voice-qa">
+<p class="voice-q">Q. どのような方にすすめたいと思われますか？</p>
+<p class="voice-a">小規模な新規起業にチャレンジを検討されている方。商工会での知見をお持ちなので、他業種間での事業を検討されている方。</p>
+</div>
+<p class="voice-name"><strong>中国新聞　大島久賀販売所</strong><span>吉村　学俊 様</span></p>
+</div>
+
+<p class="voice-consent">※ 掲載にあたり、ご本人の許諾をいただいています。</p>
+
 </div>
 </section>
 
