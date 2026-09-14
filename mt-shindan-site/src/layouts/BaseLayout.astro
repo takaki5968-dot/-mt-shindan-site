@@ -251,6 +251,28 @@ const orgSchema = {
     .hero-eyebrow { font-size: 14px; color: var(--muted); margin: 0 0 10px; }
     .hero-sub { font-size: 15px; color: var(--muted); }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 12px; }
+
+    /* ---- Standalone CTA in body copy ----------------------------------
+       The main call to action on the service, pricing and profile pages was
+       a plain text link sitting in its own paragraph — 23px tall, and
+       visually identical to any other link in the sentence above it.
+       Markdown gives it no class, so match it by shape: a /contact/ link
+       that is the only thing in its paragraph is a button, not prose.
+       Specificity has to clear `.prose a`, which sets the moss colour. */
+    .prose p > a[href^="/contact/"]:only-child,
+    main .prose p > a[href^="/contact/"]:only-child {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 48px; padding: 13px 28px; border-radius: 999px;
+      background: var(--moss); color: #fff; font-weight: 700; font-size: 14px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+    }
+    .prose p > a[href^="/contact/"]:only-child:hover {
+      text-decoration: none; transform: translateY(-2px); box-shadow: var(--shadow-md);
+    }
+    /* The dark closing band paints its own buttons; don't double up. */
+    .band--dark .prose p > a[href^="/contact/"]:only-child { background: #fff; color: var(--moss); }
+
     .hero-actions a {
       display: inline-flex; align-items: center; justify-content: center;
       font-weight: 700; font-size: 14px; padding: 13px 26px; border-radius: 999px;
@@ -737,6 +759,35 @@ const orgSchema = {
       .nav-menu a:last-child { padding-bottom: 14px; }
     }
 
+
+    /* ---- Phone touch targets and legibility ---------------------------
+       Measured 22 links under the 44px height a fingertip needs, and 66
+       elements below 14px. The badges and eyebrows stay small — they are
+       labels, not reading matter — but anything meant to be read or
+       tapped is brought up to size. */
+    @media (max-width: 640px) {
+      .card-link, .related-more, .post-nav-item,
+      .hero-actions a, .contact-actions a, .voice-name a {
+        display: inline-flex; align-items: center; min-height: 44px;
+      }
+      .card-link { padding: 4px 0; }
+      .hero-note, .stat-lead, .subsidy-note, .stat-note,
+      .card-body p, .concerns-list li, .faq-answer p {
+        font-size: 14px;
+      }
+      .footer-col a {
+        display: inline-flex; align-items: center; min-height: 44px;
+        font-size: 14px;
+      }
+      .footer-col span { font-size: 13.5px; }
+      .footer-col { gap: 0; }
+      .site-footer { font-size: 13.5px; }
+    }
+    .stat-lead {
+      text-align: center; font-size: 15px; line-height: 1.9;
+      max-width: 44em; margin: 24px auto 0;
+    }
+
     .site-footer { border-top: 1px solid var(--line); margin-top: 60px; padding: 40px 0 32px; font-size: 13px; color: var(--muted); }
     .footer-inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 28px 40px; align-items: start; margin-bottom: 28px; }
     .footer-col { display: flex; flex-direction: column; gap: 9px; min-width: 0; }
@@ -770,7 +821,7 @@ const orgSchema = {
         <a href="/pricing/">料金</a>
         <a href="/blog/">ブログ</a>
         <a href="/yamaguchi-chushokigyo-shindan/">プロフィール</a>
-        <a href="/contact/" class="nav-cta">お問い合わせ</a>
+        <a href="/contact/" class="nav-cta">無料相談</a>
       </nav>
     </div>
   </header>
@@ -814,7 +865,7 @@ const orgSchema = {
   </footer>
   <div class="mobile-cta">
     <a class="call" href="tel:08063074502">電話で相談</a>
-    <a class="consult" href="/contact/">無料相談を申し込む</a>
+    <a class="consult" href="/contact/">30分無料相談</a>
   </div>
   <script>
     const navToggle = document.getElementById("nav-toggle");

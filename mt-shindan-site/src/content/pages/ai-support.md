@@ -15,7 +15,7 @@ description: "山口県の中小企業・小規模事業者のAI導入を支援�
 <p class="hero-catch">AIを導入したいのではなく、仕事を楽にしたいはずです。</p>
 <h1>AI活用は、「うちの何に使えるか」から始まります。</h1>
 <p class="hero-sub">ツールを売る立場ではありません。商工会で9年、独立後も3年以上、通算12年以上にわたって地域の事業者の業務を見てきた中小企業診断士が、その事業のどこにAIを使うと効くのかを見極めるところから、使い続けられる状態になるまで伴走します。山口県全域に対応、オンラインでのご相談も可能です。</p>
-<p class="hero-actions"><a href="/contact/?topic=ai&amp;from=AI導入支援LP">無料相談で使い所を探す →</a><a href="#支援の内容">支援の内容を見る</a></p>
+<p class="hero-actions"><a href="/contact/?topic=ai&amp;from=AI導入支援LP">30分無料相談を申し込む →</a><a href="#支援の内容">支援の内容を見る</a></p>
 <p class="hero-note">初回30分は無料です。「AIをまだ触ったことがない」という段階でも構いません。</p>
 <ul class="trust-badges">
 <li>初回相談無料</li>
@@ -316,7 +316,7 @@ AI導入支援に固有の料金体系は設けていません。関わり方に
 
 AIの知識は不要です。「何に使えるか分からない」という状態からのご相談を歓迎しています。初回30分は無料で、無理な営業のご連絡は行いません。
 
-<p class="contact-actions"><a href="/contact/?topic=ai&amp;from=AI導入支援LP">無料相談を申し込む →</a><a href="/pricing/">料金を見る</a></p>
+<p class="contact-actions"><a href="/contact/?topic=ai&amp;from=AI導入支援LP">30分無料相談を申し込む →</a><a href="/pricing/">料金を見る</a></p>
 
 <p class="contact-note">TEL: 080-6307-4502　｜　受付時間: 平日 9:00〜18:00<br />山口市・宇部市・下関市・周南市・防府市・岩国市・長門市・柳井市・周防大島町ほか山口県全域に対応。オンラインでのご相談も可能です。</p>
 

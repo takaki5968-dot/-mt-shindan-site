@@ -10,10 +10,10 @@ date: "2026-03-01 23:12:37"
 <div class="hero">
 <div class="hero-body">
 <p class="hero-eyebrow">山口県の小規模事業者のための伴走型支援</p>
-<p class="hero-catch">補助金も、経営計画も。まずは「元・商工会」の中小企業診断士に、話してみませんか。</p>
-<h1>あなたの事業の 一歩先を、 ともに歩む。</h1>
-<p class="hero-sub">商工会の経営指導員として9年、2023年の独立後も継続して、地域事業者の経営相談に携わってきました。通算12年以上の現場経験をもとに、経営計画づくりから実行まで現場目線でサポートします。</p>
-<p class="hero-actions"><a href="/contact/">無料相談で現状を整理する →</a><a href="#サービス内容">サービスを見る</a></p>
+<p class="hero-catch">補助金・経営計画・売上改善。</p>
+<h1>「何から相談すればいい？」から、一緒に整理します。</h1>
+<p class="hero-sub">山口県の小規模事業者を支援する、元・商工会の中小企業診断士です。経営指導員として9年、2023年の独立後も継続して、通算12年以上にわたり地域の事業者の相談を受け続けてきました。</p>
+<p class="hero-actions"><a href="/contact/">30分無料相談を申し込む →</a><a href="#サービス内容">相談できる内容を見る</a></p>
 <p class="hero-note">初回相談は無料です。現状整理だけでも歓迎しています。</p>
 <ul class="trust-badges">
 <li>初回相談無料</li>
@@ -26,6 +26,27 @@ date: "2026-03-01 23:12:37"
 <figcaption><strong>前　貴棋</strong><span>中小企業診断士｜MAE TAKAKI</span></figcaption>
 </figure>
 </div>
+
+</div>
+</section>
+
+<section class="band band--tint">
+<div class="wrap">
+
+<p class="eyebrow">Track record</p>
+
+## 数字で見る支援実績
+
+<ul class="stat-row">
+<li><span class="stat-num">12年超</span><span class="stat-label">経営相談歴（うち商工会9年）</span></li>
+<li><span class="stat-num">60件超</span><span class="stat-label">補助金の採択を支援</span></li>
+<li><span class="stat-num">400件</span><span class="stat-label">年間の経営相談対応</span></li>
+<li><span class="stat-num">20回超</span><span class="stat-label">セミナー・研修に登壇</span></li>
+</ul>
+
+<p class="stat-lead">商工会の窓口と、独立後の現場。どちらも経験しているので、<strong>まだ整理できていない段階のご相談でも、そのまま受け止められます。</strong></p>
+
+<p class="stat-note">※経営相談に携わった年数は、商工会での9年間と2023年の独立以降を合わせた通算です。相談対応件数は、商工会および山口県よろず支援拠点での対応を含みます。補助金の採択支援件数は、これまでの累計です。</p>
 
 </div>
 </section>
@@ -48,7 +69,7 @@ date: "2026-03-01 23:12:37"
 
 そのお悩み、地域事業者支援の経験をもつ中小企業診断士が**伴走支援**します。
 
-[補助金について相談してみる →](/contact/)
+[30分無料相談を申し込む →](/contact/)
 
 初回相談は無料です。営業目的のご連絡は行いません。
 
@@ -219,16 +240,7 @@ date: "2026-03-01 23:12:37"
 
 商工会勤務時代、多くの事業者の方が「相談できる相手がいない」「数字が苦手で不安」という悩みを抱えていることを実感しました。経営は一人で抱えるものではありません。地域で頑張る事業者の皆様に寄り添い、一緒に考え、実行していく支援を大切にしています。
 
-<ul class="stat-row">
-<li><span class="stat-num">12年超</span><span class="stat-label">経営相談歴（うち商工会9年）</span></li>
-<li><span class="stat-num">60件超</span><span class="stat-label">補助金の採択を支援</span></li>
-<li><span class="stat-num">400件</span><span class="stat-label">年間の経営相談対応</span></li>
-<li><span class="stat-num">20回超</span><span class="stat-label">セミナー・研修に登壇</span></li>
-</ul>
-
-<p class="stat-note">※経営相談に携わった年数は、商工会での9年間と2023年の独立以降を合わせた通算です。相談対応件数は、商工会および山口県よろず支援拠点での対応を含みます。補助金の採択支援件数は、これまでの累計です。</p>
-
-[まずは30分、気軽に相談する →](/contact/)
+[30分無料相談を申し込む →](/contact/)
 
 無理な営業は行いません。小さなことでも構いません。
 
@@ -341,7 +353,7 @@ date: "2026-03-01 23:12:37"
 
 「ちょっと聞いてみたい」という段階でも大丈夫です。初回相談は無料です。現状整理だけでも歓迎しています。
 
-<p class="contact-actions"><a href="/contact/">まずは30分、気軽に相談する →</a><a href="/contact/">補助金の相談をする</a></p>
+<p class="contact-actions"><a href="/contact/">30分無料相談を申し込む →</a><a href="/contact/?topic=undecided&amp;from=トップ・決めていない方">何を相談したらいいか分からない方へ</a></p>
 
 <p class="contact-note">TEL: 080-6307-4502　｜　受付時間: 平日 9:00〜18:00<br />営業目的のご連絡は行いません。</p>
 
