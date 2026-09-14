@@ -389,6 +389,34 @@ const orgSchema = {
       text-wrap: pretty;
     }
 
+
+    /* ---- Seminar records ----------------------------------------------
+       A booker checks four things in the same order every time — when,
+       where, who it is for, what it costs. Put them in a fixed grid so the
+       eye lands on the same spot in every entry, instead of hunting
+       through a paragraph. */
+    .seminar-meta { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 7px; }
+    .seminar-meta li {
+      display: grid; grid-template-columns: 76px 1fr; gap: 12px;
+      font-size: 13.5px; line-height: 1.7; margin: 0;
+    }
+    .seminar-meta li > span:first-child {
+      color: var(--moss); font-weight: 700; font-size: 12px; padding-top: 2px;
+    }
+    /* A4 flyers are tall. Side by side they read as evidence; full width
+       they take over the page. */
+    .flyers {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 14px; margin: 20px 0 0; list-style: none; padding: 0;
+    }
+    .flyers li { margin: 0; min-width: 0; }
+    .seminar-next { margin-top: 34px; }
+    .flyers img {
+      width: 100%; max-width: 380px; display: block;
+      border: 1px solid var(--line); border-radius: 8px;
+      margin: 0 auto;
+    }
+
     /* Client voice. A single named testimonial carries more weight than the
        anonymised case cards above it, so it gets a block of its own rather
        than a slot in the card grid. White on the cream band, like .card. */
