@@ -165,6 +165,10 @@ description: "山口県の中小企業診断士が、セミナー・研修の講
 </div>
 </div>
 
+<ul class="flyers">
+<li><img src="/images/2026/09/第7回創業サポート講座A4チラシ_page-0001.webp" alt="第7回創業サポート講座「前に進もう！創業漢塾」チラシ" loading="lazy" decoding="async" /></li>
+</ul>
+
 <p class="eyebrow">Track Record</p>
 
 ## これまでの登壇実績
