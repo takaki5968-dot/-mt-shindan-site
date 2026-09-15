@@ -151,6 +151,7 @@ const orgSchema = {
     h1, h2, h3, h4,
     .hero-catch,
     .credo p,
+    .stat-lead,
     .faq-list summary,
     .featured-title, .post-title {
       word-break: auto-phrase;
@@ -811,10 +812,15 @@ const orgSchema = {
       .footer-col { gap: 0; }
       .site-footer { font-size: 13.5px; }
     }
+    /* Two sentences, one per line. Leaving them to flow made the break
+       land wherever the column width put it — 「段階のご相談 / でも、」 at
+       the width this sits at. Blocking each sentence fixes the break at
+       the full stop, and on a phone each one wraps at a 文節 instead. */
     .stat-lead {
       text-align: center; font-size: 15px; line-height: 1.9;
-      max-width: 44em; margin: 24px auto 0;
+      max-width: 34em; margin: 24px auto 0;
     }
+    .stat-lead span { display: block; }
 
     .site-footer { border-top: 1px solid var(--line); margin-top: 60px; padding: 40px 0 32px; font-size: 13px; color: var(--muted); }
     .footer-inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 28px 40px; align-items: start; margin-bottom: 28px; }
