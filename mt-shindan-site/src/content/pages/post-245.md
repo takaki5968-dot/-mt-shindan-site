@@ -41,7 +41,7 @@ date: "2026-03-01 23:12:37"
 <li><span class="stat-num">12年超</span><span class="stat-label">経営相談歴（うち商工会9年）</span></li>
 <li><span class="stat-num">60件超</span><span class="stat-label">補助金の採択を支援</span></li>
 <li><span class="stat-num">400件</span><span class="stat-label">年間の経営相談対応</span></li>
-<li><span class="stat-num">20回超</span><span class="stat-label">セミナー・研修に登壇</span></li>
+<li><span class="stat-num">25回超</span><span class="stat-label">セミナー・研修に登壇</span></li>
 </ul>
 
 <p class="stat-lead"><span>商工会の窓口と、独立後の現場。どちらも経験しています。</span><span>まだ整理できていない段階でも、そのまま受け止められます。</span></p>
