@@ -15,5 +15,4 @@ description: "以前取得した販売士１級の更新の案内が来ていま
   
 小売業に携わる方でしたら、３級程度の知識は絶対にあった方がよいと思います。  
 興味のある方は、サンプル問題を参考に受験してみてください。  
-販売士　商工会議所の検定試験　サンプル問題  
-https://www.kentei.ne.jp/retailsales/sample
+[販売士検定のサンプル問題（商工会議所）](https://www.kentei.ne.jp/retailsales/sample)
