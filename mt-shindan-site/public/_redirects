@@ -54,3 +54,28 @@
 /2024/* /blog/ 301
 /2025/* /blog/ 301
 /2026/* /blog/ 301
+
+# --- 記事: ルート直下 -> /blog/（2026-09-16 追加分） ---
+# Search Console が 2026-09-16 に /mecha-chameleon-business-lesson/ を
+# 検索結果に出していたが、このパスは 404 を返していた。移行時のルールが
+# 2026年5月以降の記事を拾えていなかったため、ルート直下で 404 になる
+# スラッグをまとめて転送する。
+/brand-touchpoint-book-review/ /blog/brand-touchpoint-book-review/ 301
+/claude-website-review/ /blog/claude-website-review/ 301
+/dx-shindan-seminar-2026/ /blog/dx-shindan-seminar-2026/ 301
+/expertbank-registration-2025/ /blog/expertbank-registration-2025/ 301
+/is-malatang-the-next-tapioca/ /blog/is-malatang-the-next-tapioca/ 301
+/jizokuka-19kai-saitaku/ /blog/jizokuka-19kai-saitaku/ 301
+/jizokuka-dai20kai-2026/ /blog/jizokuka-dai20kai-2026/ 301
+/local-benchmark-training-2026/ /blog/local-benchmark-training-2026/ 301
+/marriage/ /blog/marriage/ 301
+/mecha-chameleon-business-lesson/ /blog/mecha-chameleon-business-lesson/ 301
+/oshikatsu-market-megachurch/ /blog/oshikatsu-market-megachurch/ 301
+/persona-marketing-guide/ /blog/persona-marketing-guide/ 301
+/restaurant-location-clustering-strateg/ /blog/restaurant-location-clustering-strateg/ 301
+/seminar-info-202607/ /blog/seminar-info-202607/ 301
+/shinjigyou-shinshutsu-monodukuri-subsidy/ /blog/shinjigyou-shinshutsu-monodukuri-subsidy/ 301
+/slow-inconvenient-offline-strategy/ /blog/slow-inconvenient-offline-strategy/ 301
+/smecc-career-path-yamaguchi/ /blog/smecc-career-path-yamaguchi/ 301
+/studying-genai-passport/ /blog/studying-genai-passport/ 301
+/where-to-consult-yamaguchi/ /blog/where-to-consult-yamaguchi/ 301
