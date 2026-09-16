@@ -1,5 +1,5 @@
 ---
-title: "ものづくり補助金は今どうなっている？山口県の事業者向け"
+title: "ものづくり補助金 山口｜名称が変わり、締切は10月30日"
 slug: "monodukuri-hojokin-yamaguchi"
 date: "2026-09-16 21:00:00"
 categories: ["補助金"]
