@@ -177,6 +177,7 @@ description: "現状分析から課題整理、数値計画づくりまで。金
 * [ローカルベンチマーク研修に参加しました｜経営を数字で捉える視点](/blog/local-benchmark-training-2026/)
 * [飲食店の出店戦略｜近くに同業があると得か損か、研究で解説](/blog/restaurant-location-clustering-strateg/)
 * [2023年度の売上分析｜自分の事業の数字を実際に分解してみる](/blog/earnings/)
+* [山口県の中小企業はどこに相談すればいい？支援機関の使い分け](/blog/where-to-consult-yamaguchi/)
 
 <p class="eyebrow">Contact</p>
 

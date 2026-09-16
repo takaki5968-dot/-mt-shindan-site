@@ -310,6 +310,15 @@ AI導入支援に固有の料金体系は設けていません。関わり方に
 <section class="band band--dark">
 <div class="wrap">
 
+<p class="eyebrow">Related</p>
+
+## AI活用の記事
+
+* [昨年開催した生成AIセミナーの内容を少しご紹介します](/blog/%E6%98%A8%E5%B9%B4%E9%96%8B%E5%82%AC%E3%81%97%E3%81%9F%E7%94%9F%E6%88%90ai%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC%E3%81%AE%E5%86%85%E5%AE%B9%E3%82%92%E5%B0%91%E3%81%97%E3%81%94%E7%B4%B9%E4%BB%8B%E3%81%97/)
+* [AIで持続化補助金の申請書を作る｜ワークショップ開催レポート](/blog/0403report/)
+* [自社サイトを3ヶ月間、Claudeと一緒に改善してみた話](/blog/claude-website-review/)
+* [生成AIパスポートに挑戦中｜AI活用の土台を学び直す理由](/blog/studying-genai-passport/)
+
 <p class="eyebrow">Contact</p>
 
 ## まず、時間を取られている作業を教えてください。

@@ -124,6 +124,24 @@ const service =
 // long enough that the default " - 前貴棋中小企業診断士事務所" suffix would be
 // cut off anyway, taking half the visible line with it, so only add the
 // short form when the title leaves room for it.
+// The service band under every article said the same thing to everyone: a
+// reader who just finished 3,300 words on adoption results got the same
+// sentence as one who read a book review. `ctaLead` lets a post speak in its
+// own terms, and the contact link carries the topic so the form opens with
+// the matching box already ticked.
+const TOPIC_BY_HREF: Record<string, string> = {
+  "/subsidy-support/": "subsidy",
+  "/ai-support/": "ai",
+  "/business-plan/": "plan",
+  "/marketing-support/": "marketing",
+  "/seminar/": "seminar",
+};
+const topic = TOPIC_BY_HREF[service.href];
+const contactHref = topic
+  ? `/contact/?topic=${topic}&from=${encodeURIComponent(entry.data.slug)}`
+  : "/contact/";
+const ctaLead = entry.data.ctaLead ?? service.pitch;
+
 const BRAND = "｜前貴棋事務所";
 const TITLE_LIMIT = 32;
 const seoTitle =
@@ -242,9 +260,9 @@ const breadcrumbSchema = {
     <aside class="post-cta">
       <p class="post-cta-eyebrow">関連するサービス</p>
       <h2>{service.name}</h2>
-      <p class="post-cta-pitch">{service.pitch}</p>
+      <p class="post-cta-pitch">{ctaLead}</p>
       <div class="post-cta-actions">
-        <a class="btn-primary" href="/contact/">30分無料相談を申し込む →</a>
+        <a class="btn-primary" href={contactHref}>30分無料相談を申し込む →</a>
         <a class="btn-ghost" href={service.href}>{service.name}を見る</a>
       </div>
       <p class="post-cta-note">初回30分のご相談は無料です。営業目的のご連絡は行いません。</p>

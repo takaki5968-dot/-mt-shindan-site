@@ -176,6 +176,9 @@ description: "「誰に・何を・どう伝えるか」を整理し、売上と
 * [お客様は「商品」でなく「物語」を買っている](/blog/oshikatsu-market-megachurch/)
 * [おしゃれなカフェで急に醒めた経験、ありませんか？｜ブランドの作り方](/blog/brand-touchpoint-book-review/)
 * [「めっちゃカメレオン」に学ぶ、小さくても勝てる理由](/blog/mecha-chameleon-business-lesson/)
+* [ペルソナマーケティングとは？中小企業のための実践ガイド](/blog/persona-marketing-guide/)
+* [マーラータンはタピオカの二の舞になる？ブーム盛衰の法則](/blog/is-malatang-the-next-tapioca/)
+* [「遅い・不便・圏外」が売りになる｜ドパガキ時代の逆張り戦略](/blog/slow-inconvenient-offline-strategy/)
 
 <p class="eyebrow">Contact</p>
 

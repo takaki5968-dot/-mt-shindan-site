@@ -230,6 +230,18 @@ description: "小規模事業者持続化補助金、新事業進出・ものづ
 </details>
 </div>
 
+<p class="eyebrow">Related</p>
+
+## 補助金の記事
+
+* [ものづくり補助金 山口｜名称が変わり、締切は10月30日](/blog/monodukuri-hojokin-yamaguchi/)
+* [小規模事業者持続化補助金 第19回の採択結果｜採択率47.2%](/blog/jizokuka-19kai-saitaku/)
+* [持続化補助金 第20回の変更点｜締切は12月15日ではありません](/blog/jizokuka-dai20kai-2026/)
+* [小規模事業者持続化補助金 スケジュールと概要【2026年版】](/blog/jizokuka_-schedule/)
+* [小規模事業者持続化補助金の採択率を上げる5つのコツ](/blog/%E6%8C%81%E7%B6%9A%E5%8C%96%E8%A3%9C%E5%8A%A9%E9%87%91%E3%81%AE%E6%8E%A1%E6%8A%9E%E7%8E%87%E3%82%92%E4%B8%8A%E3%81%92%E3%82%8B5%E3%81%A4%E3%81%AE%E3%82%B3%E3%83%84%E3%80%90%E7%AC%AC19%E5%9B%9E/)
+
+過去の記事：[新事業進出・ものづくり商業サービス補助金がスタート（2026年6月）](/blog/shinjigyou-shinshutsu-monodukuri-subsidy/)／[第14回の採択結果（2024年3月）](/blog/jizokuka14/)／[持続化補助金の支援をさせて頂きました（2023年12月）](/blog/jizokuka/)
+
 <p class="eyebrow">Contact</p>
 
 ## 補助金の活用について、まずはご相談ください。

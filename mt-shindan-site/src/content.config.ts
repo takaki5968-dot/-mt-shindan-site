@@ -11,6 +11,7 @@ const blog = defineCollection({
     description: z.string().optional(),
     seoTitle: z.string().optional(),
     service: z.string().optional(),
+    ctaLead: z.string().optional(),
   }),
 });
 

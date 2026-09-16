@@ -27,6 +27,24 @@ const categories = [...counts.keys()].sort(
   (a, b) => CATEGORY_ORDER.indexOf(a) - CATEGORY_ORDER.indexOf(b)
 );
 
+// The list is date-ordered, so whatever was posted last sits at the top —
+// often a one-paragraph event report. 42 articles average 1,652 characters
+// and 23 of them are notices and diary entries, which means a first-time
+// visitor usually lands on the least useful thing here. These picks put the
+// pieces that answer a real question above that stream.
+const PICK_SLUGS = [
+  "monodukuri-hojokin-yamaguchi",
+  "jizokuka-19kai-saitaku",
+  "jizokuka-dai20kai-2026",
+  "where-to-consult-yamaguchi",
+  "persona-marketing-guide",
+];
+const picks = PICK_SLUGS.map((slug) => {
+  const post = posts.find((p) => p.data.slug === slug);
+  if (!post) throw new Error(`PICK_SLUGS: 記事が見つかりません — ${slug}`);
+  return post;
+});
+
 const [featured, ...rest] = posts;
 // Everything past this point starts hidden behind 「もっと見る」 so the page
 // doesn't open as 18 screens of scrolling.
@@ -62,6 +80,21 @@ const mins = (p: (typeof posts)[number]) => readingMinutes(p.body);
       山口県の現場で見聞きしたことを書いています。制度の情報は、公募要領を確認したうえで、
       できるだけ「いつまでに何をすればよいか」が分かる形でまとめるようにしています。
     </p>
+
+    <section class="picks" aria-labelledby="picks-head">
+      <p class="picks-eyebrow">Start here</p>
+      <h2 id="picks-head">まず読んでほしい記事</h2>
+      <ul class="picks-list">
+        {picks.map((post) => (
+          <li>
+            <a href={`/blog/${post.data.slug}/`}>
+              <span class="picks-title">{post.data.title}</span>
+              <span class="picks-meta">{post.data.categories?.[0]} ・ 約{mins(post)}分</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
 
     <div class="filters" role="group" aria-label="カテゴリで絞り込む">
       <button type="button" class="chip is-active" data-cat="all" aria-pressed="true">
@@ -135,6 +168,15 @@ const mins = (p: (typeof posts)[number]) => readingMinutes(p.body);
 </BaseLayout>
 
 <style>
+  .picks { margin: 26px 0 34px; padding: 22px 24px; background: var(--moss-light); border: 1px solid var(--line); border-radius: 14px; }
+  .picks-eyebrow { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin: 0 0 4px; }
+  .picks h2 { font-size: 18px; margin: 0 0 14px; }
+  .picks-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 2px; }
+  .picks-list a { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; padding: 9px 10px; border-radius: 8px; min-height: 44px; align-content: center; }
+  .picks-list a:hover { background: #fff; text-decoration: none; }
+  .picks-title { font-size: 14.5px; font-weight: 700; color: var(--ink); line-height: 1.6; }
+  .picks-meta { font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--muted); white-space: nowrap; }
+  @media (max-width: 640px) { .picks { padding: 18px 16px; } .picks-title { font-size: 14px; } }
   h1 { font-size: 30px; margin: 0 0 14px; }
   .blog-intro { color: var(--muted); font-size: 14.5px; max-width: 62ch; margin: 0 0 24px; }
 
