@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AIプロンプト集</title>
+<meta name="description" content="大畠商工会 生成AI活用セミナー（2026年11月17日）で使ったプロンプト集。ボタンでコピーしてAIに貼り付けられます。">
+<style>
+:root { --navy:#1F3A5F; --ink:#222831; --sub:#5A6470; --accent:#B35C18; --pale:#EEF2F7; --apale:#FFF6EA; --bg:#FAFAF8; --card:#fff; --line:#D5DBE3; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --navy:#9DB8DA; --ink:#E8EAED; --sub:#AEB6C2; --accent:#F2A765; --pale:#243246; --apale:#3A2C1E; --bg:#15191F; --card:#1E242C; --line:#38414D; } }
+:root[data-theme="dark"] { --navy:#9DB8DA; --ink:#E8EAED; --sub:#AEB6C2; --accent:#F2A765; --pale:#243246; --apale:#3A2C1E; --bg:#15191F; --card:#1E242C; --line:#38414D; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'BIZ UDPGothic', 'Hiragino Sans', 'Noto Sans JP', sans-serif; font-size: 18px; line-height: 1.7; }
+header { background: #1F3A5F; color: #fff; padding: 22px 16px 18px; }
+header h1 { margin: 0; font-size: 24px; line-height: 1.35; }
+header p { margin: 6px 0 0; font-size: 15px; opacity: .9; }
+main { max-width: 720px; margin: 0 auto; padding: 16px; }
+.info { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin-bottom: 14px; }
+.info h2 { font-size: 18px; margin: 0 0 6px; color: var(--navy); background: none; padding: 0; }
+.info ul { margin: 0; padding-left: 1.2em; }
+.warn { border: 2px solid var(--accent); background: var(--apale); }
+.warn h2 { color: var(--accent); }
+section > h2 { font-size: 20px; color: #fff; background: #1F3A5F; margin: 26px 0 12px; padding: 8px 14px; border-radius: 8px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px 16px; margin-bottom: 14px; }
+.card h3 { margin: 0 0 8px; font-size: 19px; color: var(--navy); line-height: 1.45; }
+.no { color: var(--accent); margin-right: 6px; }
+.prompt { background: var(--apale); border-left: 5px solid var(--accent); padding: 12px 14px; border-radius: 6px; font-size: 18px; overflow-wrap: anywhere; }
+.ph { color: var(--accent); font-weight: bold; }
+.copy { display: block; width: 100%; margin-top: 10px; min-height: 52px; font: inherit; font-size: 18px; font-weight: bold; color: #fff; background: #B35C18; border: 0; border-radius: 8px; cursor: pointer; }
+.copy.done { background: #2E7D4F; }
+.lbl { margin: 14px 0 6px; font-weight: bold; color: var(--sub); font-size: 16px; }
+.note { margin: 10px 0 0; color: var(--sub); font-size: 16px; }
+table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 10px; overflow: hidden; }
+td { border-bottom: 1px solid var(--line); padding: 10px 12px; vertical-align: top; font-size: 16px; }
+td:first-child { font-weight: bold; }
+ol.rules { background: var(--card); border: 1px solid var(--line); border-radius: 10px; margin: 0; padding: 12px 16px 12px 2.2em; }
+footer { max-width: 720px; margin: 0 auto; padding: 8px 16px 40px; font-size: 15px; color: var(--sub); }
+footer b { color: var(--ink); }
+</style></head><body>
+<header><h1>AIプロンプト集</h1><p>大畠商工会 生成AI活用セミナー<br>～事業計画策定編～ 2026年11月17日</p></header>
+<main>
+  <div class="info"><h2>使い方</h2><ul><li><span class="ph">【　】</span>のところを、自分のことに入れ替えてから送信します。</li><li>ChatGPT・Geminiなど、ほかのAIでも同じように使えます。</li><li>一回で気に入らなければ「もっと短く」「別の案を」と言い直してください。</li><li>「コピーする」を押して、AIの入力欄に貼り付けます。</li></ul></div>
+  <div class="info warn"><h2>入れてはいけない3つ</h2><ul><li>お客様の名前・電話番号・住所・注文の中身</li><li>従業員の給与・健康・家族のこと</li><li>取引先との契約・見積の中身、パスワード</li></ul><p class="note">迷ったら「Aさん」「B社」に置き換えて入力します。Claudeは「設定 → プライバシー → AIモデルの改善に協力する」をオフにしておくと、入力した内容がAIの学習に使われません。</p></div>
+  
+  <section><h2>はじめに</h2>
+  <article class="card">
+      <h3><span class="no">①</span>最初のひと言：自分の仕事を伝える</h3>
+      
+      
+      <div class="prompt" id="p0">私は山口県柳井市で<span class="ph">【業種】</span>を営んでいます。<br>従業員は<span class="ph">【人数】</span>人、主なお客様は<span class="ph">【客層】</span>です。<br>これから仕事の相談をします。<br>まず、私の仕事でAIが手伝えそうなことを5つ、短く教えてください。</div>
+      <button class="copy" data-t="私は山口県柳井市で【業種】を営んでいます。
+従業員は【人数】人、主なお客様は【客層】です。
+これから仕事の相談をします。
+まず、私の仕事でAIが手伝えそうなことを5つ、短く教えてください。">コピーする</button>
+      
+    </article>
+  </section>
+  <section><h2>事業計画をつくる</h2>
+  <article class="card">
+      <h3><span class="no">②</span>強みと課題の棚卸し（AIにインタビューしてもらう）</h3>
+      
+      
+      <div class="prompt" id="p1">あなたは小規模事業者の相談にのる専門家です。<br>私の店（会社）の強みと課題を整理したいので、私にインタビューしてください。<br>質問は1つずつ、全部で5問。<br>最後に「強み」「課題」「お客様が選ぶ理由」を箇条書きでまとめてください。<br>業種は<span class="ph">【業種】</span>です。</div>
+      <button class="copy" data-t="あなたは小規模事業者の相談にのる専門家です。
+私の店（会社）の強みと課題を整理したいので、私にインタビューしてください。
+質問は1つずつ、全部で5問。
+最後に「強み」「課題」「お客様が選ぶ理由」を箇条書きでまとめてください。
+業種は【業種】です。">コピーする</button>
+      <p class="note">答えは短くて大丈夫です。途中でやめたいときは「ここまででまとめてください」と送ります。</p>
+    </article><article class="card">
+      <h3><span class="no">③</span>計画書の下書き（②の会話の続きに送る）</h3>
+      
+      
+      <div class="prompt" id="p2">ここまでの会話をもとに、持続化補助金の経営計画の「自社や自社の提供する商品・サービスの強み・弱み」の下書きを400字程度で書いてください。<br>条件：私が話していない事実や数字は書かない。足りない情報は<span class="ph">【要確認：○○】</span>と残す。</div>
+      <button class="copy" data-t="ここまでの会話をもとに、持続化補助金の経営計画の「自社や自社の提供する商品・サービスの強み・弱み」の下書きを400字程度で書いてください。
+条件：私が話していない事実や数字は書かない。足りない情報は【要確認：○○】と残す。">コピーする</button>
+      <p class="note">「強み・弱み」の部分を「経営方針・目標と今後のプラン」などに変えると、ほかの欄の下書きにも使えます。</p>
+    </article><article class="card">
+      <h3>市場の動向を調べる（出典つき）</h3>
+      
+      
+      <div class="prompt" id="p3"><span class="ph">【柳井市】</span>の<span class="ph">【飲食業】</span>を取り巻く環境（人口の動き、観光客、物価など）を、国や自治体の公的な統計から調べてください。<br>要点を5つにまとめ、それぞれに出典の名前とURLを付けてください。<br>わからないことは、わからないと書いてください。</div>
+      <button class="copy" data-t="【柳井市】の【飲食業】を取り巻く環境（人口の動き、観光客、物価など）を、国や自治体の公的な統計から調べてください。
+要点を5つにまとめ、それぞれに出典の名前とURLを付けてください。
+わからないことは、わからないと書いてください。">コピーする</button>
+      <p class="note">出典のURLを必ず開いて、数字がそこに書いてあるか自分の目で確かめてから使います。</p>
+    </article><article class="card">
+      <h3><span class="no">④</span>審査員の目で推敲させる</h3>
+      
+      
+      <div class="prompt" id="p4">あなたは持続化補助金の審査員です。<br>上の下書きを読んで、①わかりにくい所 ②根拠が足りない所 ③もっと具体的に書くべき所 を合わせて5つ、厳しめに指摘してください。<br>直した文章は、まだ書かないでください。</div>
+      <button class="copy" data-t="あなたは持続化補助金の審査員です。
+上の下書きを読んで、①わかりにくい所 ②根拠が足りない所 ③もっと具体的に書くべき所 を合わせて5つ、厳しめに指摘してください。
+直した文章は、まだ書かないでください。">コピーする</button>
+      <p class="note">直すのは自分です。指摘だけもらうと、自分の言葉の計画書になります。</p>
+    </article><article class="card">
+      <h3>計画書全体の抜けをチェックする</h3>
+      
+      
+      <div class="prompt" id="p5">次の経営計画を読んで、「課題」「強み」「今後のプラン」「補助事業でやること」が一本の筋でつながっているか確認してください。<br>つながっていない所があれば、どこか・なぜかを教えてください。<br><br>（ここに計画書の文章を貼る）</div>
+      <button class="copy" data-t="次の経営計画を読んで、「課題」「強み」「今後のプラン」「補助事業でやること」が一本の筋でつながっているか確認してください。
+つながっていない所があれば、どこか・なぜかを教えてください。
+
+（ここに計画書の文章を貼る）">コピーする</button>
+      
+    </article>
+  </section>
+  <section><h2>毎日の書き仕事</h2>
+  <article class="card">
+      <h3><span class="no">⑤</span>SNSの投稿文</h3>
+      
+      
+      <div class="prompt" id="p6">私の店の強み<span class="ph">【強み】</span>を伝える投稿文を、Instagram（またはLINE・Facebook）用に3案作ってください。<br>条件：150字以内。地元のお客様に向けて、親しみやすく。最後にハッシュタグを3つ。</div>
+      <button class="copy" data-t="私の店の強み【強み】を伝える投稿文を、Instagram（またはLINE・Facebook）用に3案作ってください。
+条件：150字以内。地元のお客様に向けて、親しみやすく。最後にハッシュタグを3つ。">コピーする</button>
+      <p class="note">写真を1枚送って「この写真で投稿文を作って」でも作れます。</p>
+    </article><article class="card">
+      <h3><span class="no">⑥</span>言いにくいお知らせ（値上げ・臨時休業）</h3>
+      
+      
+      <div class="prompt" id="p7">来年1月から、原材料の値上がりにより<span class="ph">【商品】</span>の価格を<span class="ph">【旧価格】</span>から<span class="ph">【新価格】</span>に改定します。<br>常連のお客様に向けて、店頭に貼るお知らせ文を作ってください。<br>条件：おわびと感謝が伝わるように。300字以内、やわらかい言葉で。</div>
+      <button class="copy" data-t="来年1月から、原材料の値上がりにより【商品】の価格を【旧価格】から【新価格】に改定します。
+常連のお客様に向けて、店頭に貼るお知らせ文を作ってください。
+条件：おわびと感謝が伝わるように。300字以内、やわらかい言葉で。">コピーする</button>
+      
+    </article><article class="card">
+      <h3><span class="no">⑦</span>見積書の送付文・お礼状・おわび</h3>
+      
+      
+      <div class="prompt" id="p8"><span class="ph">【取引先名】</span>様に見積書をメールで送ります。送付文を作ってください。<br>内容：<span class="ph">【工事名】</span>の見積書を添付。有効期限は<span class="ph">【日付】</span>。不明点は電話で。<br>条件：丁寧だが短く、5行程度。</div>
+      <button class="copy" data-t="【取引先名】様に見積書をメールで送ります。送付文を作ってください。
+内容：【工事名】の見積書を添付。有効期限は【日付】。不明点は電話で。
+条件：丁寧だが短く、5行程度。">コピーする</button>
+      <p class="note">続けて「お礼状にして」「納期が遅れるおわびにして」と送ると、別の文章になります。</p>
+    </article><article class="card">
+      <h3>Googleマップの口コミに返信する</h3>
+      
+      
+      <div class="prompt" id="p9">Googleマップに次の口コミが届きました。お店として返信する文を作ってください。<br>条件：お礼 → 具体的なひとこと → またのご来店を。200字以内。<br><br>口コミ：（ここに口コミの文章を貼る）</div>
+      <button class="copy" data-t="Googleマップに次の口コミが届きました。お店として返信する文を作ってください。
+条件：お礼 → 具体的なひとこと → またのご来店を。200字以内。
+
+口コミ：（ここに口コミの文章を貼る）">コピーする</button>
+      <p class="note">投稿した人の名前は貼らないでください。</p>
+    </article><article class="card">
+      <h3><span class="no">⑧</span>声で頼む（朝礼の原稿）</h3>
+      
+      
+      <div class="prompt" id="p10">明日の朝礼で、<span class="ph">【年末に向けて気をつけること】</span>を3つ話したいです。1分で話せる原稿にしてください。</div>
+      <button class="copy" data-t="明日の朝礼で、【年末に向けて気をつけること】を3つ話したいです。1分で話せる原稿にしてください。">コピーする</button>
+      <p class="note">入力欄のマイクのボタンを押して、しゃべるだけで入力できます。</p>
+    </article><article class="card">
+      <h3>手書きのメモを表にする（写真を送る）</h3>
+      
+      
+      <div class="prompt" id="p11">この写真の内容を表にして、Excelファイルで出してください。<br>読み取れない所は<span class="ph">【？】</span>と書いてください。</div>
+      <button class="copy" data-t="この写真の内容を表にして、Excelファイルで出してください。
+読み取れない所は【？】と書いてください。">コピーする</button>
+      <p class="note">無料版は写真を送れる回数が少ないので、大事なときに使います。</p>
+    </article><article class="card">
+      <h3>メモを議事録・要点にまとめる</h3>
+      
+      
+      <div class="prompt" id="p12">次のメモを、①決まったこと ②次にやること（誰が・いつまで） ③保留になったこと、の3つに分けて整理してください。<br><br>（ここにメモを貼る）</div>
+      <button class="copy" data-t="次のメモを、①決まったこと ②次にやること（誰が・いつまで） ③保留になったこと、の3つに分けて整理してください。
+
+（ここにメモを貼る）">コピーする</button>
+      
+    </article><article class="card">
+      <h3>アイデア出し（10個 → 3つ → 計画へ）</h3>
+      
+      
+      <div class="prompt" id="p13"><span class="ph">【冬の集客】</span>のアイデアを10個出してください。お金をかけずにできるものを中心に。</div>
+      <button class="copy" data-t="【冬の集客】のアイデアを10個出してください。お金をかけずにできるものを中心に。">コピーする</button>
+      <p class="lbl">続けて送る（1）</p>
+      <div class="prompt" id="p14">その中で、うちの強みが生きるものを3つ選んで、理由も教えてください。</div>
+      <button class="copy" data-t="その中で、うちの強みが生きるものを3つ選んで、理由も教えてください。">コピーする</button>
+      <p class="lbl">続けて送る（2）</p>
+      <div class="prompt" id="p15">1つめを、経営計画の「今後のプラン」に書ける形にしてください。</div>
+      <button class="copy" data-t="1つめを、経営計画の「今後のプラン」に書ける形にしてください。">コピーする</button>
+      
+    </article><article class="card">
+      <h3>文章の言い回しを直す</h3>
+      
+      
+      <div class="prompt" id="p16">次の文章を、<span class="ph">【もっと丁寧に／もっと短く／やわらかく】</span>直してください。意味は変えないでください。<br><br>（ここに文章を貼る）</div>
+      <button class="copy" data-t="次の文章を、【もっと丁寧に／もっと短く／やわらかく】直してください。意味は変えないでください。
+
+（ここに文章を貼る）">コピーする</button>
+      
+    </article>
+  </section>
+  <section><h2>困ったときの言い直しフレーズ</h2>
+  <table><tr><td>「もっと短く」</td><td>長すぎるとき</td></tr><tr><td>「別の案を3つ」</td><td>ピンとこないとき</td></tr><tr><td>「中学生にもわかる言葉で」</td><td>難しいとき</td></tr><tr><td>「わからない時は、わからないと言って」</td><td>最初に付けておくと、でたらめが減る</td></tr><tr><td>「私に質問してください。1つずつ。」</td><td>何を頼めばいいかわからないとき</td></tr></table></section>
+  <section><h2>安全に使う5つのルール</h2><ol class="rules"><li>お客様・従業員の個人情報は入れない</li><li>取引先の秘密・パスワードは入れない</li><li>数字・日付・制度は、元の資料で確かめる</li><li>AIの文章は、自分の言葉に直してから出す</li><li>他人の文章・写真・ロゴをまねさせない</li></ol></section>
+</main>
+<footer><p><b>計画書の相談・持続化補助金の様式4は　大畠商工会　TEL 0820-45-2414</b></p><p>講師　前貴棋中小企業診断士事務所　中小企業診断士 前 貴棋　TEL 080-6307-4502</p><p><a href="https://mt-shindan.com/" style="color:inherit">前貴棋中小企業診断士事務所のホームページへ</a></p></footer>
+<script>
+function fallbackCopy(t) {
+  var ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', '');
+  ta.style.position = 'fixed'; ta.style.top = '-1000px'; document.body.appendChild(ta); ta.select();
+  var ok = false; try { ok = document.execCommand('copy'); } catch (e) {} document.body.removeChild(ta); return ok;
+}
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.copy'); if (!b) return;
+  var t = b.getAttribute('data-t');
+  var done = function () { b.textContent = 'コピーしました'; b.classList.add('done'); setTimeout(function () { b.textContent = 'コピーする'; b.classList.remove('done'); }, 1800); };
+  var fail = function () { b.textContent = 'コピーできませんでした。文章を長押ししてコピーしてください'; };
+  if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(t).then(done, function () { fallbackCopy(t) ? done() : fail(); });
+  else fallbackCopy(t) ? done() : fail();
+});
+</script>
+</body></html>
