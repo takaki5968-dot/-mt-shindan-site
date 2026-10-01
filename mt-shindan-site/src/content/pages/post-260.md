@@ -235,6 +235,7 @@ description: "小規模事業者持続化補助金、新事業進出・ものづ
 ## 補助金の記事
 
 * [ものづくり補助金 山口｜名称が変わり、締切は10月30日](/blog/monodukuri-hojokin-yamaguchi/)
+* [デジタル化・AI導入補助金2026｜ChatGPT単体は対象外](/blog/digital-ai-hojokin-2026/)
 * [小規模事業者持続化補助金 第19回の採択結果｜採択率47.2%](/blog/jizokuka-19kai-saitaku/)
 * [持続化補助金 第20回の変更点｜締切は12月15日ではありません](/blog/jizokuka-dai20kai-2026/)
 * [小規模事業者持続化補助金 スケジュールと概要【2026年版】](/blog/jizokuka_-schedule/)
