@@ -2,6 +2,7 @@
 title: "HOME"
 slug: "home-2"
 date: "2026-03-01 23:12:37"
+updated: "2026-09-17"
 ---
 
 <section class="band">

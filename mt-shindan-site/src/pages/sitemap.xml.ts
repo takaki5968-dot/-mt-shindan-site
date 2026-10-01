@@ -16,6 +16,9 @@ function xmlEscape(value: string): string {
     .replace(/'/g, "&apos;");
 }
 
+// lastmod は公開日ではなく最終更新日を指す。date のまま出していたため、
+// 9月に全面的に作り直したセミナーページが「2026-03-01 から変更なし」と
+// 申告される状態だった。frontmatter の updated があればそちらを使う。
 function toLastmod(date: string | undefined): string | undefined {
   if (!date) return undefined;
   const match = date.match(/^\d{4}-\d{2}-\d{2}/);
@@ -36,7 +39,7 @@ export const GET: APIRoute = async () => {
     if (PAGES_HANDLED_ELSEWHERE.includes(page.data.slug)) continue;
     entries.push({
       path: `/${page.data.slug}/`,
-      lastmod: toLastmod(page.data.date),
+      lastmod: toLastmod(page.data.updated ?? page.data.date),
       priority: page.data.slug === "privacy-policy" ? "0.2" : "0.8",
     });
   }
@@ -44,7 +47,7 @@ export const GET: APIRoute = async () => {
   for (const post of posts) {
     entries.push({
       path: `/blog/${post.data.slug}/`,
-      lastmod: toLastmod(post.data.date),
+      lastmod: toLastmod(post.data.updated ?? post.data.date),
       priority: "0.6",
     });
   }

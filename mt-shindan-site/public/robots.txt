@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mt-shindan.com/sitemap.xml

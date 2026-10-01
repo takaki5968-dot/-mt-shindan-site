@@ -2,6 +2,7 @@
 title: "飲食店の出店戦略｜近くに同業があると得か損か研究で解説"
 slug: "restaurant-location-clustering-strateg"
 date: "2026-08-25 18:00:00"
+updated: "2026-09-17"
 categories: ["経営のヒント"]
 description: "商店街や幹線道路を歩いていると、飲食店が数軒並んでいたり、自動車販売店が数キロにわたって固まって出店していたりする光景をよく目にします。"
 ctaLead: "出店候補地の周辺に同業が何軒あるかは、RESASやjSTATMAPで実際に数えられます。候補地の比較からご相談いただけます。"

@@ -2,6 +2,7 @@
 title: "マーケティング支援"
 slug: "marketing-support"
 date: "2026-03-01 23:55:00"
+updated: "2026-09-17"
 eyebrow: "Services / Marketing"
 seoTitle: "マーケティング支援｜山口県の中小企業診断士 前貴棋事務所"
 description: "「誰に・何を・どう伝えるか」を整理し、売上と集客につながる仕組みを作ります。SNS・LINE公式・生成AIの活用も、山口県の中小企業診断士が現場目線で支援します。初回相談無料。"
