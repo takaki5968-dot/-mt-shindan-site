@@ -207,11 +207,6 @@ const orgSchema = {
        Bands mark shifts in what the page is doing — "here is your problem",
        "here is the person", "here is how to start" — rather than alternating
        on every heading, which reads as stripes. */
-    /* The home page H2s were browser default (24px) while the H1 is 32px,
-       so past the first screen the page had almost no scale contrast — a
-       reader told us it "flows past". Section headings carry the breaks. */
-    main h2 { font-size: clamp(26px, 3.4vw, 34px); margin: 0 0 14px; }
-
     .band { padding: 72px 0; }
     .band:first-child { padding-top: 40px; }
     .band--paper { background: #fff; }

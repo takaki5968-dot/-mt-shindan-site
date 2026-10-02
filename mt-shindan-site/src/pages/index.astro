@@ -56,7 +56,10 @@ const faqSchema = {
 
 <style>
   .prose :global(h1) { font-size: 32px; margin-top: 0; }
-  .prose :global(h2) { font-size: 24px; margin-top: 0; border-left: 4px solid var(--gold-rule); padding-left: 12px; }
+  /* Section headings were 24px against a 32px H1, so past the first screen
+     the page had almost no scale contrast. A reader described it as "flowing
+     past". These are the only chapter markers on a 8,000px page. */
+  .prose :global(h2) { font-size: clamp(26px, 3.2vw, 32px); margin-top: 0; border-left: 4px solid var(--gold-rule); padding-left: 14px; }
   .prose :global(.band > .wrap > *:first-child) { margin-top: 0; }
   .prose :global(ul) { padding-left: 20px; }
 </style>
