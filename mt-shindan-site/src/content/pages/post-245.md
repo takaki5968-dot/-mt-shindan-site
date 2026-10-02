@@ -264,7 +264,7 @@ updated: "2026-09-17"
 
 <ol class="timeline">
 <li>
-<div class="step-icon"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=160&q=75" alt="お問い合わせ" loading="lazy" decoding="async" /></div>
+<div class="step-icon"><img src="/images/2026/10/step-contact.webp" alt="お問い合わせ" loading="lazy" decoding="async" /></div>
 <div class="step-body">
 <span class="step-num">01</span>
 <h4>お問い合わせフォームからご連絡（約1分）</h4>
@@ -272,7 +272,7 @@ updated: "2026-09-17"
 </div>
 </li>
 <li>
-<div class="step-icon"><img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=160&q=75" alt="日程調整" loading="lazy" decoding="async" /></div>
+<div class="step-icon"><img src="/images/2026/10/step-schedule.webp" alt="日程調整" loading="lazy" decoding="async" /></div>
 <div class="step-body">
 <span class="step-num">02</span>
 <h4>日程調整</h4>
@@ -280,7 +280,7 @@ updated: "2026-09-17"
 </div>
 </li>
 <li>
-<div class="step-icon"><img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=160&q=75" alt="オンライン相談" loading="lazy" decoding="async" /></div>
+<div class="step-icon"><img src="/images/2026/10/step-online.webp" alt="オンライン相談" loading="lazy" decoding="async" /></div>
 <div class="step-body">
 <span class="step-num">03</span>
 <h4>初回30分 無料相談（オンライン・対面可）</h4>
