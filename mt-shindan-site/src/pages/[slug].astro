@@ -73,6 +73,9 @@ const breadcrumbSchema = {
 </BaseLayout>
 
 <style>
-  .prose :global(h2) { font-size: 22px; margin-top: 32px; border-left: 4px solid var(--gold-rule); padding-left: 12px; }
+  /* 760px の読み幅では、22px の見出しは本文16pxと6pxしか違わず、章の
+     切れ目として立たない。トップと同じ考え方で落差をつける。 */
+  .prose :global(h2) { font-size: clamp(24px, 2.8vw, 28px); margin-top: 40px; border-left: 4px solid var(--gold-rule); padding-left: 14px; }
+  .prose :global(h3) { font-size: 20px; margin-top: 30px; }
   .prose :global(a) { color: var(--moss); font-weight: 600; }
 </style>
