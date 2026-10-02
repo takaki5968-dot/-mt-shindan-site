@@ -590,7 +590,13 @@ const orgSchema = {
       white-space: nowrap; font-variant-numeric: tabular-nums; letter-spacing: 0.01em;
     }
     .stat-row .stat-label { display: block; font-size: 13px; color: var(--muted); margin-top: 6px; }
-    .stat-note { font-size: 13px; color: var(--muted); margin: -12px 0 24px; }
+    /* The -12px pulled the note up into whatever sat above it. That works
+       after a list or table, which carry their own bottom margin, but
+       .stat-lead has margin-bottom 0 — so on the home page the note was
+       overlapping the lead by exactly 12px. Normal spacing, with extra room
+       after the lead. */
+    .stat-note { font-size: 13px; color: var(--muted); margin: 6px 0 24px; }
+    .stat-lead + .stat-note { margin-top: 20px; }
 
     /* Dated notice block */
     .notice {
