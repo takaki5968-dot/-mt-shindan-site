@@ -207,10 +207,20 @@ const orgSchema = {
        Bands mark shifts in what the page is doing — "here is your problem",
        "here is the person", "here is how to start" — rather than alternating
        on every heading, which reads as stripes. */
+    /* The home page H2s were browser default (24px) while the H1 is 32px,
+       so past the first screen the page had almost no scale contrast — a
+       reader told us it "flows past". Section headings carry the breaks. */
+    main h2 { font-size: clamp(26px, 3.4vw, 34px); margin: 0 0 14px; }
+
     .band { padding: 72px 0; }
     .band:first-child { padding-top: 40px; }
     .band--paper { background: #fff; }
-    .band--tint { background: var(--moss-light); }
+    /* --moss-light (#EDF1EA) is only 9/3/4 away from the page ground
+       (#F6F4EE). Alternating the two read as no change at all, so eight
+       background switches down the home page carried no information. The
+       band tint is its own, deeper colour now; muted text still clears
+       4.5:1 on it (4.71). */
+    .band--tint { background: #E4EBDF; }
     .band--dark { background: var(--moss); color: #E9EDE6; }
     .band--dark h2,
     .band--dark h3 { color: #fff; }
@@ -421,6 +431,21 @@ const orgSchema = {
     /* Client voice. A single named testimonial carries more weight than the
        anonymised case cards above it, so it gets a block of its own rather
        than a slot in the card grid. White on the cream band, like .card. */
+    /* The one thing on the home page that should stop the eye. With a single
+       testimonial and no Google reviews yet, this is the only third-party
+       voice on the site, and it sat at 14px inside a card. */
+    .voice-pull {
+      margin: 26px 0 34px; padding: 2px 0 2px 26px;
+      border-left: 3px solid var(--gold);
+    }
+    .voice-pull p {
+      font-family: 'Shippori Mincho', serif;
+      font-size: clamp(21px, 2.9vw, 30px);
+      line-height: 1.75; color: var(--ink); margin: 0 0 14px;
+      word-break: auto-phrase;
+    }
+    .voice-pull footer { font-size: 13px; color: var(--muted); }
+
     .voice {
       background: #fff;
       border: 1px solid var(--line);

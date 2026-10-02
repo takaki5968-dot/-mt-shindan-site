@@ -156,6 +156,12 @@ updated: "2026-09-17"
 </li>
 </ul>
 
+</div>
+</section>
+
+<section class="band band--paper">
+<div class="wrap">
+
 <p class="eyebrow">Case Studies</p>
 
 ## 支援事例（一例）
@@ -190,6 +196,11 @@ updated: "2026-09-17"
 
 ## お客様の声
 
+<blockquote class="voice-pull">
+<p>案件の申請、採択まで親身になって伴走支援してくださいました。</p>
+<footer>中国新聞　大島久賀販売所　吉村　学俊 様</footer>
+</blockquote>
+
 <div class="voice">
 <ul class="voice-meta">
 <li>新聞販売業</li>
@@ -202,10 +213,6 @@ updated: "2026-09-17"
 <li>補助金を使いたいが、手続きが難しかった</li>
 <li>相談できる相手がいなかった</li>
 </ul>
-</div>
-<div class="voice-qa">
-<p class="voice-q">Q. 相談してみて、いかがでしたか？</p>
-<p class="voice-a">案件の申請、採択まで親身になって伴走支援してくださいました。</p>
 </div>
 <div class="voice-qa">
 <p class="voice-q">Q. 支援を受けて、変わったこと・助かったことはありますか？</p>
