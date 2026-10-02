@@ -7,11 +7,15 @@
 // Runs after the build so it covers Markdown, raw HTML inside Markdown and
 // .astro templates alike. Tags that already carry width or height are left
 // alone.
+//
+// Sizes are read with Astro's own pure-JS image probe rather than sharp:
+// sharp is an optional native dev dependency that the Cloudflare build
+// doesn't reliably install, and a missing import fails the whole build.
 import { readFile, readdir, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import sharp from "sharp";
+import { imageMetadata } from "astro/assets/utils";
 
 async function htmlFiles(dir) {
   const out = [];
@@ -45,7 +49,7 @@ export default function imageSize() {
             cache.set(
               file,
               existsSync(file)
-                ? sharp(file).metadata().then((m) => m, () => null)
+                ? readFile(file).then((buf) => imageMetadata(buf, src)).catch(() => null)
                 : Promise.resolve(null),
             );
           }
