@@ -192,7 +192,7 @@ const orgSchema = {
     }
 
     /* Markdown tables */
-    main table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 20px 0; background: #fff; }
+    main table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 20px 0; background: #fff; }
     main th, main td { border: 1px solid var(--line); padding: 10px 13px; text-align: left; vertical-align: top; }
     main thead th { background: var(--moss-light); font-weight: 700; color: var(--ink); }
     @media (max-width: 640px) {
@@ -200,7 +200,7 @@ const orgSchema = {
          every column into the viewport width. */
       main table { display: block; overflow-x: auto; white-space: normal; }
       main table tbody, main table thead { display: table; width: 100%; min-width: 460px; }
-      main th, main td { padding: 8px 10px; font-size: 13px; }
+      main th, main td { padding: 9px 11px; font-size: 14px; }
     }
 
     /* ---- Full-bleed section bands --------------------------------------
@@ -255,7 +255,7 @@ const orgSchema = {
     }
     .hero-body > *:first-child { margin-top: 0; }
     .hero-eyebrow { font-size: 14px; color: var(--muted); margin: 0 0 10px; }
-    .hero-sub { font-size: 15px; color: var(--muted); }
+    .hero-sub { font-size: 16.5px; color: var(--muted); }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 12px; }
 
     /* ---- Standalone CTA in body copy ----------------------------------
@@ -295,7 +295,7 @@ const orgSchema = {
       background: transparent; color: var(--moss); border: 1px solid var(--moss);
     }
     .hero-body .hero-actions a:last-child:hover { background: var(--moss-light); }
-    .hero-note { font-size: 13px; color: var(--muted); margin: 0; }
+    .hero-note { font-size: 14px; color: var(--muted); margin: 0; }
 
     .hero-figure { margin: 0; }
     .hero-figure img {
@@ -361,7 +361,7 @@ const orgSchema = {
     .profile-figure figcaption { margin-top: 10px; text-align: center; }
     .profile-figure figcaption strong { display: block; font-family: 'Shippori Mincho', serif; font-size: 16px; }
     .profile-figure figcaption span { display: block; font-size: 11px; color: var(--muted); margin-top: 2px; }
-    .profile-lead-body > p { font-size: 15px; }
+    .profile-lead-body > p { font-size: 16.5px; }
     .profile-lead-body > *:first-child { margin-top: 0; }
     @media (max-width: 700px) {
       .profile-lead { grid-template-columns: 1fr; gap: 24px; }
@@ -474,7 +474,7 @@ const orgSchema = {
       color: var(--moss); margin-bottom: 8px;
     }
     .voice-before ul { margin: 0; padding-left: 1.15em; }
-    .voice-before li { font-size: 14px; margin: 4px 0; }
+    .voice-before li { font-size: 15px; margin: 5px 0; }
     .voice-qa { margin: 0 0 22px; }
     .voice-q {
       font-size: 13px; font-weight: 700; color: var(--muted);
@@ -512,7 +512,7 @@ const orgSchema = {
     .concerns-list { list-style: none; padding: 0; margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
     .concerns-list li {
       background: #fff; border: 1px solid var(--line); border-radius: 10px;
-      padding: 14px 18px; font-size: 15px; font-weight: 700;
+      padding: 15px 18px; font-size: 16px; font-weight: 700;
       box-shadow: var(--shadow-sm);
       transition: transform 0.3s var(--ease), border-color 0.3s var(--ease);
     }
@@ -546,11 +546,11 @@ const orgSchema = {
     /* The card column is narrow enough that a long service name cannot fit a
        phrase per line; let it fill instead of stranding one. */
     .card-body h3 { font-size: 17px; margin: 0; font-family: 'Shippori Mincho', serif; word-break: normal; }
-    .card-body p { font-size: 14px; color: var(--muted); margin: 0; }
-    .card-body ul { margin: 0; padding-left: 18px; font-size: 13px; color: var(--muted); }
+    .card-body p { font-size: 15.5px; color: var(--muted); margin: 0; }
+    .card-body ul { margin: 0; padding-left: 18px; font-size: 14.5px; color: var(--muted); }
     .card-body ul li { margin-bottom: 3px; }
     .card-body > p:last-of-type:not(:last-child) { flex: 0; }
-    .card-link { font-size: 13px; font-weight: 700; margin-top: auto; }
+    .card-link { font-size: 14px; font-weight: 700; margin-top: auto; }
 
     /* How it works timeline */
     .timeline { list-style: none; padding: 0; margin: 32px 0; }
@@ -565,7 +565,7 @@ const orgSchema = {
     .step-icon img { width: 100%; height: 100%; object-fit: cover; margin: 0; border-radius: 0; }
     .step-num { display: block; font-family: 'JetBrains Mono', monospace; color: var(--gold); font-weight: 700; font-size: 12px; margin-bottom: 4px; }
     .step-body h4 { margin: 0 0 4px; font-size: 16px; font-family: 'Shippori Mincho', serif; }
-    .step-body p { margin: 0; font-size: 14px; color: var(--muted); }
+    .step-body p { margin: 0; font-size: 15.5px; color: var(--muted); }
 
     /* About stat row */
     .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 28px 0; padding: 0; list-style: none; }
@@ -589,8 +589,8 @@ const orgSchema = {
       font-size: clamp(22px, 4.2vw, 30px); font-weight: 700; color: var(--moss);
       white-space: nowrap; font-variant-numeric: tabular-nums; letter-spacing: 0.01em;
     }
-    .stat-row .stat-label { display: block; font-size: 12px; color: var(--muted); margin-top: 6px; }
-    .stat-note { font-size: 12px; color: var(--muted); margin: -12px 0 24px; }
+    .stat-row .stat-label { display: block; font-size: 13px; color: var(--muted); margin-top: 6px; }
+    .stat-note { font-size: 13px; color: var(--muted); margin: -12px 0 24px; }
 
     /* Dated notice block */
     .notice {
@@ -634,7 +634,7 @@ const orgSchema = {
       font-family: 'Shippori Mincho', serif; font-size: 22px; font-weight: 700;
       color: var(--moss); white-space: nowrap;
     }
-    .subsidy > p { font-size: 14.5px; margin: 0 0 12px; }
+    .subsidy > p { font-size: 15.5px; margin: 0 0 12px; }
     .subsidy-tags { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0 0 16px; }
     .subsidy-tags li {
       font-size: 11.5px; font-weight: 700; color: var(--muted);
@@ -642,7 +642,7 @@ const orgSchema = {
       padding: 3px 10px; border-radius: 999px;
     }
     .subsidy table { margin: 0 0 12px; }
-    .subsidy-note { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.75; }
+    .subsidy-note { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.75; }
 
     /* Pricing table */
     .price-cards { display: grid; gap: 16px; margin: 28px 0; padding: 0; list-style: none; }
@@ -652,7 +652,7 @@ const orgSchema = {
     .price-card h3 { font-size: 17px; margin: 0; }
     .price-tag { font-family: 'Shippori Mincho', serif; font-size: 22px; font-weight: 700; color: var(--moss); white-space: nowrap; }
     .price-tag small { font-size: 13px; font-weight: 400; color: var(--muted); margin-left: 2px; }
-    .price-card p { font-size: 14px; color: var(--muted); margin: 0 0 10px; }
+    .price-card p { font-size: 15.5px; color: var(--muted); margin: 0 0 10px; }
     .price-card ul { margin: 0; padding-left: 20px; font-size: 13.5px; color: var(--muted); }
     .price-card li { margin-bottom: 4px; }
     .price-badge { display: inline-block; font-size: 11px; font-weight: 700; background: var(--gold-light); color: var(--gold); padding: 3px 10px; border-radius: 999px; margin-bottom: 8px; }
@@ -661,7 +661,7 @@ const orgSchema = {
     .credentials-list { list-style: none; padding: 0; margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
     .credentials-list li { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; }
     .credentials-list strong { display: block; font-size: 15px; }
-    .credentials-list span { display: block; font-size: 13px; color: var(--muted); margin-top: 2px; }
+    .credentials-list span { display: block; font-size: 14.5px; color: var(--muted); margin-top: 2px; }
 
     /* FAQ */
     .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
@@ -693,7 +693,7 @@ const orgSchema = {
       from { opacity: 0; transform: translateY(-6px); }
       to { opacity: 1; transform: none; }
     }
-    .faq-answer { padding: 16px 18px; font-size: 14px; color: var(--muted); display: flex; gap: 10px; align-items: flex-start; }
+    .faq-answer { padding: 17px 18px; font-size: 15.5px; color: var(--muted); display: flex; gap: 10px; align-items: flex-start; }
     .faq-answer::before { content: "A"; font-family: 'JetBrains Mono', monospace; color: var(--moss); font-weight: 700; flex-shrink: 0; }
     .faq-answer p { margin: 0; }
 
@@ -822,7 +822,7 @@ const orgSchema = {
       .card-link { padding: 4px 0; }
       .hero-note, .stat-lead, .subsidy-note, .stat-note,
       .card-body p, .concerns-list li, .faq-answer p {
-        font-size: 14px;
+        font-size: 15px;
       }
       .footer-col a {
         display: inline-flex; align-items: center; min-height: 44px;
