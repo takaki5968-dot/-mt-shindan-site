@@ -14,6 +14,11 @@ ctaLead: "AIで作るか人が作るかより、どこに自分の手を残す�
 
 試しに私も、ChatGPTで画像を作ってみました。1分か2分もかからずに出来上がります。驚くほど手軽です。人手の少ないお店が使いたくなる理由は、よく分かります。
 
+<figure style="max-width:420px;margin:2em auto;">
+<img src="/images/2026/10/ai-pop-katsu-curry-sample.webp" alt="生成AIで作成したカツカレーのPOP。料理写真の上に「カツカレー」の大きな筆文字、「¥980（税込）」の価格、豚カツ・カレーソース・ごはんの特徴3点が配置されている" width="1055" height="1491" loading="lazy">
+<figcaption style="font-size:13px;color:var(--muted);text-align:center;margin-top:8px;line-height:1.6;">生成AIで作成したPOPの例。実在の店舗・商品ではありません</figcaption>
+</figure>
+
 ただ、人によっては、こうした画像にAIっぽさを感じて、買いたくなくなるという方がいます。調べてみると、これは気分の問題ではなく、数字にも出ていました。
 
 今日は、生成AIの画像を商売に使うときの注意点と、これからの見通しを、海外の事例も含めて整理します。
