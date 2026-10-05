@@ -199,7 +199,7 @@ const breadcrumbSchema = {
 >
   <script type="application/ld+json" is:inline set:html={JSON.stringify(articleSchema)} slot="head" />
   <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
-  <div class="wrap" style="padding:40px 0 60px; max-width:760px;">
+  <div class="wrap" style="padding-top:40px; padding-bottom:60px; max-width:calc(760px + 48px);">
     <div class="post-meta">
       {new Date(entry.data.date).toLocaleDateString("ja-JP")}
       {entry.data.categories?.length ? ` ・ ${entry.data.categories.join(", ")}` : ""}

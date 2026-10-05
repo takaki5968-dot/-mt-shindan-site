@@ -63,7 +63,7 @@ const breadcrumbSchema = {
   {faqSchema && (
     <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} slot="head" />
   )}
-  <div class="wrap" style="padding:40px 0 60px; max-width:760px;">
+  <div class="wrap" style="padding-top:40px; padding-bottom:60px; max-width:calc(760px + 48px);">
     {entry.data.eyebrow && <p class="eyebrow">{entry.data.eyebrow}</p>}
     <h1>{entry.data.title}</h1>
     <article class="prose">
