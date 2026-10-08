@@ -244,23 +244,18 @@ const orgSchema = {
     /* Eyebrow section labels */
     .eyebrow { display: block; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin: 0 0 8px; }
 
-    /* Hero. The home page dropped its portrait, but /ai-support/ still runs
-       the two-column form, so key the second column off the figure actually
-       being there instead of hard-coding one shape. The portrait is
-       1177x1766 — left unconstrained it renders taller than the viewport. */
+    /* Hero: text left, portrait right. The portrait is 1177x1766, so left
+       unconstrained it renders taller than the viewport on desktop. */
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr) 280px;
       gap: 44px;
       align-items: start;
       margin: 8px 0 12px;
     }
-    .hero:has(.hero-figure) { grid-template-columns: minmax(0, 1fr) 280px; }
     .hero-body > *:first-child { margin-top: 0; }
     .hero-eyebrow { font-size: 14px; color: var(--muted); margin: 0 0 10px; }
-    /* Without the portrait the hero spans the full 832px; cap the one long
-       paragraph so it does not run to 50 characters a line. */
-    .hero-sub { font-size: 16.5px; color: var(--muted); max-width: 40em; }
+    .hero-sub { font-size: 16.5px; color: var(--muted); }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 12px; }
 
     /* ---- Standalone CTA in body copy ----------------------------------

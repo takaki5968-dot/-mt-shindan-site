@@ -22,6 +22,10 @@ updated: "2026-09-17"
 <li>山口県よろず支援拠点</li>
 </ul>
 </div>
+<figure class="hero-figure">
+<img src="/images/2024/05/IMG_11-scaled-e1716444134963.webp" alt="中小企業診断士 前 貴棋" loading="eager" />
+<figcaption><strong>前　貴棋</strong><span>中小企業診断士｜MAE TAKAKI</span></figcaption>
+</figure>
 </div>
 
 </div>
