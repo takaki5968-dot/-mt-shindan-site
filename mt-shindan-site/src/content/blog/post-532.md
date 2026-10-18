@@ -1,6 +1,7 @@
 ---
 title: "ペルソナマーケティングとは？中小企業のための実践ガイド"
 slug: "persona-marketing-guide"
+image: "/images/og/persona-marketing-guide.jpg"
 date: "2026-08-31 12:00:00"
 updated: "2026-09-17"
 categories: ["経営のヒント"]

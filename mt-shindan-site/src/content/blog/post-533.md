@@ -1,6 +1,7 @@
 ---
 title: "マーラータンはタピオカの二の舞になる？ブーム盛衰の法則"
 slug: "is-malatang-the-next-tapioca"
+image: "/images/og/is-malatang-the-next-tapioca.jpg"
 date: "2026-09-07 14:26:40"
 updated: "2026-09-17"
 categories: ["経営のヒント"]

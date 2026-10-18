@@ -1,6 +1,7 @@
 ---
 title: "持続化補助金の支援をさせて頂きました"
 slug: "jizokuka"
+image: "/images/og/jizokuka.jpg"
 date: "2023-12-14 18:23:21"
 updated: "2026-09-17"
 categories: ["補助金"]

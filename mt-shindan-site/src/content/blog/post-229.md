@@ -1,6 +1,7 @@
 ---
 title: "【参加者募集】第3回 創業サポート講座（全4回）開催のお知らせ"
 slug: "yorozu-2"
+image: "/images/og/yorozu-2.jpg"
 date: "2025-07-31 17:02:33"
 updated: "2026-09-14"
 categories: ["セミナー・登壇"]

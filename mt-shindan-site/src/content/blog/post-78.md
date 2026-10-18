@@ -1,6 +1,7 @@
 ---
 title: "ホームページについて"
 slug: "homepage"
+image: "/images/og/homepage.jpg"
 date: "2023-09-21 16:58:30"
 updated: "2026-09-15"
 categories: ["事務所より"]

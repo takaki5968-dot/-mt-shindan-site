@@ -1,6 +1,7 @@
 ---
 title: "販売士資格更新"
 slug: "retail"
+image: "/images/og/retail.jpg"
 date: "2023-11-21 17:00:00"
 updated: "2026-09-15"
 categories: ["事務所より"]

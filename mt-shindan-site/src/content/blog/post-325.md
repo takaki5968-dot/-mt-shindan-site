@@ -1,6 +1,7 @@
 ---
 title: "【参加者募集】AIで持続化補助金の申請書を作るワークショップ"
 slug: "jizokuka_seminar"
+image: "/images/og/jizokuka_seminar.jpg"
 date: "2026-03-15 18:00:00"
 updated: "2026-09-01"
 categories: ["セミナー・登壇"]

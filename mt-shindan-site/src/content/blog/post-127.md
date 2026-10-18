@@ -1,6 +1,7 @@
 ---
 title: "読んだ本【1、2冊目】"
 slug: "book_1-2"
+image: "/images/og/book_1-2.jpg"
 date: "2024-01-17 17:00:00"
 updated: "2026-08-30"
 categories: ["読書"]

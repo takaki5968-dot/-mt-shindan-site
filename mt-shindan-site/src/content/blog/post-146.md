@@ -1,6 +1,7 @@
 ---
 title: "第14回小規模事業者持続化補助金の採択結果が発表されました"
 slug: "jizokuka14"
+image: "/images/og/jizokuka14.jpg"
 date: "2024-03-04 19:42:32"
 updated: "2026-09-17"
 categories: ["補助金"]

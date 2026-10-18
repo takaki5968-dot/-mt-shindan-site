@@ -1,6 +1,7 @@
 ---
 title: "認定経営革新等支援機関に認定されました"
 slug: "nintei"
+image: "/images/og/nintei.jpg"
 date: "2025-02-27 15:47:39"
 updated: "2026-09-15"
 categories: ["お知らせ"]

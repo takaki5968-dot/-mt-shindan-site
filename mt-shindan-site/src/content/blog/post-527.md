@@ -1,6 +1,7 @@
 ---
 title: "商工会職員から中小企業診断士へ｜合格まで3年、独立までの道のり"
 slug: "smecc-career-path-yamaguchi"
+image: "/images/og/smecc-career-path-yamaguchi.jpg"
 date: "2026-08-17 18:00:00"
 updated: "2026-09-01"
 categories: ["事務所より"]

@@ -1,6 +1,7 @@
 ---
 title: "7月の無料セミナー2本｜税金・社会保険入門／補助金活用"
 slug: "seminar-info-202607"
+image: "/images/og/seminar-info-202607.jpg"
 date: "2026-06-09 18:00:00"
 updated: "2026-09-14"
 categories: ["セミナー・登壇"]

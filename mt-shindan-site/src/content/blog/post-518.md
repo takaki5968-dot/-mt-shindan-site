@@ -1,6 +1,7 @@
 ---
 title: "お客様は「商品」でなく「物語」を買っている｜メガチャーチに学ぶ"
 slug: "oshikatsu-market-megachurch"
+image: "/images/og/oshikatsu-market-megachurch.jpg"
 date: "2026-08-03 18:00:00"
 updated: "2026-09-17"
 categories: ["経営のヒント"]

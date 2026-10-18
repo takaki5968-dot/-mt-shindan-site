@@ -1,6 +1,7 @@
 ---
 title: "デジタル化・AI導入補助金2026｜ChatGPT単体は対象外"
 slug: "digital-ai-hojokin-2026"
+image: "/images/og/digital-ai-hojokin-2026.jpg"
 date: "2026-09-22 18:00:00"
 updated: "2026-10-02"
 categories: ["補助金"]

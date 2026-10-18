@@ -1,6 +1,7 @@
 ---
 title: "大畠商工会の事業計画策定セミナーに登壇"
 slug: "oobatake"
+image: "/images/og/oobatake.jpg"
 date: "2023-11-14 15:31:37"
 updated: "2026-09-14"
 categories: ["セミナー・登壇"]

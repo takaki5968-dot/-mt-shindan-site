@@ -1,6 +1,7 @@
 ---
 title: "2024年度上半期の業況について"
 slug: "2024half"
+image: "/images/og/2024half.jpg"
 date: "2024-06-28 12:00:00"
 updated: "2026-09-14"
 categories: ["事務所より"]

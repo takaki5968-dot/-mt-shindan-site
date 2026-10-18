@@ -1,6 +1,7 @@
 ---
 title: "読んだ本【３、４、５冊目】"
 slug: "book3-5"
+image: "/images/og/book3-5.jpg"
 date: "2024-02-22 13:00:00"
 updated: "2026-08-30"
 categories: ["読書"]

@@ -1,6 +1,7 @@
 ---
 title: "小規模事業者持続化補助金 スケジュールと概要【2026年版】"
 slug: "jizokuka_-schedule"
+image: "/images/og/jizokuka_-schedule.jpg"
 date: "2026-03-23 18:00:00"
 updated: "2026-09-17"
 categories: ["補助金"]

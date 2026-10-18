@@ -1,6 +1,7 @@
 ---
 title: "自社サイトを3ヶ月間、Claudeと一緒に改善してみた話"
 slug: "claude-website-review"
+image: "/images/og/claude-website-review.jpg"
 date: "2026-07-07 18:00:00"
 updated: "2026-08-30"
 categories: ["事務所より"]

@@ -1,6 +1,7 @@
 ---
 title: "「めっちゃカメレオン」に学ぶ、小さくても勝てる理由"
 slug: "mecha-chameleon-business-lesson"
+image: "/images/og/mecha-chameleon-business-lesson.jpg"
 date: "2026-08-11 18:00:00"
 updated: "2026-09-17"
 categories: ["経営のヒント"]

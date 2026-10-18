@@ -1,6 +1,7 @@
 ---
 title: "飲食店の出店戦略｜近くに同業があると得か損か研究で解説"
 slug: "restaurant-location-clustering-strateg"
+image: "/images/og/restaurant-location-clustering-strateg.jpg"
 date: "2026-08-25 18:00:00"
 updated: "2026-09-17"
 categories: ["経営のヒント"]

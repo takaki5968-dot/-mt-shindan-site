@@ -1,6 +1,7 @@
 ---
 title: "今年の支援実績について"
 slug: "job"
+image: "/images/og/job.jpg"
 date: "2023-10-20 12:12:38"
 updated: "2026-08-30"
 categories: ["事務所より"]

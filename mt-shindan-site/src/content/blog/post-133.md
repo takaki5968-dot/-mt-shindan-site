@@ -1,6 +1,7 @@
 ---
 title: "2023年度の売上分析"
 slug: "earnings"
+image: "/images/og/earnings.jpg"
 date: "2024-02-10 21:40:19"
 updated: "2026-09-14"
 categories: ["事務所より"]

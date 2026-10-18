@@ -1,6 +1,7 @@
 ---
 title: "AIで持続化補助金の申請書を作る｜ワークショップ開催レポート"
 slug: "0403report"
+image: "/images/og/0403report.jpg"
 date: "2026-04-16 18:00:00"
 updated: "2026-09-01"
 categories: ["セミナー・登壇"]

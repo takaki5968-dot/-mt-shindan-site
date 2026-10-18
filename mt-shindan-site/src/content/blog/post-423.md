@@ -1,6 +1,7 @@
 ---
 title: "おしゃれなカフェで急に醒めた経験｜『美しいブランドのつくりかた』"
 slug: "brand-touchpoint-book-review"
+image: "/images/og/brand-touchpoint-book-review.jpg"
 date: "2026-05-26 18:00:00"
 updated: "2026-09-17"
 categories: ["経営のヒント"]

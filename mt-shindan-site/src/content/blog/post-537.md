@@ -1,6 +1,7 @@
 ---
 title: "ものづくり補助金 山口｜名称が変わり、締切は10月30日"
 slug: "monodukuri-hojokin-yamaguchi"
+image: "/images/og/monodukuri-hojokin-yamaguchi.jpg"
 date: "2026-09-16 21:00:00"
 updated: "2026-10-02"
 categories: ["補助金"]

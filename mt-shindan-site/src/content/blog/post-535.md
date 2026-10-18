@@ -1,6 +1,7 @@
 ---
 title: "山口県の中小企業はどこに相談すればいい？支援機関の使い分け"
 slug: "where-to-consult-yamaguchi"
+image: "/images/og/where-to-consult-yamaguchi.jpg"
 date: "2026-09-11 10:00:00"
 updated: "2026-09-17"
 categories: ["経営のヒント"]

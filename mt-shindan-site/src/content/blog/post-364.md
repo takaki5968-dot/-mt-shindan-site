@@ -1,6 +1,7 @@
 ---
 title: "ライバルは何社？データで導き出す開業戦略セミナー開催レポート"
 slug: "resas-jstatmap-seminar"
+image: "/images/og/resas-jstatmap-seminar.jpg"
 date: "2026-04-25 18:00:00"
 updated: "2026-09-01"
 categories: ["セミナー・登壇"]

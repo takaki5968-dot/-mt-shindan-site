@@ -1,6 +1,7 @@
 ---
 title: "小規模事業者持続化補助金 第19回の採択結果｜採択率47.2%"
 slug: "jizokuka-19kai-saitaku"
+image: "/images/og/jizokuka-19kai-saitaku.jpg"
 date: "2026-09-14 18:00:00"
 updated: "2026-09-17"
 categories: ["補助金"]

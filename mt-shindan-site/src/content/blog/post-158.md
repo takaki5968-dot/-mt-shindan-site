@@ -1,6 +1,7 @@
 ---
 title: "読んだ本【6、7冊目】"
 slug: "book6-7"
+image: "/images/og/book6-7.jpg"
 date: "2024-04-19 22:24:03"
 updated: "2026-08-30"
 categories: ["読書"]

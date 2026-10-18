@@ -1,6 +1,7 @@
 ---
 title: "山口県よろず支援拠点のコーディネーターに就任しました"
 slug: "yorozu"
+image: "/images/og/yorozu.jpg"
 date: "2024-04-01 19:00:00"
 updated: "2026-08-30"
 categories: ["お知らせ"]

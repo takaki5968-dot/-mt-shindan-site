@@ -1,6 +1,7 @@
 ---
 title: "持続化補助金 第20回の変更点｜締切は12月15日ではありません"
 slug: "jizokuka-dai20kai-2026"
+image: "/images/og/jizokuka-dai20kai-2026.jpg"
 date: "2026-05-29 18:00:00"
 updated: "2026-09-17"
 categories: ["補助金"]

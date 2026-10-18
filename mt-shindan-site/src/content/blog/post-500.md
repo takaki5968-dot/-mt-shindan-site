@@ -1,6 +1,7 @@
 ---
 title: "生成AIパスポートに挑戦中｜AI活用の土台を学び直す理由"
 slug: "studying-genai-passport"
+image: "/images/og/studying-genai-passport.jpg"
 date: "2026-07-21 18:00:00"
 updated: "2026-09-01"
 categories: ["事務所より"]
