@@ -1,6 +1,7 @@
 ---
 title: "「遅い・不便・圏外」が売りになる｜ドパガキ時代の逆張り戦略"
 slug: "slow-inconvenient-offline-strategy"
+image: "/images/og/slow-inconvenient-offline-strategy.jpg"
 date: "2026-09-14 13:14:37"
 updated: "2026-09-17"
 categories: ["経営のヒント"]

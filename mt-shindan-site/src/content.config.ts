@@ -13,6 +13,8 @@ const blog = defineCollection({
     seoTitle: z.string().optional(),
     service: z.string().optional(),
     ctaLead: z.string().optional(),
+    // 記事ごとの共有用画像（1200×630）。SNS・LINEで共有したときのカードと構造化データに使う。
+    image: z.string().optional(),
   }),
 });
 

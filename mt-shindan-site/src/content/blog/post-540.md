@@ -1,6 +1,7 @@
 ---
 title: "顧客リストを貼り付ける前に｜生成AIパスポートを取って分かったこと"
 slug: "genai-passport-what-i-learned"
+image: "/images/og/genai-passport-what-i-learned.jpg"
 date: "2026-09-28 18:00:00"
 categories: ["経営のヒント"]
 description: "生成AIパスポートに合格しました。合格率は81.21%で、資格そのものに希少価値はありません。ただ試験範囲5章のうち第4章は、社員が顧客情報をAIに入力してよいかを会社として決めるためのチェックリストになっています。シラバスは受験しなくても無料で読めます。"

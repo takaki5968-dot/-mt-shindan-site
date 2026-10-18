@@ -1,6 +1,7 @@
 ---
 title: "企業SNSのバズは売上になるか｜1万人のフォロワーより10人の顧客"
 slug: "sns-buzz-vs-real-customers"
+image: "/images/og/sns-buzz-vs-real-customers.jpg"
 date: "2026-09-21 22:10:00"
 categories: ["経営のヒント"]
 description: "インプレッション20万、プロフィールを見に来た人2,213人、増えたフォロワー40人。自分のXアカウントの数字を出発点に、バズと売上がつながらない構造を調査データとあわせて整理します。地域で商売をする事業者にとってのSNSの意味を考えます。"

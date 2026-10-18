@@ -1,6 +1,7 @@
 ---
 title: "そのPOP、AIっぽくないですか｜1分で作れる画像を商売に使う前に"
 slug: "ai-generated-pop-caution"
+image: "/images/og/ai-generated-pop-caution.jpg"
 date: "2026-10-05 18:00:00"
 categories: ["経営のヒント"]
 service: "ai-support"

@@ -1,6 +1,7 @@
 ---
 title: "MBTIは何のために生まれたのか｜発行元が「採用には使わないで」と言う理由"
 slug: "mbti-origin-and-hiring"
+image: "/images/og/mbti-origin-and-hiring.jpg"
 date: "2026-10-12 18:00:00"
 categories: ["経営のヒント"]
 service: "business-plan"

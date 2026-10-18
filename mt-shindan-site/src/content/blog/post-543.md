@@ -1,6 +1,7 @@
 ---
 title: "ChatGPT無料版でお好み焼きのPOPを作ってみた｜直すほどAIっぽくなった話"
 slug: "chatgpt-free-okonomiyaki-pop"
+image: "/images/og/chatgpt-free-okonomiyaki-pop.jpg"
 date: "2026-10-19 18:00:00"
 categories: ["経営のヒント"]
 service: "ai-support"

@@ -164,6 +164,7 @@ const articleSchema = {
   description: entry.data.description,
   url: postURL,
   mainEntityOfPage: { "@type": "WebPage", "@id": postURL },
+  ...(entry.data.image ? { image: new URL(entry.data.image, SITE_URL).href } : {}),
   datePublished: published,
   dateModified: published,
   inLanguage: "ja",
@@ -195,6 +196,7 @@ const breadcrumbSchema = {
   title={entry.data.title}
   description={entry.data.description}
   seoTitle={seoTitle}
+  ogImage={entry.data.image}
   ogType="article"
 >
   <script type="application/ld+json" is:inline set:html={JSON.stringify(articleSchema)} slot="head" />
