@@ -33,6 +33,13 @@ const otherPosts = allPosts.filter(
 );
 const related = [...sameCategory, ...otherPosts].slice(0, 3);
 
+// Card image: the 640×336 list thumbnail made next to each post's share image
+// (see src/pages/blog/index.astro). The card text says the same thing, so alt="".
+const thumb = (p: (typeof allPosts)[number]) =>
+  p.data.image
+    ? p.data.image.replace("/images/og/", "/images/og/thumb/").replace(".jpg", ".webp")
+    : null;
+
 // Rough reading time from the raw markdown. Japanese reads at roughly
 // 500 characters a minute; markup is stripped so it isn't counted.
 function readingMinutes(body: string | undefined): number {
@@ -245,6 +252,9 @@ const breadcrumbSchema = {
         <div class="related-grid">
           {related.map((post) => (
             <a class="related-card" href={`/blog/${post.data.slug}/`}>
+              {thumb(post) && (
+                <img class="related-thumb" src={thumb(post)} width="640" height="336" alt="" loading="lazy" decoding="async" />
+              )}
               <span class="related-meta">
                 {new Date(post.data.date).toLocaleDateString("ja-JP")}
                 {post.data.categories?.length ? ` ・ ${post.data.categories[0]}` : ""}
@@ -317,6 +327,11 @@ const breadcrumbSchema = {
     display: flex; flex-direction: column; gap: 5px; min-width: 0;
     background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px;
     transition: border-color 0.3s var(--ease), transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  }
+  .related-card { overflow: hidden; }
+  .related-thumb {
+    display: block; width: calc(100% + 36px); max-width: none; height: auto;
+    aspect-ratio: 1200 / 630; margin: -16px -18px 8px; border-radius: 0;
   }
   .related-card:hover {
     border-color: var(--moss); text-decoration: none;
