@@ -67,6 +67,14 @@ function readingMinutes(body: string | undefined): number {
   return Math.max(1, Math.round(text.length / 500));
 }
 const mins = (p: (typeof posts)[number]) => readingMinutes(p.body);
+
+// List thumbnail: a 640×336 WebP made alongside each post's 1200×630 share
+// image (frontmatter `image`). The card text already says what the picture
+// says, so the img is decorative (alt="").
+const thumb = (p: (typeof posts)[number]) =>
+  p.data.image
+    ? p.data.image.replace("/images/og/", "/images/og/thumb/").replace(".jpg", ".webp")
+    : null;
 ---
 <BaseLayout
   title="ブログ"
@@ -89,8 +97,13 @@ const mins = (p: (typeof posts)[number]) => readingMinutes(p.body);
         {picks.map((post) => (
           <li>
             <a href={`/blog/${post.data.slug}/`}>
-              <span class="picks-title">{post.data.title}</span>
-              <span class="picks-meta">{post.data.categories?.[0]} ・ 約{mins(post)}分</span>
+              {thumb(post) && (
+                <img class="picks-thumb" src={thumb(post)} width="640" height="336" alt="" loading="lazy" decoding="async" />
+              )}
+              <span class="picks-text">
+                <span class="picks-title">{post.data.title}</span>
+                <span class="picks-meta">{post.data.categories?.[0]} ・ 約{mins(post)}分</span>
+              </span>
             </a>
           </li>
         ))}
@@ -115,6 +128,10 @@ const mins = (p: (typeof posts)[number]) => readingMinutes(p.body);
       href={`/blog/${featured.data.slug}/`}
       data-cats={(featured.data.categories ?? []).join("|")}
     >
+      {thumb(featured) && (
+        <img class="featured-thumb" src={thumb(featured)} width="640" height="336" alt="" decoding="async" />
+      )}
+      <span class="featured-body">
       <span class="featured-flag">最新の記事</span>
       <span class="post-meta">
         {fmt(featured.data.date)}
@@ -126,6 +143,7 @@ const mins = (p: (typeof posts)[number]) => readingMinutes(p.body);
         <span class="featured-excerpt">{featured.data.description}</span>
       )}
       <span class="featured-more">続きを読む →</span>
+      </span>
     </a>
 
     <div class="post-grid">
@@ -137,6 +155,9 @@ const mins = (p: (typeof posts)[number]) => readingMinutes(p.body);
           data-index={i}
           hidden={i >= INITIAL_VISIBLE}
         >
+          {thumb(post) && (
+            <img class="post-thumb" src={thumb(post)} width="640" height="336" alt="" loading="lazy" decoding="async" />
+          )}
           <span class="post-meta">
             {fmt(post.data.date)}
             {post.data.categories?.length ? ` ・ ${post.data.categories.join(", ")}` : ""}
@@ -173,11 +194,13 @@ const mins = (p: (typeof posts)[number]) => readingMinutes(p.body);
   .picks-eyebrow { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin: 0 0 4px; }
   .picks h2 { font-size: 21px; margin: 0 0 14px; }
   .picks-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 2px; }
-  .picks-list a { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; padding: 9px 10px; border-radius: 8px; min-height: 44px; align-content: center; }
+  .picks-list a { display: flex; align-items: center; gap: 14px; padding: 8px 10px; border-radius: 8px; min-height: 44px; }
+  .picks-thumb { flex: 0 0 120px; width: 120px; height: auto; aspect-ratio: 1200 / 630; border-radius: 6px; }
+  .picks-text { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; min-width: 0; }
   .picks-list a:hover { background: #fff; text-decoration: none; }
   .picks-title { font-size: 14.5px; font-weight: 700; color: var(--ink); line-height: 1.6; }
   .picks-meta { font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--muted); white-space: nowrap; }
-  @media (max-width: 640px) { .picks { padding: 18px 16px; } .picks-title { font-size: 14px; } }
+  @media (max-width: 640px) { .picks { padding: 18px 16px; } .picks-title { font-size: 14px; } .picks-thumb { flex-basis: 92px; width: 92px; } .picks-list a { gap: 12px; } }
   h1 { font-size: 30px; margin: 0 0 14px; }
   .blog-intro { color: var(--muted); font-size: 15.5px; max-width: 62ch; margin: 0 0 24px; }
 
@@ -201,6 +224,10 @@ const mins = (p: (typeof posts)[number]) => readingMinutes(p.body);
     border: 1px solid var(--line); border-radius: 14px;
     padding: 26px 28px; margin: 16px 0 20px;
   }
+  .featured { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 24px; align-items: center; }
+  .featured-thumb { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; border-radius: 10px; }
+  .featured-body { display: block; min-width: 0; }
+  @media (max-width: 700px) { .featured { grid-template-columns: 1fr; gap: 16px; } }
   .featured:hover { border-color: var(--moss); text-decoration: none; }
   .featured[hidden] { display: none; }
   .featured-flag {
@@ -229,6 +256,11 @@ const mins = (p: (typeof posts)[number]) => readingMinutes(p.body);
     display: flex; flex-direction: column; gap: 4px;
     background: #fff; border: 1px solid var(--line);
     border-radius: 10px; padding: 18px 20px;
+  }
+  .post-card { overflow: hidden; }
+  .post-thumb {
+    display: block; width: calc(100% + 40px); max-width: none; height: auto;
+    aspect-ratio: 1200 / 630; margin: -18px -20px 10px; border-radius: 0;
   }
   .post-card:hover { border-color: var(--moss); text-decoration: none; }
   .post-card[hidden] { display: none; }
