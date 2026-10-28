@@ -13,6 +13,8 @@ const blog = defineCollection({
     seoTitle: z.string().optional(),
     service: z.string().optional(),
     ctaLead: z.string().optional(),
+    // 「あわせて読みたい」に出す記事の slug。指定した分が先に並び、足りない分は自動で埋める。
+    related: z.array(z.string()).optional(),
     // 記事ごとの共有用画像（1200×630）。SNS・LINEで共有したときのカードと構造化データに使う。
     image: z.string().optional(),
   }),

@@ -31,7 +31,18 @@ const sameCategory = allPosts.filter(
 const otherPosts = allPosts.filter(
   (p) => p.data.slug !== entry.data.slug && p.data.categories?.[0] !== currentCategory
 );
-const related = [...sameCategory, ...otherPosts].slice(0, 3);
+// A post can hand-pick its related posts. Newest-in-category sent readers of
+// the most-read trend posts only to more trend posts, never toward anything
+// about the work itself. Picked posts come first; the rest fill up as before.
+const picked = (entry.data.related ?? []).map((slug) => {
+  const post = allPosts.find((p) => p.data.slug === slug);
+  if (!post) throw new Error(`related: "${slug}" in "${entry.data.slug}" is not a post`);
+  return post;
+});
+const related = [
+  ...picked,
+  ...[...sameCategory, ...otherPosts].filter((p) => !picked.includes(p)),
+].slice(0, 3);
 
 // Card image: the 640×336 list thumbnail made next to each post's share image
 // (see src/pages/blog/index.astro). The card text says the same thing, so alt="".
