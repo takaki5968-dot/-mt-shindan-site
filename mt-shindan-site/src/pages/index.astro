@@ -44,7 +44,7 @@ const faqSchema = {
 <BaseLayout
   title="山口県の中小企業診断士"
   seoTitle="山口県の中小企業診断士｜補助金・経営計画なら前貴棋事務所"
-  description="山口県の小規模事業者を支援する中小企業診断士。商工会での9年に独立後を加えた通算12年以上の現場経験をもとに、持続化補助金などの申請支援から経営計画づくり・販路開拓まで伴走します。初回相談無料。"
+  description="山口県柳井市を拠点に、県内の小規模事業者を支援する中小企業診断士・経営コンサルタント。商工会での9年に独立後を加えた通算12年以上の現場経験をもとに、持続化補助金などの申請支援から経営計画づくり・販路開拓まで伴走します。初回相談無料。"
 >
   <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} slot="head" />
   {/* No wrapper here: each band in the content is full-bleed and supplies
@@ -56,6 +56,10 @@ const faqSchema = {
 
 <style>
   .prose :global(h1) { font-size: 32px; margin-top: 0; }
+  /* The H1 carries the search phrase (山口県の中小企業診断士) in the small
+     eyebrow slot; the catch line keeps the large heading look as a <p>. */
+  .prose :global(h1.hero-eyebrow) { font-family: inherit; font-size: 14px; font-weight: 400; line-height: 1.8; color: var(--muted); margin: 0 0 10px; }
+  .prose :global(.hero-title) { font-family: 'Shippori Mincho', serif; font-size: 32px; font-weight: 700; line-height: 1.5; margin: 0 0 0.67em; word-break: auto-phrase; text-wrap: pretty; }
   /* Section headings were 24px against a 32px H1, so past the first screen
      the page had almost no scale contrast. A reader described it as "flowing
      past". These are the only chapter markers on a 8,000px page. */

@@ -18,7 +18,7 @@ const {
   ogType = "website",
 } = Astro.props;
 
-const pageTitle = seoTitle ?? `${title} - ${SITE_NAME}`;
+const pageTitle = seoTitle ?? `${title}｜山口県の中小企業診断士 前貴棋事務所`;
 const canonicalURL = new URL(Astro.url.pathname, SITE_URL).href;
 const ogImageURL = new URL(ogImage, SITE_URL).href;
 
@@ -35,7 +35,16 @@ const orgSchema = {
   description:
     "山口県の小規模事業者・中小企業を対象に、補助金申請支援・経営計画策定・販路開拓支援を行う中小企業診断士事務所。商工会での9年に2023年の独立以降を加え、通算12年以上にわたり経営相談に従事。",
   foundingDate: "2023",
-  areaServed: { "@type": "AdministrativeArea", name: "山口県" },
+  // Town only: the office is a home office, so no street address.
+  address: {
+    "@type": "PostalAddress",
+    addressRegion: "山口県",
+    addressLocality: "柳井市",
+    addressCountry: "JP",
+  },
+  areaServed: ["山口県", "山口市", "宇部市", "下関市", "周南市", "岩国市", "柳井市", "周防大島町"].map(
+    (name) => ({ "@type": "AdministrativeArea", name })
+  ),
   founder: {
     "@type": "Person",
     name: "前 貴棋",
@@ -909,6 +918,7 @@ const orgSchema = {
         </nav>
         <div class="footer-col">
           <span class="footer-col-label">ご連絡先</span>
+          <span>所在地：山口県柳井市</span>
           <a href="tel:08063074502">080-6307-4502</a>
           <span>受付：平日 9:00〜18:00</span>
           <div class="footer-social">
