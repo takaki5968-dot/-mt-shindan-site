@@ -5,6 +5,7 @@ image: "/images/og/smecc-career-path-yamaguchi.jpg"
 date: "2026-08-17 18:00:00"
 updated: "2026-09-01"
 categories: ["事務所より"]
+related: ["where-to-consult-yamaguchi", "monodukuri-hojokin-consultant-fee", "jizokuka-19kai-saitaku"]
 description: "はじめに中小企業診断士への転職やキャリアチェンジを考えている方から、「実際どんな道のりだったのか」と聞かれることが増えました。"
 ---
 
@@ -50,3 +51,5 @@ description: "はじめに中小企業診断士への転職やキャリアチェ
 
 
 コンサルタントと名乗るだけであれば、資格がなくても、いつでも始められます。中小企業診断士の資格を持っているというだけでは、独立して仕事を続けていくのは難しいのが実情です。特に補助金関連の支援業務は、AIの普及によって診断士が担う役割が徐々に小さくなりつつあると感じています。だからこそ、自分にしかできない支援は何かを常に考え続けることが、独立を続けるうえで欠かせないと思っています。
+
+独立したいまの仕事の中身と、これまでの経歴は、[プロフィール](/yamaguchi-chushokigyo-shindan/)にまとめています。

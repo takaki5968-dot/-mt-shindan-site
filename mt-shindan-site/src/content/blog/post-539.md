@@ -5,6 +5,7 @@ image: "/images/og/digital-ai-hojokin-2026.jpg"
 date: "2026-09-22 18:00:00"
 updated: "2026-10-02"
 categories: ["補助金"]
+related: ["jizokuka-self-application-ai", "ai-generated-pop-caution", "genai-passport-what-i-learned"]
 description: "IT導入補助金が2026年から「デジタル化・AI導入補助金」に改称されました。生成AIの利用料に使える制度ではありません。5つの枠と金額、通常枠の採択率は4割台で回を追って下落、審査と不正対策の状況、そして相見積もりを取るべき理由を整理します。"
 service: "ai-support"
 ctaLead: "補助金が使えるかどうかより先に、その作業が本当にAIやソフトで楽になるのかを見極めたほうが早い場合があります。ツールを売る立場ではないので、無料の範囲で足りるならそうお伝えします。"
