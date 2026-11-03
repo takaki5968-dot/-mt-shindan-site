@@ -25,12 +25,10 @@ const currentCategory = entry.data.categories?.[0] ?? "";
 
 // Same category first — that is the strongest signal of "more like this" —
 // then fall back to recent posts so there are always three to move on to.
-const sameCategory = allPosts.filter(
-  (p) => p.data.slug !== entry.data.slug && p.data.categories?.[0] === currentCategory
-);
-const otherPosts = allPosts.filter(
-  (p) => p.data.slug !== entry.data.slug && p.data.categories?.[0] !== currentCategory
-);
+// Posts kept out of search are not offered as related reading either.
+const candidates = allPosts.filter((p) => p.data.slug !== entry.data.slug && !p.data.noindex);
+const sameCategory = candidates.filter((p) => p.data.categories?.[0] === currentCategory);
+const otherPosts = candidates.filter((p) => p.data.categories?.[0] !== currentCategory);
 // A post can hand-pick its related posts. Newest-in-category sent readers of
 // the most-read trend posts only to more trend posts, never toward anything
 // about the work itself. Picked posts come first; the rest fill up as before.
@@ -216,6 +214,7 @@ const breadcrumbSchema = {
   seoTitle={seoTitle}
   ogImage={entry.data.image}
   ogType="article"
+  noindex={entry.data.noindex}
 >
   <script type="application/ld+json" is:inline set:html={JSON.stringify(articleSchema)} slot="head" />
   <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema)} slot="head" />

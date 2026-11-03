@@ -1,6 +1,7 @@
 ---
 title: "11月はセミナー月間でした"
 slug: "seminar"
+noindex: true
 image: "/images/og/seminar.jpg"
 date: "2024-12-02 12:00:00"
 updated: "2026-09-14"

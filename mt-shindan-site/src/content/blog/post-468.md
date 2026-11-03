@@ -1,6 +1,7 @@
 ---
 title: "結婚のご報告"
 slug: "marriage"
+noindex: true
 image: "/images/og/marriage.jpg"
 date: "2026-06-15 18:15:19"
 updated: "2026-09-14"

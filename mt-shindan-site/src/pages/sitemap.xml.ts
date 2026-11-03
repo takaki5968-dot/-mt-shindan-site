@@ -45,6 +45,7 @@ export const GET: APIRoute = async () => {
   }
 
   for (const post of posts) {
+    if (post.data.noindex) continue;
     entries.push({
       path: `/blog/${post.data.slug}/`,
       lastmod: toLastmod(post.data.updated ?? post.data.date),

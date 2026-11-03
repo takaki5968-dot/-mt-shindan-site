@@ -1,6 +1,7 @@
 ---
 title: "山口県商工会連合会のエキスパートバンクに登録されました"
 slug: "expertbank-registration-2025"
+noindex: true
 image: "/images/og/expertbank-registration-2025.jpg"
 date: "2026-06-02 18:00:00"
 updated: "2026-09-01"

@@ -1,6 +1,7 @@
 ---
 title: "生成AIとLINE公式アカウント活用講座レポート"
 slug: "学び多き2日間！生成aiとline公式の活用講座レポート"
+noindex: true
 image: "/images/og/post-235.jpg"
 date: "2025-11-21 18:00:00"
 updated: "2026-09-14"

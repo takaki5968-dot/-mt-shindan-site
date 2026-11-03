@@ -1,6 +1,7 @@
 ---
 title: "ローカルベンチマーク研修に参加しました【よろず支援拠点】"
 slug: "local-benchmark-training-2026"
+noindex: true
 image: "/images/og/local-benchmark-training-2026.jpg"
 date: "2026-05-17 18:00:00"
 updated: "2026-09-14"

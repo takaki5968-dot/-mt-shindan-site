@@ -16,16 +16,16 @@
 /earnings/ /blog/earnings/ 301
 /homepage/ /blog/homepage/ 301
 /jizokuka/ /blog/jizokuka/ 301
-/jizokuka14/ /blog/jizokuka14/ 301
-/jizokuka_-schedule/ /blog/jizokuka_-schedule/ 301
-/jizokuka_seminar/ /blog/jizokuka_seminar/ 301
+/jizokuka14/ /blog/jizokuka-19kai-saitaku/ 301
+/jizokuka_-schedule/ /blog/jizokuka-20kai-schedule/ 301
+/jizokuka_seminar/ /blog/0403report/ 301
 /job/ /blog/job/ 301
 /nintei/ /blog/nintei/ 301
 /oobatake/ /blog/oobatake/ 301
 /resas-jstatmap-seminar/ /blog/resas-jstatmap-seminar/ 301
 /retail/ /blog/retail/ 301
 /yorozu/ /blog/yorozu/ 301
-/yorozu-2/ /blog/yorozu-2/ 301
+/yorozu-2/ /seminar/ 301
 
 # --- 記事: 日本語スラッグ ---
 /%E5%AD%A6%E3%81%B3%E5%A4%9A%E3%81%8D2%E6%97%A5%E9%96%93%EF%BC%81%E7%94%9F%E6%88%90ai%E3%81%A8line%E5%85%AC%E5%BC%8F%E3%81%AE%E6%B4%BB%E7%94%A8%E8%AC%9B%E5%BA%A7%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/ /blog/%E5%AD%A6%E3%81%B3%E5%A4%9A%E3%81%8D2%E6%97%A5%E9%96%93%EF%BC%81%E7%94%9F%E6%88%90ai%E3%81%A8line%E5%85%AC%E5%BC%8F%E3%81%AE%E6%B4%BB%E7%94%A8%E8%AC%9B%E5%BA%A7%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/ 301
@@ -62,7 +62,7 @@
 # スラッグをまとめて転送する。
 /brand-touchpoint-book-review/ /blog/brand-touchpoint-book-review/ 301
 /claude-website-review/ /blog/claude-website-review/ 301
-/dx-shindan-seminar-2026/ /blog/dx-shindan-seminar-2026/ 301
+/dx-shindan-seminar-2026/ /seminar/ 301
 /expertbank-registration-2025/ /blog/expertbank-registration-2025/ 301
 /is-malatang-the-next-tapioca/ /blog/is-malatang-the-next-tapioca/ 301
 /jizokuka-19kai-saitaku/ /blog/jizokuka-19kai-saitaku/ 301
@@ -73,9 +73,18 @@
 /oshikatsu-market-megachurch/ /blog/oshikatsu-market-megachurch/ 301
 /persona-marketing-guide/ /blog/persona-marketing-guide/ 301
 /restaurant-location-clustering-strateg/ /blog/restaurant-location-clustering-strateg/ 301
-/seminar-info-202607/ /blog/seminar-info-202607/ 301
+/seminar-info-202607/ /seminar/ 301
 /shinjigyou-shinshutsu-monodukuri-subsidy/ /blog/shinjigyou-shinshutsu-monodukuri-subsidy/ 301
 /slow-inconvenient-offline-strategy/ /blog/slow-inconvenient-offline-strategy/ 301
 /smecc-career-path-yamaguchi/ /blog/smecc-career-path-yamaguchi/ 301
-/studying-genai-passport/ /blog/studying-genai-passport/ 301
+/studying-genai-passport/ /blog/genai-passport-what-i-learned/ 301
 /where-to-consult-yamaguchi/ /blog/where-to-consult-yamaguchi/ 301
+
+# --- 記事の整理（2026-11-03）: 中身の薄い記事・終わった告知を、近い内容のページへまとめた ---
+/blog/jizokuka_-schedule/ /blog/jizokuka-20kai-schedule/ 301
+/blog/jizokuka14/ /blog/jizokuka-19kai-saitaku/ 301
+/blog/jizokuka_seminar/ /blog/0403report/ 301
+/blog/studying-genai-passport/ /blog/genai-passport-what-i-learned/ 301
+/blog/yorozu-2/ /seminar/ 301
+/blog/seminar-info-202607/ /seminar/ 301
+/blog/dx-shindan-seminar-2026/ /seminar/ 301

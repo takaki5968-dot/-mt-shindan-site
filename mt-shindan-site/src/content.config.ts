@@ -15,6 +15,8 @@ const blog = defineCollection({
     ctaLead: z.string().optional(),
     // 「あわせて読みたい」に出す記事の slug。指定した分が先に並び、足りない分は自動で埋める。
     related: z.array(z.string()).optional(),
+    // 検索結果に出さない記事。ブログ一覧からは読めるが、noindex を出し、サイトマップと自動の関連記事から外す。
+    noindex: z.boolean().optional(),
     // 記事ごとの共有用画像（1200×630）。SNS・LINEで共有したときのカードと構造化データに使う。
     image: z.string().optional(),
   }),

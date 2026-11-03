@@ -5,6 +5,7 @@ interface Props {
   seoTitle?: string;
   ogImage?: string;
   ogType?: string;
+  noindex?: boolean;
 }
 const SITE_NAME = "前貴棋中小企業診断士事務所";
 const SITE_URL = "https://mt-shindan.com";
@@ -16,6 +17,7 @@ const {
   seoTitle,
   ogImage = DEFAULT_OG_IMAGE,
   ogType = "website",
+  noindex = false,
 } = Astro.props;
 
 const pageTitle = seoTitle ?? `${title}｜山口県の中小企業診断士 前貴棋事務所`;
@@ -70,6 +72,7 @@ const orgSchema = {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{pageTitle}</title>
   <meta name="description" content={description} />
+  {noindex && <meta name="robots" content="noindex, follow" />}
   <link rel="canonical" href={canonicalURL} />
   <meta property="og:type" content={ogType} />
   <meta property="og:title" content={pageTitle} />
