@@ -269,7 +269,7 @@ description: "山口県の中小企業・小規模事業者向けのAI導入支�
 ## AI活用の記事
 
 * [そのPOP、AIっぽくないですか｜1分で作れる画像を商売に使う前に](/blog/ai-generated-pop-caution/)
-* [ChatGPT無料版でお好み焼きのPOPを作ってみた｜直すほどAIっぽくなった話](/blog/chatgpt-free-okonomiyaki-pop/)
+* [ChatGPTでPOPを作る方法｜無料版で5回直したら、2回目が一番良かった](/blog/chatgpt-free-okonomiyaki-pop/)
 * [持続化補助金は自分で書ける？AIで申請書を作る前に知っておくこと](/blog/jizokuka-self-application-ai/)
 * [顧客リストを貼り付ける前に｜生成AIパスポートを取って分かったこと](/blog/genai-passport-what-i-learned/)
 * [デジタル化・AI導入補助金2026｜ChatGPT単体は対象外](/blog/digital-ai-hojokin-2026/)
