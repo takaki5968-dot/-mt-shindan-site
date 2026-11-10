@@ -36,7 +36,7 @@ footer b { color: var(--ink); }
 </style></head><body>
 <header><h1>AIプロンプト集</h1><p>大畠商工会 生成AI活用セミナー<br>～事業計画策定編～ 2026年11月17日</p></header>
 <main>
-  <div class="info"><h2>使い方</h2><ul><li><span class="ph">【　】</span>のところを、自分のことに入れ替えてから送信します。</li><li>ChatGPT・Geminiなど、ほかのAIでも同じように使えます。</li><li>一回で気に入らなければ「もっと短く」「別の案を」と言い直してください。</li><li>ここにある頼み方は、すべて無料版で使えます。有料版（月20ドル）は使える量が増えるので、毎日止まるようになったら検討を。</li><li>「コピーする」を押して、AIの入力欄に貼り付けます。</li></ul></div>
+  <div class="info"><h2>使い方</h2><ul><li><span class="ph">【　】</span>のところを、自分のことに入れ替えてから送信します。</li><li>ChatGPT・Geminiなど、ほかのAIでも同じように使えます。</li><li>一回で気に入らなければ「もっと短く」「別の案を」と言い直してください。</li><li>打つのが大変なら、入力欄のマイクを押して声で。長い頼み方は、Web版（右上のQR）の「コピーする」で貼り付けます。</li><li>ここにある頼み方は、すべて無料版で使えます。有料版（月20ドル）は使える量が増えるので、毎日止まるようになったら検討を。</li><li>「コピーする」を押して、AIの入力欄に貼り付けます。</li></ul></div>
   <div class="info warn"><h2>入れてはいけない3つ</h2><ul><li>お客様の名前・電話番号・住所・注文の中身</li><li>従業員の給与・健康・家族のこと</li><li>取引先との契約・見積の中身、パスワード</li></ul><p class="note">迷ったら「Aさん」「B社」に置き換えて入力します。Claudeは「設定 → プライバシー → AIモデルの改善に協力する」をオフにしておくと、入力した内容がAIの学習に使われません。</p></div>
   
   <section><h2>はじめに</h2>
@@ -44,12 +44,10 @@ footer b { color: var(--ink); }
       <h3><span class="no">①</span>最初のひと言：自分の仕事を伝える</h3>
       
       
-      <div class="prompt" id="p0">私は山口県柳井市で<span class="ph">【業種】</span>を営んでいます。<br>従業員は<span class="ph">【人数】</span>人、主なお客様は<span class="ph">【客層】</span>です。<br>これから仕事の相談をします。<br>まず、私の仕事でAIが手伝えそうなことを5つ、短く教えてください。</div>
-      <button class="copy" data-t="私は山口県柳井市で【業種】を営んでいます。
-従業員は【人数】人、主なお客様は【客層】です。
-これから仕事の相談をします。
-まず、私の仕事でAIが手伝えそうなことを5つ、短く教えてください。">コピーする</button>
-      
+      <div class="prompt" id="p0">私は柳井市で<span class="ph">【業種】</span>をしています。<br>私の仕事でAIが手伝えそうなことを、5つ、短く教えてください。</div>
+      <button class="copy" data-t="私は柳井市で【業種】をしています。
+私の仕事でAIが手伝えそうなことを、5つ、短く教えてください。">コピーする</button>
+      <p class="note">短いので、マイクのボタンを押して声で言ってもOKです。</p>
     </article>
   </section>
   <section><h2>事業計画をつくる</h2>
@@ -140,33 +138,26 @@ footer b { color: var(--ink); }
 口コミ：（ここに口コミの文章を貼る）">コピーする</button>
       <p class="note">投稿した人の名前は貼らないでください。</p>
     </article><article class="card">
-      <h3><span class="no">⑧</span>声で頼む（朝礼の原稿）</h3>
+      <h3>声で頼む（朝礼の原稿）</h3>
       
       
       <div class="prompt" id="p10">明日の朝礼で、<span class="ph">【年末に向けて気をつけること】</span>を3つ話したいです。1分で話せる原稿にしてください。</div>
       <button class="copy" data-t="明日の朝礼で、【年末に向けて気をつけること】を3つ話したいです。1分で話せる原稿にしてください。">コピーする</button>
       <p class="note">入力欄のマイクのボタンを押して、しゃべるだけで入力できます。</p>
     </article><article class="card">
-      <h3>話すだけでチラシを作る（デザイン）</h3>
+      <h3><span class="no">⑧</span>チラシの構成を相談する</h3>
       
       
-      <div class="prompt" id="p11"><span class="ph">【店名】</span>で、<span class="ph">【12月の忘年会プラン】</span>のチラシをA4で作ってください。<br>内容：<span class="ph">【コース5,000円、飲み放題つき、10名様から】</span><br>雰囲気：<span class="ph">【温かい感じ】</span></div>
-      <button class="copy" data-t="【店名】で、【12月の忘年会プラン】のチラシをA4で作ってください。
-内容：【コース5,000円、飲み放題つき、10名様から】
-雰囲気：【温かい感じ】">コピーする</button>
-      <p class="note">できたら「写真の場所を大きく」「もっと明るく」と頼むと直ります。価格や日付は、印刷の前に必ず確かめてください。</p>
-    </article><article class="card">
-      <h3>計画書を説明スライドにする（③の会話の続きに送る）</h3>
-      
-      
-      <div class="prompt" id="p12">さっきの計画書を、商工会の指導員さんに説明する5枚のスライドにしてください。</div>
-      <button class="copy" data-t="さっきの計画書を、商工会の指導員さんに説明する5枚のスライドにしてください。">コピーする</button>
-      <p class="note">できたスライドは、PowerPointやPDFで保存できます。</p>
+      <div class="prompt" id="p11"><span class="ph">【店名】</span>で<span class="ph">【12月の忘年会プラン】</span>のチラシを作ります。<br>見出しの案を3つと、載せるべき情報、A4のどこに何を置くかを提案してください。<br>内容：<span class="ph">【コース5,000円、飲み放題つき、10名様から】</span></div>
+      <button class="copy" data-t="【店名】で【12月の忘年会プラン】のチラシを作ります。
+見出しの案を3つと、載せるべき情報、A4のどこに何を置くかを提案してください。
+内容：【コース5,000円、飲み放題つき、10名様から】">コピーする</button>
+      <p class="note">作るのは手書き・Canva・ChatGPTで。写真は必ず本物（自分の店・料理・商品）を使い、価格や日付は印刷前に確かめてください。</p>
     </article><article class="card">
       <h3>手書きのメモを表にする（写真を送る）</h3>
       
       
-      <div class="prompt" id="p13">この写真の内容を表にして、Excelファイルで出してください。<br>読み取れない所は<span class="ph">【？】</span>と書いてください。</div>
+      <div class="prompt" id="p12">この写真の内容を表にして、Excelファイルで出してください。<br>読み取れない所は<span class="ph">【？】</span>と書いてください。</div>
       <button class="copy" data-t="この写真の内容を表にして、Excelファイルで出してください。
 読み取れない所は【？】と書いてください。">コピーする</button>
       <p class="note">無料版は写真を送れる回数が少ないので、大事なときに使います。</p>
@@ -174,19 +165,10 @@ footer b { color: var(--ink); }
       <h3>メモを議事録・要点にまとめる</h3>
       
       
-      <div class="prompt" id="p14">次のメモを、①決まったこと ②次にやること（誰が・いつまで） ③保留になったこと、の3つに分けて整理してください。<br><br>（ここにメモを貼る）</div>
+      <div class="prompt" id="p13">次のメモを、①決まったこと ②次にやること（誰が・いつまで） ③保留になったこと、の3つに分けて整理してください。<br><br>（ここにメモを貼る）</div>
       <button class="copy" data-t="次のメモを、①決まったこと ②次にやること（誰が・いつまで） ③保留になったこと、の3つに分けて整理してください。
 
 （ここにメモを貼る）">コピーする</button>
-      
-    </article><article class="card">
-      <h3>文章の言い回しを直す</h3>
-      
-      
-      <div class="prompt" id="p15">次の文章を、<span class="ph">【もっと丁寧に／もっと短く／やわらかく】</span>直してください。意味は変えないでください。<br><br>（ここに文章を貼る）</div>
-      <button class="copy" data-t="次の文章を、【もっと丁寧に／もっと短く／やわらかく】直してください。意味は変えないでください。
-
-（ここに文章を貼る）">コピーする</button>
       
     </article>
   </section>
@@ -194,7 +176,7 @@ footer b { color: var(--ink); }
   <table><tr><td>「もっと短く」</td><td>長すぎるとき</td></tr><tr><td>「別の案を3つ」</td><td>ピンとこないとき</td></tr><tr><td>「中学生にもわかる言葉で」</td><td>難しいとき</td></tr><tr><td>「わからない時は、わからないと言って」</td><td>最初に付けておくと、でたらめが減る</td></tr><tr><td>「私に質問してください。1つずつ。」</td><td>何を頼めばいいかわからないとき</td></tr></table></section>
   <section><h2>安全に使う5つのルール</h2><ol class="rules"><li>お客様・従業員の個人情報は入れない</li><li>取引先の秘密・パスワードは入れない</li><li>数字・日付・制度は、元の資料で確かめる</li><li>AIの文章は、自分の言葉に直してから出す</li><li>他人の文章・写真・ロゴをまねさせない</li></ol></section>
 </main>
-<footer><p><b>計画書の相談・持続化補助金の様式4は　大畠商工会　TEL 0820-45-2414</b></p><p>講師　前貴棋中小企業診断士事務所　中小企業診断士 前 貴棋　TEL 080-6307-4502</p><p><a href="https://mt-shindan.com/" style="color:inherit">前貴棋中小企業診断士事務所のホームページへ</a></p><p><a href="https://note.com/maetaka_shindan/n/n4cc54a513f00" style="color:inherit">講師のnote　AIとお店の販促、補助金の話を毎週月曜に</a></p></footer>
+<footer><p><b>計画書の相談・様式4は　大畠商工会　TEL 0820-45-2414</b></p><p>講師　前貴棋中小企業診断士事務所　中小企業診断士 前 貴棋　TEL 080-6307-4502</p><p><a href="https://mt-shindan.com/" style="color:inherit">前貴棋中小企業診断士事務所のホームページへ</a></p><p><a href="https://note.com/maetaka_shindan/n/n4cc54a513f00" style="color:inherit">講師のnote　AIとお店の販促、補助金の話を毎週月曜に</a></p></footer>
 <script>
 function fallbackCopy(t) {
   var ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', '');
