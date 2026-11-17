@@ -8,7 +8,7 @@ updated: "2026-10-30"
 <section class="band">
 <div class="wrap">
 
-<div class="hero is-text-only">
+<div class="hero">
 <div class="hero-body">
 <h1 class="hero-eyebrow">山口県の中小企業診断士｜前貴棋事務所</h1>
 <p class="hero-catch">補助金・経営計画・売上改善。</p>
@@ -22,6 +22,10 @@ updated: "2026-10-30"
 <li>山口県よろず支援拠点</li>
 </ul>
 </div>
+<figure class="hero-figure">
+<img src="/images/2024/05/IMG_11-scaled-e1716444134963.webp" alt="中小企業診断士 前 貴棋" loading="eager" />
+<figcaption><strong>前　貴棋</strong><span>中小企業診断士｜MAE TAKAKI</span></figcaption>
+</figure>
 </div>
 
 </div>
