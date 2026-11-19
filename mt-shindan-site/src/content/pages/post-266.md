@@ -151,7 +151,7 @@ description: "山口県の中小企業診断士が、セミナー・研修の講
 
 ## これからの登壇予定
 
-2026年11月から12月にかけて、4つのセミナーで講師を務めます。どれも参加できるセミナーです。お申し込みは、それぞれの主催者へお願いします。
+2026年11月から12月にかけて、3つのセミナーで講師を務めます。どれも参加できるセミナーです。お申し込みは、それぞれの主催者へお願いします。
 
 <div class="card seminar-next">
 <div class="card-body">
@@ -198,27 +198,10 @@ description: "山口県の中小企業診断士が、セミナー・研修の講
 </div>
 </div>
 
-<div class="card seminar-next">
-<div class="card-body">
-<span class="card-tag">山口法人会</span>
-<h3>どう変わる？消費税｜令和9年4月からの消費税改正のポイント</h3>
-<p>2部に分かれた特別セミナーです。第1部（14:00〜15:00）では、山口税務署の職員が改正の内容を解説します。私は第2部（15:00〜16:00）「消費税改正に伴う事業への影響」を担当します。飲食料品の税率引下げなどの改正が事業にどう影響するかを、経営と実務の両面から考えます。</p>
-<ul class="seminar-meta">
-<li><span>日時</span>2026年12月8日（火）14:00〜16:00（受付 13:30〜）</li>
-<li><span>会場</span>サンフレッシュ山口（山口市湯田温泉五丁目5番22号）</li>
-<li><span>主催</span>公益社団法人山口法人会・山口青色申告会（後援：山口税務署）</li>
-<li><span>参加費</span>無料（定員40名・応募締切 11月25日（水））</li>
-</ul>
-<p>お申し込みは、山口法人会のホームページにある応募フォームからお願いします（TEL 083-922-1680）。</p>
-</div>
-</div>
-
 <ul class="flyers">
 <li><img src="/images/2026/10/seminar-20261117-ohatake-ai.webp" alt="大畠商工会 生成AI活用セミナー〜事業計画策定編〜 チラシ" loading="lazy" decoding="async" /></li>
 <li><img src="/images/2026/10/seminar-20261118-josei-sougyou.webp" alt="第8回 前に進もう！女性創業サポート講座 チラシ" loading="lazy" decoding="async" /></li>
-<li><img src="/images/2026/10/seminar-20261124-saiyou.webp" alt="はじめての採用セミナー「“忙しいから雇う”その前に」チラシ" loading="lazy" decoding="async" /></li>
-<li><img src="/images/2026/10/seminar-20261208-shouhizei.webp" alt="どう変わる？消費税 令和9年4月からの消費税改正のポイント チラシ" loading="lazy" decoding="async" /></li>
-</ul>
+<li><img src="/images/2026/10/seminar-20261124-saiyou.webp" alt="はじめての採用セミナー「“忙しいから雇う”その前に」チラシ" loading="lazy" decoding="async" /></li></ul>
 
 <p class="eyebrow">Track Record</p>
 
